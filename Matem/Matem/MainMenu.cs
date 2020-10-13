@@ -15,16 +15,9 @@ namespace Matem
         public MainMenu()
         {
             InitializeComponent();
-        }
+        }       
 
         
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Tasks1 frm = new Tasks1();
-            frm.Show();
-            Hide();
-        }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
@@ -67,6 +60,20 @@ namespace Matem
         private void label1_MouseDown(object sender, MouseEventArgs e)
         {
             lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void TeacherButton_Click(object sender, EventArgs e)
+        {
+            Tasks1 form = new Tasks1();
+            form.Show();
+            this.Hide();
+        }
+
+        private void StudentButton_Click(object sender, EventArgs e)
+        {
+            StudentTasks1 form = new StudentTasks1();
+            form.Show();
+            this.Hide();
         }
     }
 }

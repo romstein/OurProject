@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.StudentButton = new System.Windows.Forms.Button();
+            this.TeacherButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -40,24 +41,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Yellow;
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.TeacherButton);
+            this.panel1.Controls.Add(this.StudentButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(557, 466);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Chartreuse;
-            this.button1.Location = new System.Drawing.Point(54, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 59);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Tasks1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -101,6 +92,28 @@
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
+            // StudentButton
+            // 
+            this.StudentButton.BackColor = System.Drawing.Color.Lime;
+            this.StudentButton.Location = new System.Drawing.Point(51, 191);
+            this.StudentButton.Name = "StudentButton";
+            this.StudentButton.Size = new System.Drawing.Size(160, 77);
+            this.StudentButton.TabIndex = 1;
+            this.StudentButton.Text = "Student";
+            this.StudentButton.UseVisualStyleBackColor = false;
+            this.StudentButton.Click += new System.EventHandler(this.StudentButton_Click);
+            // 
+            // TeacherButton
+            // 
+            this.TeacherButton.BackColor = System.Drawing.Color.Lime;
+            this.TeacherButton.Location = new System.Drawing.Point(292, 191);
+            this.TeacherButton.Name = "TeacherButton";
+            this.TeacherButton.Size = new System.Drawing.Size(162, 77);
+            this.TeacherButton.TabIndex = 2;
+            this.TeacherButton.Text = "Teacher";
+            this.TeacherButton.UseVisualStyleBackColor = false;
+            this.TeacherButton.Click += new System.EventHandler(this.TeacherButton_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,6 +136,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label closeButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button TeacherButton;
+        private System.Windows.Forms.Button StudentButton;
     }
 }

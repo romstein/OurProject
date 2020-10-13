@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -39,6 +40,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Yellow;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -80,8 +82,17 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(800, 91);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tasks1";
+            this.label1.Text = "Задания для учеников";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(216, 207);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(325, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Здесь преподователь будет создавать вопросы";
             // 
             // Tasks1
             // 
@@ -94,6 +105,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tasks1";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label closeButton;
+        private System.Windows.Forms.Label label2;
     }
 }
