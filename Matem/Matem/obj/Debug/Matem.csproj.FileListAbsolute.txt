@@ -10,3 +10,4 @@ C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.exe
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.pdb
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Tasks1.resources
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.StudentTasks1.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.MenuWithThemes.resources

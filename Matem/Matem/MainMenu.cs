@@ -15,25 +15,11 @@ namespace Matem
         public MainMenu()
         {
             InitializeComponent();
-        }       
+        } 
 
         
-
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void closeButton_MouseEnter(object sender, EventArgs e)
-        {
-            closeButton.ForeColor = Color.Red;
-        }
-
-        private void closeButton_MouseLeave(object sender, EventArgs e)
-        {
-            closeButton.ForeColor = Color.Black;
-        }
         Point lastPoint;
+
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if(e.Button==MouseButtons.Left)
@@ -64,7 +50,7 @@ namespace Matem
 
         private void TeacherButton_Click(object sender, EventArgs e)
         {
-            Tasks1 form = new Tasks1();
+            MenuWithThemes form = new MenuWithThemes();
             form.Show();
             this.Hide();
         }
@@ -74,6 +60,45 @@ namespace Matem
             StudentTasks1 form = new StudentTasks1();
             form.Show();
             this.Hide();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Red;
+        }
+
+        private void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Black;
+        }
+
+        private void TeacherButton_MouseEnter(object sender, EventArgs e)
+        {
+            TeacherButton.BackColor = Color.Red;
+            TeacherButton.ForeColor = Color.White;
+        }
+
+        private void TeacherButton_MouseLeave(object sender, EventArgs e)
+        {
+            TeacherButton.BackColor = Color.Lime;
+            TeacherButton.ForeColor = Color.Black;
+        }
+
+        private void StudentButton_MouseEnter(object sender, EventArgs e)
+        {
+            StudentButton.BackColor = Color.Red;
+            StudentButton.ForeColor = Color.White;
+        }
+
+        private void StudentButton_MouseLeave(object sender, EventArgs e)
+        {
+            StudentButton.BackColor = Color.Lime;
+            StudentButton.ForeColor = Color.Black;
         }
     }
 }
