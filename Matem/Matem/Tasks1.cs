@@ -12,6 +12,7 @@ namespace Matem
 {
     public partial class Tasks1 : Form
     {
+        public List<Task> any = new List<Task>();
         public int currentIndexRadio = 0;
         public int currentRadioButton = 0;
         RadioButton[] radio = new RadioButton[1000];
@@ -137,6 +138,11 @@ namespace Matem
         private void closeButton_MouseLeave(object sender, EventArgs e)
         {
             closeButton.ForeColor = Color.Black;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

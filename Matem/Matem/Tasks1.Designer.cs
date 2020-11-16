@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tasks1));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.closeButton = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.AddQuestion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
@@ -37,7 +38,6 @@
             this.KolichestvoAnswer = new System.Windows.Forms.ToolStripTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.closeButton = new System.Windows.Forms.Label();
             this.Polzunok = new System.Windows.Forms.VScrollBar();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -53,9 +53,28 @@
             this.panel2.Controls.Add(this.toolStrip1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 140);
+            this.panel2.Size = new System.Drawing.Size(800, 114);
             this.panel2.TabIndex = 0;
+            // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.AutoSize = true;
+            this.closeButton.BackColor = System.Drawing.Color.White;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton.ForeColor = System.Drawing.Color.Black;
+            this.closeButton.Location = new System.Drawing.Point(775, 0);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(24, 24);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.Text = "X";
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // toolStrip1
             // 
@@ -66,9 +85,9 @@
             this.AddQuestion,
             this.toolStripSplitButton1,
             this.KolichestvoAnswer});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 111);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 85);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(287, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(232, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -91,20 +110,20 @@
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(39, 24);
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(36, 24);
             this.toolStripSplitButton1.Text = "Выберите тип вопроса";
             // 
             // сОднимВариантомОтветаToolStripMenuItem
             // 
             this.сОднимВариантомОтветаToolStripMenuItem.Name = "сОднимВариантомОтветаToolStripMenuItem";
-            this.сОднимВариантомОтветаToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.сОднимВариантомОтветаToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.сОднимВариантомОтветаToolStripMenuItem.Text = "С одним вариантом ответа";
             this.сОднимВариантомОтветаToolStripMenuItem.Click += new System.EventHandler(this.сОднимВариантомОтветаToolStripMenuItem_Click);
             // 
             // KolichestvoAnswer
             // 
             this.KolichestvoAnswer.Name = "KolichestvoAnswer";
-            this.KolichestvoAnswer.Size = new System.Drawing.Size(210, 27);
+            this.KolichestvoAnswer.Size = new System.Drawing.Size(158, 27);
             this.KolichestvoAnswer.Text = "Введите количество ответов";
             this.KolichestvoAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox2_KeyDown);
             this.KolichestvoAnswer.Click += new System.EventHandler(this.toolStripTextBox2_Click);
@@ -115,11 +134,13 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1066, 140);
+            this.label1.Size = new System.Drawing.Size(800, 114);
             this.label1.TabIndex = 0;
             this.label1.Text = "Задания для учеников";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -129,42 +150,27 @@
             this.panel1.Controls.Add(this.Polzunok);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1097, 637);
+            this.panel1.Size = new System.Drawing.Size(823, 518);
             this.panel1.TabIndex = 0;
-            // 
-            // closeButton
-            // 
-            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.AutoSize = true;
-            this.closeButton.BackColor = System.Drawing.Color.White;
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(1033, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(30, 29);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.Text = "X";
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
-            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // Polzunok
             // 
-            this.Polzunok.Location = new System.Drawing.Point(1038, 140);
+            this.Polzunok.Location = new System.Drawing.Point(778, 114);
             this.Polzunok.Name = "Polzunok";
-            this.Polzunok.Size = new System.Drawing.Size(28, 473);
+            this.Polzunok.Size = new System.Drawing.Size(28, 384);
             this.Polzunok.TabIndex = 1;
             // 
             // Tasks1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 612);
+            this.ClientSize = new System.Drawing.Size(799, 497);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(951, 603);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(713, 490);
             this.Name = "Tasks1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Шаблон для редактиования";
