@@ -14,7 +14,11 @@ namespace Matem
 {
     public partial class Tasks1 : Form
     {
+<<<<<<< HEAD
         public string StrokaTheme="";
+=======
+        public List<Task> any = new List<Task>();
+>>>>>>> 4ffc57f47780efb607e0895ce1cc1099691b37bb
         public int currentIndexRadio = 0;
         public int currentRadioButton = 0;
         RadioButton[] radio = new RadioButton[1000];
@@ -145,6 +149,7 @@ namespace Matem
             closeButton.ForeColor = Color.Black;
         }
 
+<<<<<<< HEAD
         private void ThemeZagolovok_Click(object sender, EventArgs e)
         {
             ThemeZagolovok.Text = StrokaTheme;
@@ -176,6 +181,11 @@ namespace Matem
             menu.labelTheme1.Text = StrokaTheme;
             menu.Show();
             this.Hide();
+=======
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> 4ffc57f47780efb607e0895ce1cc1099691b37bb
         }
     }
 }
