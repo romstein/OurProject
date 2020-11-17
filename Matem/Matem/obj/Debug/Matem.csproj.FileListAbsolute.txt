@@ -11,3 +11,5 @@ C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.pdb
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Tasks1.resources
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.StudentTasks1.resources
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.MenuWithThemes.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Theme1_Itog.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Theme1_Zadachi.resources

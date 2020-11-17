@@ -32,22 +32,20 @@ namespace Matem
             closeButton.ForeColor = Color.Black;
         }
 
-        private void AddTheme_MouseEnter(object sender, EventArgs e)
+        
+        
+
+        private void GoBack_Click(object sender, EventArgs e)
         {
-            AddTheme.ForeColor = Color.White;
-            AddTheme.BackColor = Color.Red;
+            MainMenu main = new MainMenu();
+            main.Show();
+            this.Hide();
         }
 
-        private void AddTheme_MouseLeave(object sender, EventArgs e)
+        private void labelTheme1_Click(object sender, EventArgs e)
         {
-            AddTheme.ForeColor = Color.Black;
-            AddTheme.BackColor = Color.Lime;
-        }
-
-        private void AddTheme_Click(object sender, EventArgs e)
-        {
-            Tasks1 frm = new Tasks1();
-            frm.Show();
+            Tasks1 t = new Tasks1();
+            t.Show();
             this.Hide();
         }
     }

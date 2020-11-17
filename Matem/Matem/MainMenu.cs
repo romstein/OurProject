@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Matem
 {
@@ -19,6 +21,7 @@ namespace Matem
 
         
         Point lastPoint;
+        public XmlSerializer formater;
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
@@ -51,15 +54,46 @@ namespace Matem
         private void TeacherButton_Click(object sender, EventArgs e)
         {
             MenuWithThemes form = new MenuWithThemes();
-            form.Show();
-            this.Hide();
+            if (File.Exists("theme.xml"))
+            {
+                Nazvanie_Theme nazvanie = new Nazvanie_Theme();
+                formater = new XmlSerializer(typeof(Nazvanie_Theme));
+                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                {
+                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
+                }
+                form.labelTheme1.Text = nazvanie.Name;
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                form.Show();
+                this.Hide();
+            }
+
         }
 
         private void StudentButton_Click(object sender, EventArgs e)
         {
             StudentTasks1 form = new StudentTasks1();
-            form.Show();
-            this.Hide();
+            if (File.Exists("theme.xml"))
+            {
+                Nazvanie_Theme nazvanie = new Nazvanie_Theme();
+                formater = new XmlSerializer(typeof(Nazvanie_Theme));
+                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                {
+                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
+                }
+                form.Theme1.Text = nazvanie.Name;
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                form.Show();
+                this.Hide();
+            }
         }
 
         private void closeButton_Click(object sender, EventArgs e)

@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tasks1));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ThemeZagolovok = new System.Windows.Forms.TextBox();
+            this.closeButton = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.AddQuestion = new System.Windows.Forms.ToolStripButton();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.сОднимВариантомОтветаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KolichestvoAnswer = new System.Windows.Forms.ToolStripTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.closeButton = new System.Windows.Forms.Label();
-            this.Polzunok = new System.Windows.Forms.VScrollBar();
+            this.CreateTheme = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -46,16 +46,44 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.ThemeZagolovok);
             this.panel2.Controls.Add(this.closeButton);
             this.panel2.Controls.Add(this.toolStrip1);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1066, 140);
+            this.panel2.Size = new System.Drawing.Size(1077, 140);
             this.panel2.TabIndex = 0;
+            // 
+            // ThemeZagolovok
+            // 
+            this.ThemeZagolovok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ThemeZagolovok.ForeColor = System.Drawing.Color.Green;
+            this.ThemeZagolovok.Location = new System.Drawing.Point(75, 29);
+            this.ThemeZagolovok.Name = "ThemeZagolovok";
+            this.ThemeZagolovok.Size = new System.Drawing.Size(911, 53);
+            this.ThemeZagolovok.TabIndex = 3;
+            this.ThemeZagolovok.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ThemeZagolovok.Click += new System.EventHandler(this.ThemeZagolovok_Click);
+            this.ThemeZagolovok.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ThemeZagolovok_KeyDown);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.AutoSize = true;
+            this.closeButton.BackColor = System.Drawing.Color.White;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.closeButton.ForeColor = System.Drawing.Color.Black;
+            this.closeButton.Location = new System.Drawing.Point(992, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(30, 29);
+            this.closeButton.TabIndex = 2;
+            this.closeButton.Text = "X";
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // toolStrip1
             // 
@@ -109,61 +137,37 @@
             this.KolichestvoAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox2_KeyDown);
             this.KolichestvoAnswer.Click += new System.EventHandler(this.toolStripTextBox2_Click);
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1066, 140);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Задания для учеников";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Yellow;
-            this.panel1.Controls.Add(this.Polzunok);
+            this.panel1.Controls.Add(this.CreateTheme);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1097, 637);
+            this.panel1.Size = new System.Drawing.Size(1077, 580);
             this.panel1.TabIndex = 0;
             // 
-            // closeButton
+            // CreateTheme
             // 
-            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.AutoSize = true;
-            this.closeButton.BackColor = System.Drawing.Color.White;
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(1033, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(30, 29);
-            this.closeButton.TabIndex = 2;
-            this.closeButton.Text = "X";
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
-            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
-            // 
-            // Polzunok
-            // 
-            this.Polzunok.Location = new System.Drawing.Point(1038, 140);
-            this.Polzunok.Name = "Polzunok";
-            this.Polzunok.Size = new System.Drawing.Size(28, 473);
-            this.Polzunok.TabIndex = 1;
+            this.CreateTheme.BackColor = System.Drawing.Color.Lime;
+            this.CreateTheme.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateTheme.Location = new System.Drawing.Point(0, 160);
+            this.CreateTheme.Name = "CreateTheme";
+            this.CreateTheme.Size = new System.Drawing.Size(267, 64);
+            this.CreateTheme.TabIndex = 1;
+            this.CreateTheme.Text = "Создать тему";
+            this.CreateTheme.UseVisualStyleBackColor = false;
+            this.CreateTheme.Click += new System.EventHandler(this.CreateTheme_Click);
             // 
             // Tasks1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 612);
+            this.ClientSize = new System.Drawing.Size(1077, 580);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(951, 603);
             this.Name = "Tasks1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -180,7 +184,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton AddQuestion;
@@ -188,6 +191,7 @@
         private System.Windows.Forms.ToolStripMenuItem сОднимВариантомОтветаToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox KolichestvoAnswer;
         private System.Windows.Forms.Label closeButton;
-        private System.Windows.Forms.VScrollBar Polzunok;
+        private System.Windows.Forms.TextBox ThemeZagolovok;
+        private System.Windows.Forms.Button CreateTheme;
     }
 }

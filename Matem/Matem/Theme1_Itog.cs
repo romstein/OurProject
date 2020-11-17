@@ -10,24 +10,16 @@ using System.Windows.Forms;
 
 namespace Matem
 {
-    public partial class StudentTasks1 : Form
+    public partial class Theme1_Itog : Form
     {
-        public StudentTasks1()
+        public Theme1_Itog()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainMenu main = new MainMenu();
-            main.Show();
-            this.Hide();
-        }
-
-        private void Theme1_Click(object sender, EventArgs e)
-        {
-            Theme1_Zadachi form = new Theme1_Zadachi();
-            //здесь надо передать задачи
+            StudentTasks1 form = new StudentTasks1();
             form.Show();
             this.Hide();
         }

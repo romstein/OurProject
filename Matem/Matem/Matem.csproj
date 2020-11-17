@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serializaciya.cs" />
     <Compile Include="StudentTasks1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +72,18 @@
     </Compile>
     <Compile Include="Tasks1.Designer.cs">
       <DependentUpon>Tasks1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Theme1_Itog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Theme1_Itog.Designer.cs">
+      <DependentUpon>Theme1_Itog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Theme1_Zadachi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Theme1_Zadachi.Designer.cs">
+      <DependentUpon>Theme1_Zadachi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -92,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tasks1.resx">
       <DependentUpon>Tasks1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Theme1_Itog.resx">
+      <DependentUpon>Theme1_Itog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Theme1_Zadachi.resx">
+      <DependentUpon>Theme1_Zadachi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

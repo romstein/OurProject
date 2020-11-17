@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Matem
 {
     public partial class Tasks1 : Form
     {
+        public string StrokaTheme="";
         public int currentIndexRadio = 0;
         public int currentRadioButton = 0;
         RadioButton[] radio = new RadioButton[1000];
@@ -36,7 +39,7 @@ namespace Matem
             InitializeComponent();
         }
 
-         
+        
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -44,12 +47,13 @@ namespace Matem
             panel[PanelConstanta].Width = panel1.Width;
             panel[PanelConstanta].Height = 0;
             panel[PanelConstanta].Location = new Point(0, panelLokation);
-            panel[PanelConstanta].Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+            //panel[PanelConstanta].Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
             textTask[currentIndexTextTask] = new TextBox();
             textTask[currentIndexTextTask].Multiline = true;
             textTask[currentIndexTextTask].Width = panel1.Width;
             textTask[currentIndexTextTask].Height = 20;
-            textTask[currentIndexTextTask].Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
+           // textTask[currentIndexTextTask].Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
             panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
             localHeight += textTask[currentIndexTextTask].Height;
@@ -64,14 +68,16 @@ namespace Matem
                     radio[i].Height = 20;
                     radio[i].Location = new Point(0, localHeight);
                     radio[i].BackColor = Color.Red;
-                    radio[i].Anchor = AnchorStyles.Left|AnchorStyles.Top|AnchorStyles.Right;
+                    radio[i].Font = new System.Drawing.Font("Times New Roman", 9);
+                    //radio[i].Anchor = AnchorStyles.Left|AnchorStyles.Top|AnchorStyles.Right;
                     panel[PanelConstanta].Height += radio[i].Height;
                     panel[PanelConstanta].Controls.Add(radio[i]);
                     textAnswer[currentIndexTextAnswer] = new TextBox();                    
                     textAnswer[currentIndexTextAnswer].Width = 200;
                     textAnswer[currentIndexTextAnswer].Height = 20;
                     textAnswer[currentIndexTextAnswer].Location = new Point(radio[i].Width, localHeight);
-                    textAnswer[currentIndexTextAnswer].Anchor = AnchorStyles.Right|AnchorStyles.Top|AnchorStyles.Left;
+                    textAnswer[currentIndexTextAnswer].Font = new System.Drawing.Font("Times New Roman", 9);
+                    //textAnswer[currentIndexTextAnswer].Anchor = AnchorStyles.Right|AnchorStyles.Top|AnchorStyles.Left;
                     textAnswer[currentIndexTextAnswer].KeyDown += new System.Windows.Forms.KeyEventHandler(AddAnswer);
                     panel[PanelConstanta].Controls.Add(textAnswer[currentIndexTextAnswer]);
                     localHeight += radio[i].Height;
@@ -80,7 +86,7 @@ namespace Matem
             }
             
             panel1.Controls.Add(panel[PanelConstanta]);
-
+            CreateTheme.Location =new Point(0, panelLokation+panel[PanelConstanta].Height);
             currentIndexRadio += Nans;
             currentIndexTextTask++;            
             localHeight += 5;
@@ -137,6 +143,39 @@ namespace Matem
         private void closeButton_MouseLeave(object sender, EventArgs e)
         {
             closeButton.ForeColor = Color.Black;
+        }
+
+        private void ThemeZagolovok_Click(object sender, EventArgs e)
+        {
+            ThemeZagolovok.Text = StrokaTheme;
+            ThemeZagolovok.BackColor = Color.White;
+        }
+
+        private void ThemeZagolovok_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                StrokaTheme = ThemeZagolovok.Text;
+                ThemeZagolovok.BackColor = Color.Yellow;
+            }
+        }
+
+        private void CreateTheme_Click(object sender, EventArgs e)
+        {
+            Nazvanie_Theme theme = new Nazvanie_Theme(StrokaTheme);
+            XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
+            if(File.Exists("theme.xml"))
+            {
+                File.Delete("theme.xml");
+            }
+            using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+            {
+                formater.Serialize(fs, theme);
+            }
+            MenuWithThemes menu = new MenuWithThemes();
+            menu.labelTheme1.Text = StrokaTheme;
+            menu.Show();
+            this.Hide();
         }
     }
 }
