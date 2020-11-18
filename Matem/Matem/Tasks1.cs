@@ -170,7 +170,7 @@ namespace Matem
             int ind = 0;
             int i = 0;
             
-            while( i < radio.Length)
+            while( i < radio.Length && ind<CountNans.Count)
             {
                 Mission mr = new Mission();
                 
