@@ -13,16 +13,16 @@ namespace Matem
 
 
     }
-    public class Task
+    public class Mission
     {
         public string question { get; set; }
         public string Theme { get; set; }
         public List<Pair<string, bool>> answers = new List<Pair<string, bool>>();
 
-        public Task() { }
-        public Task(string S, string TH, List<Pair<string, bool>> a)
+        public Mission() { }
+        public Mission(string Q, string TH, List<Pair<string, bool>> a)
         {
-            question = S;
+            question = Q;
             Theme = TH;
             answers = a;
         }
@@ -35,13 +35,13 @@ namespace Matem
         }
 
     }
-    //List<Task> a = new List<Task>();
+    //List<Mission> a = new List<Mission>();
     //Pair<string, bool> c = new Pair<string, bool>();
     //c.First = "LLL";
     //        c.Second = false;
     //        List<Pair<string, bool>> an = new List<Pair<string, bool>>();
     //string mm = " llll";
-    //Task t1 = new Task();
+    //Mission t1 = new Mission();
     //t1.question = mm;
     //        an.Add(c);
     //        t1.answers = an;

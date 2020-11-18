@@ -15,7 +15,9 @@ namespace Matem
     public partial class Tasks1 : Form
     {
         public string StrokaTheme = "";
-        public List<Task> any = new List<Task>();
+        public List<Mission> any = new List<Mission>();
+        public List<Mission> localT = new List<Mission>();
+        List<int> CountNans = new List<int>();
         public int currentIndexRadio = 0;
         public int currentRadioButton = 0;
         RadioButton[] radio = new RadioButton[1000];
@@ -60,6 +62,7 @@ namespace Matem
             localHeight += textTask[currentIndexTextTask].Height;
 
             Nans = int.Parse(KolichestvoAnswer.Text);
+            CountNans.Add(Nans);
             if (flagVyborOtveta == 1)
             {
                 for (int i = currentIndexRadio; i < currentIndexRadio + Nans; i++)
@@ -164,6 +167,28 @@ namespace Matem
 
         private void CreateTheme_Click(object sender, EventArgs e)
         {
+            int ind = 0;
+            int i = 0;
+            
+            while( i < radio.Length)
+            {
+                Mission mr = new Mission();
+                
+                int n = CountNans[ind];
+                for(int j = 0; j <n ;j++)
+                {
+                    Pair<string, bool> v = new Pair<string, bool>();
+                    v.First = radio[i].Text;
+                    v.Second = radio[i].Checked;
+                    mr.answers.Add(v);
+                    i++;
+
+                }
+                mr.Theme = StrokaTheme;
+                mr.question = textTask[ind].Text;
+                any.Add(mr);
+                ind++;
+            }
             Nazvanie_Theme theme = new Nazvanie_Theme(StrokaTheme);
             XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
             if (File.Exists("theme.xml"))
