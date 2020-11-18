@@ -12,6 +12,9 @@ namespace Matem
 {
     public partial class Tasks1 : Form
     {
+
+	// комментарий
+
         public Tasks1()
         {
             InitializeComponent();
