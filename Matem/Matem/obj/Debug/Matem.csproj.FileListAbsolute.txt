@@ -1,31 +1,14 @@
 C:\pr1\OurProject\Matem\Matem\bin\Debug\Matem.exe.config
 C:\pr1\OurProject\Matem\Matem\bin\Debug\Matem.exe
 C:\pr1\OurProject\Matem\Matem\bin\Debug\Matem.pdb
-C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.csprojAssemblyReference.cache
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.MainMenu.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.MenuWithThemes.resources
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Properties.Resources.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.StudentTasks1.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Tasks1.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Theme1_Itog.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Theme1_Zadachi.resources
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.csproj.GenerateResource.cache
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.csproj.CoreCompileInputs.cache
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.exe
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.pdb
-C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Tasks1.resources
-C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.StudentTasks1.resources
-C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.MenuWithThemes.resources
-<<<<<<< HEAD
-C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Theme1_Itog.resources
-C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.Theme1_Zadachi.resources
-=======
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\bin\Debug\Matem.exe.config
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\bin\Debug\Matem.exe
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\bin\Debug\Matem.pdb
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.csprojAssemblyReference.cache
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.MainMenu.resources
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.MenuWithThemes.resources
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.Properties.Resources.resources
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.StudentTasks1.resources
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.Tasks1.resources
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.csproj.GenerateResource.cache
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.csproj.CoreCompileInputs.cache
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.exe
-C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.pdb
->>>>>>> 4ffc57f47780efb607e0895ce1cc1099691b37bb
