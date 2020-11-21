@@ -169,8 +169,15 @@ namespace Matem
         {
             int ind = 0;
             int i = 0;
-            
-            while( i < radio.Length && ind<CountNans.Count)
+            XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
+            if (File.Exists("bank.xml"))
+            {
+                using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+                {
+                    any = (List<Mission>)diser.Deserialize(fs);
+                }
+            }
+            while ( i < radio.Length && ind<CountNans.Count)
             {
                 Mission mr = new Mission();
                 
@@ -189,6 +196,16 @@ namespace Matem
                 any.Add(mr);
                 ind++;
             }
+            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
+            if (File.Exists("bank.xml"))
+            {
+                File.Delete("bank.xml");
+            }
+            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+            {
+                ser.Serialize(fs, any);
+            }
+
             Nazvanie_Theme theme = new Nazvanie_Theme(StrokaTheme);
             XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
             if (File.Exists("theme.xml"))

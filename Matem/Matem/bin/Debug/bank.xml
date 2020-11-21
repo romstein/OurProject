@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ArrayOfMission xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
+        <First>1</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>2</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>3</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>4</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <question>вопрос1</question>
+    <Theme>тема 1</Theme>
+  </Mission>
+</ArrayOfMission>

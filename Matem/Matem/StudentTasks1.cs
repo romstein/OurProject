@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Matem
 {
@@ -27,9 +29,40 @@ namespace Matem
         private void Theme1_Click(object sender, EventArgs e)
         {
             Theme1_Zadachi form = new Theme1_Zadachi();
-            //здесь надо передать задачи
+            List<Mission> any = new List<Mission>();
+            XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
+            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+            {
+                any = (List<Mission>)diser.Deserialize(fs);
+            }
+            Nazvanie_Theme nazvanie = new Nazvanie_Theme();
+            XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
+            using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+            {
+                nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
+            }
+            foreach(var item in any)
+            {
+                if (item.Theme == nazvanie.Name)
+                {
+                    //написать вывод на экран
+                    
+                }
+            }
+            
             form.Show();
             this.Hide();
+        }
+        void SearchThemes(List<Mission> any, List<string> thm) //метод находит все уникальные темы в хранилище
+        {
+           
+            foreach (var item in any)
+            {
+                if (thm.Contains(item.Theme) == false)
+                {
+                    thm.Add(item.Theme);
+                }
+            }
         }
     }
 }

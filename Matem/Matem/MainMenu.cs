@@ -56,6 +56,7 @@ namespace Matem
             MenuWithThemes form = new MenuWithThemes();
             if (File.Exists("theme.xml"))
             {
+             
                 Nazvanie_Theme nazvanie = new Nazvanie_Theme();
                 formater = new XmlSerializer(typeof(Nazvanie_Theme));
                 using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
@@ -73,7 +74,7 @@ namespace Matem
             }
 
         }
-
+       
         private void StudentButton_Click(object sender, EventArgs e)
         {
             StudentTasks1 form = new StudentTasks1();

@@ -13,6 +13,7 @@ namespace Matem
 
 
     }
+    [Serializable]
     public class Mission
     {
         public string question { get; set; }
