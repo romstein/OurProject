@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddQuestionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddQuestionsForm.Designer.cs">
+      <DependentUpon>AddQuestionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseAction.Designer.cs">
+      <DependentUpon>ChooseAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteQuestionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteQuestionsForm.Designer.cs">
+      <DependentUpon>DeleteQuestionsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +104,15 @@
     <Compile Include="Theme1_Zadachi.Designer.cs">
       <DependentUpon>Theme1_Zadachi.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddQuestionsForm.resx">
+      <DependentUpon>AddQuestionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseAction.resx">
+      <DependentUpon>ChooseAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteQuestionsForm.resx">
+      <DependentUpon>DeleteQuestionsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

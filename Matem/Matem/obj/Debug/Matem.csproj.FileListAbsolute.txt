@@ -27,3 +27,7 @@ C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Mate
 C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.csproj.CoreCompileInputs.cache
 C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.exe
 C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.pdb
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.csprojAssemblyReference.cache
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.ChooseAction.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.AddQuestionsForm.resources
+C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.DeleteQuestionsForm.resources

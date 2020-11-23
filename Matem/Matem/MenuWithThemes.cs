@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Matem
 {
@@ -45,8 +47,25 @@ namespace Matem
         private void labelTheme1_Click(object sender, EventArgs e)
         {
             Tasks1 t = new Tasks1();
-            t.Show();
-            this.Hide();
+            if (File.Exists("theme.xml"))
+            {
+                Nazvanie_Theme nazvanie = new Nazvanie_Theme();
+                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
+                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                {
+                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
+                }
+                ChooseAction form = new ChooseAction();
+                form.LabelTheme.Text = nazvanie.Name;
+                form.Show();
+                this.Hide();
+            }
+            else
+            {
+                t.ThemeZagolovok.Text = "Тема 1";
+                t.Show();
+                this.Hide();
+            }
         }
     }
 }

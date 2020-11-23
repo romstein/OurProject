@@ -77,6 +77,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Name = "Theme1_Zadachi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Theme1_Zadachi";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
