@@ -31,3 +31,6 @@ C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.csprojAssemblyReference.cache
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.ChooseAction.resources
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.AddQuestionsForm.resources
 C:\pr1\OurProject\Matem\Matem\obj\Debug\Matem.DeleteQuestionsForm.resources
+C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.AddQuestionsForm.resources
+C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.ChooseAction.resources
+C:\Users\Дима\Desktop\Documents\GitHub\OurProject\Matem\Matem\obj\Debug\Matem.DeleteQuestionsForm.resources

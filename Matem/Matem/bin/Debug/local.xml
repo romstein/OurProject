@@ -56,32 +56,6 @@
     <answers>
       <PairOfStringBoolean>
         <First>1</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>5</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <question>вопрос 3</question>
-    <Theme>THEME 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
         <Second>true</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>

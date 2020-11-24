@@ -53,14 +53,39 @@ namespace Matem
         private void Delete_Click(object sender, EventArgs e)
         {
             ChooseAction form = new ChooseAction();
-            for(int i=0;i<checks.Length;i++)
+            List<Mission> any = new List<Mission>();
+            XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
+            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+            {
+                any = (List<Mission>)diser.Deserialize(fs);
+            }
+            string TemaEbat = localLIST[0].Theme;
+            for (int i=0;i<checks.Length;i++)
             {
                 if(checks[i].Checked)
                 {
+
+                    foreach(var item in any)
+                    {
+                        if(item.Theme==TemaEbat && item.question == checks[i].Text)
+                        {
+                            any.Remove(item);
+                            break;
+                        }
+                    }
                     // Если этот checkBox помечен, то мы удаляем этот вопрос из localLIST
                     // Затем эти изменения должны быть применены к общему хранилищу, т. е. bank.xml
                     // 
                 }
+            }
+            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
+            if (File.Exists("bank.xml"))
+            {
+                File.Delete("bank.xml");
+            }
+            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+            {
+                ser.Serialize(fs, any);
             }
             formater2 = new XmlSerializer(typeof(Nazvanie_Theme));
             Nazvanie_Theme s;
