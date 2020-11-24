@@ -18,7 +18,9 @@ namespace Matem
         {
             InitializeComponent();
         }
-        public XmlSerializer formater;
+        public XmlSerializer formater,formater2,formater3;
+        public List<Mission> any;
+        public List<Mission> themeQuestions;
 
         private void Nazad_Click(object sender, EventArgs e)
         {
@@ -58,6 +60,36 @@ namespace Matem
                 nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
             }
             form.label1.Text = nazvanie.Name;
+            formater2 = new XmlSerializer(typeof(List<Mission>));
+            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+            {
+                any = (List<Mission>)formater2.Deserialize(fs);
+            }
+            themeQuestions = new List<Mission>();
+            foreach(var t in any)
+            {
+                if(t.Theme==LabelTheme.Text)
+                {
+                    themeQuestions.Add(t);
+                }
+            }
+            if(File.Exists("local.xml"))
+            {
+                File.Delete("local.xml");
+                formater3 = new XmlSerializer(typeof(List<Mission>));
+                using (FileStream fs = new FileStream("local.xml", FileMode.OpenOrCreate))
+                {
+                    formater3.Serialize(fs, themeQuestions);
+                }
+            }
+            else
+            {
+                formater3 = new XmlSerializer(typeof(List<Mission>));
+                using (FileStream fs = new FileStream("local.xml", FileMode.OpenOrCreate))
+                {
+                    formater3.Serialize(fs, themeQuestions);
+                }
+            }            
             form.Show();
             this.Hide();
         }
