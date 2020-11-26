@@ -41,15 +41,21 @@ namespace Matem
             {
                 nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
             }
+            List<Mission> list = new List<Mission>();
             foreach(var item in any)
             {
                 if (item.Theme == nazvanie.Name)
                 {
-                    //написать вывод на экран
+                    list.Add(item);
                     
                 }
             }
-            
+            XmlSerializer formatterlist = new XmlSerializer(typeof(List<Mission>));
+
+            using (FileStream fs = new FileStream("listmission.xml", FileMode.OpenOrCreate))
+            {
+                formatterlist.Serialize(fs, list);
+            }
             form.Show();
             this.Hide();
         }
