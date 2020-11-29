@@ -19,7 +19,7 @@ namespace Matem
         public string question { get; set; }
         public string Theme { get; set; }
         public List<Pair<string, bool>> answers = new List<Pair<string, bool>>();
-
+        public bool Status = false;
         public Mission() { }
         public Mission(string Q, string TH, List<Pair<string, bool>> a)
         {

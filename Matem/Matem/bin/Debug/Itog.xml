@@ -23,7 +23,7 @@
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
-    <Status>false</Status>
+    <Status>true</Status>
     <question>вопрос 1</question>
     <Theme>THEME 1</Theme>
   </Mission>

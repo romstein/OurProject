@@ -39,6 +39,31 @@ namespace Matem
         private void button1_Click(object sender, EventArgs e)
         {
             Theme1_Itog itog = new Theme1_Itog();
+            
+            int ind = 0;
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i].Status = false; // если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
+                for (int j = 0; j < list[i].answers.Count; j++)
+                {
+                    if (radio[ind].Checked == true && list[i].answers[j].Second == true)
+                    {
+                        list[i].Status = true;
+
+                    }
+                    ind++;
+
+                }
+            }
+            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
+            if (File.Exists("Itog.xml"))
+            {
+                File.Delete("Itog.xml");
+            }
+            using (FileStream fs = new FileStream("Itog.xml", FileMode.OpenOrCreate))
+            {
+                ser.Serialize(fs, list);
+            }
             itog.Show();
             this.Hide();
         }
