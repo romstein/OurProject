@@ -52,6 +52,11 @@ namespace Matem
             }
             XmlSerializer formatterlist = new XmlSerializer(typeof(List<Mission>));
 
+
+            if(File.Exists("listmission.xml"))
+            {
+                File.Delete("listmission.xml");
+            }
             using (FileStream fs = new FileStream("listmission.xml", FileMode.OpenOrCreate))
             {
                 formatterlist.Serialize(fs, list);

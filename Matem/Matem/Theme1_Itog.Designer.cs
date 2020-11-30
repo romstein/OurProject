@@ -60,9 +60,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(335, 473);
+            this.button1.Location = new System.Drawing.Point(333, 491);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 68);
+            this.button1.Size = new System.Drawing.Size(225, 50);
             this.button1.TabIndex = 1;
             this.button1.Text = "Вернуться в меню";
             this.button1.UseVisualStyleBackColor = false;
@@ -72,6 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Yellow;
             this.ClientSize = new System.Drawing.Size(922, 553);
             this.Controls.Add(this.button1);
@@ -79,6 +80,7 @@
             this.Name = "Theme1_Itog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Theme1_Itog";
+            this.Load += new System.EventHandler(this.Theme1_Itog_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -87,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
     }
 }

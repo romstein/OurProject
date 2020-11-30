@@ -64,6 +64,9 @@ namespace Matem
             {
                 ser.Serialize(fs, list);
             }
+
+
+            itog.label1.Text = label1.Text;
             itog.Show();
             this.Hide();
         }
@@ -91,7 +94,7 @@ namespace Matem
                 textTask[currentIndexTextTask].Height = 20;
                 textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
                 textTask[currentIndexTextTask].Text = item.question;
-                textTask[currentIndexTextTask].BackColor= Color.DarkBlue;
+                textTask[currentIndexTextTask].BackColor= Color.Cyan;
                 panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
                 panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
                 localHeight += textTask[currentIndexTextTask].Height;
@@ -119,10 +122,6 @@ namespace Matem
                 panelLokation += localHeight;
                 localHeight = 0;
             }
-
-            
-
-
         }
     }
 }

@@ -3,6 +3,63 @@
   <Mission>
     <answers>
       <PairOfStringBoolean>
+        <First>-2</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>-1</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>0</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>вопрос 2 5-6=</question>
+    <Theme>THEME 1</Theme>
+  </Mission>
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
+        <First>1</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>2</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>0</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>вопрос 3 5-5=</question>
+    <Theme>THEME 1</Theme>
+  </Mission>
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
+        <First>0</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>4</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>5353535</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>вопрос 4 0+0=</question>
+    <Theme>THEME 1</Theme>
+  </Mission>
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
         <First>1</First>
         <Second>false</Second>
       </PairOfStringBoolean>
@@ -18,77 +75,8 @@
         <First>4</First>
         <Second>false</Second>
       </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>5</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
     </answers>
-    <question>вопрос 1</question>
-    <Theme>THEME 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>5</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <question>вопрос 2</question>
-    <Theme>THEME 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>5</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <question>вопрос 4</question>
-    <Theme>THEME 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
+    <Status>false</Status>
     <question>вопрос 5</question>
     <Theme>THEME 1</Theme>
   </Mission>
@@ -96,13 +84,22 @@
     <answers>
       <PairOfStringBoolean>
         <First>1</First>
-        <Second>false</Second>
+        <Second>true</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
         <First>2</First>
-        <Second>true</Second>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>3</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>4</First>
+        <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
+    <Status>false</Status>
     <question>вопрос 6</question>
     <Theme>THEME 1</Theme>
   </Mission>
@@ -110,8 +107,50 @@
     <answers>
       <PairOfStringBoolean>
         <First>1</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>2</First>
         <Second>false</Second>
       </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>3</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>4</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>вопрос 7</question>
+    <Theme>THEME 1</Theme>
+  </Mission>
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
+        <First>1</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>2</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>3</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>4</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>вопрос 8</question>
+    <Theme>THEME 1</Theme>
+  </Mission>
+  <Mission>
+    <answers>
       <PairOfStringBoolean>
         <First>2</First>
         <Second>true</Second>
@@ -121,7 +160,8 @@
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
-    <question>вопрос на засыпку</question>
+    <Status>false</Status>
+    <question>Тупой вопрос 1+1=</question>
     <Theme>THEME 1</Theme>
   </Mission>
   <Mission>
@@ -131,45 +171,8 @@
         <Second>true</Second>
       </PairOfStringBoolean>
     </answers>
-    <question>вопрос 9</question>
-    <Theme>THEME 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <question>вопрос 10</question>
-    <Theme>THEME 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <question>вопрос 11</question>
-    <Theme>THEME 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <question>Последний вопрос</question>
+    <Status>false</Status>
+    <question>Интересный вопрос</question>
     <Theme>THEME 1</Theme>
   </Mission>
 </ArrayOfMission>

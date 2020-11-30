@@ -24,7 +24,6 @@ namespace Matem
 
         public int Nans = 0;
         public int localHeight = 0;
-        public int flagVyborOtveta = 0;
 
         public int panelLokation = 115;
         public int PanelConstanta = 0;
@@ -46,25 +45,27 @@ namespace Matem
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            panel[PanelConstanta] = new Panel();
-            panel[PanelConstanta].Width = panel1.Width;
-            panel[PanelConstanta].Height = 0;
-            panel[PanelConstanta].Location = new Point(0, panelLokation);
-            //panel[PanelConstanta].Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
-            textTask[currentIndexTextTask] = new TextBox();
-            textTask[currentIndexTextTask].Multiline = true;
-            textTask[currentIndexTextTask].Width = panel1.Width;
-            textTask[currentIndexTextTask].Height = 20;
-            textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
-            // textTask[currentIndexTextTask].Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
-            panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
-            localHeight += textTask[currentIndexTextTask].Height;
-
-            Nans = int.Parse(KolichestvoAnswer.Text);
-            CountNans.Add(Nans);
-            if (flagVyborOtveta == 1)
+            if(KolichestvoAnswer.Text=="Введите количество ответов")
             {
+                MessageBox.Show("Вы не ввели количество ответов");
+            }
+            else
+            {
+                panel[PanelConstanta] = new Panel();
+                panel[PanelConstanta].Width = panel1.Width;
+                panel[PanelConstanta].Height = 0;
+                panel[PanelConstanta].Location = new Point(0, panelLokation);
+                textTask[currentIndexTextTask] = new TextBox();
+                textTask[currentIndexTextTask].Multiline = true;
+                textTask[currentIndexTextTask].Width = panel1.Width;
+                textTask[currentIndexTextTask].Height = 20;
+                textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
+                panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
+                panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
+                localHeight += textTask[currentIndexTextTask].Height;
+
+                Nans = int.Parse(KolichestvoAnswer.Text);
+                CountNans.Add(Nans);
                 for (int i = currentIndexRadio; i < currentIndexRadio + Nans; i++)
                 {
                     radio[i] = new RadioButton();
@@ -73,7 +74,6 @@ namespace Matem
                     radio[i].Location = new Point(0, localHeight);
                     radio[i].BackColor = Color.Red;
                     radio[i].Font = new System.Drawing.Font("Times New Roman", 9);
-                    //radio[i].Anchor = AnchorStyles.Left|AnchorStyles.Top|AnchorStyles.Right;
                     panel[PanelConstanta].Height += radio[i].Height;
                     panel[PanelConstanta].Controls.Add(radio[i]);
                     textAnswer[currentIndexTextAnswer] = new TextBox();
@@ -81,22 +81,22 @@ namespace Matem
                     textAnswer[currentIndexTextAnswer].Height = 20;
                     textAnswer[currentIndexTextAnswer].Location = new Point(radio[i].Width, localHeight);
                     textAnswer[currentIndexTextAnswer].Font = new System.Drawing.Font("Times New Roman", 9);
-                    //textAnswer[currentIndexTextAnswer].Anchor = AnchorStyles.Right|AnchorStyles.Top|AnchorStyles.Left;
                     textAnswer[currentIndexTextAnswer].KeyDown += new System.Windows.Forms.KeyEventHandler(AddAnswer);
                     panel[PanelConstanta].Controls.Add(textAnswer[currentIndexTextAnswer]);
                     localHeight += radio[i].Height;
                     currentIndexTextAnswer++;
                 }
-            }
 
-            panel1.Controls.Add(panel[PanelConstanta]);
-            CreateTheme.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
-            currentIndexRadio += Nans;
-            currentIndexTextTask++;
-            localHeight += 5;
-            PanelConstanta++;
-            panelLokation += localHeight;
-            localHeight = 0;
+                panel1.Controls.Add(panel[PanelConstanta]);
+                CreateTheme.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
+                currentIndexRadio += Nans;
+                currentIndexTextTask++;
+                localHeight += 5;
+                PanelConstanta++;
+                panelLokation += localHeight;
+                localHeight = 0;
+            }
+            
 
         }
 
@@ -129,10 +129,7 @@ namespace Matem
             }
         }
 
-        private void сОднимВариантомОтветаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            flagVyborOtveta = 1;
-        }
+        
 
         private void closeButton_Click(object sender, EventArgs e)
         {
