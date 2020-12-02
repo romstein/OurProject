@@ -170,7 +170,7 @@ namespace Matem
                 ser.Serialize(fs, any);
             }
 
-            Nazvanie_Theme theme = new Nazvanie_Theme(label1.Text);
+            /*Nazvanie_Theme theme = new Nazvanie_Theme(label1.Text);
             XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
             if (File.Exists("theme.xml"))
             {
@@ -179,17 +179,17 @@ namespace Matem
             using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
             {
                 formater.Serialize(fs, theme);
-            }
-            MenuWithThemes menu = new MenuWithThemes();
-            menu.labelTheme1.Text = label1.Text;
+            }*/
+            ChooseAction menu = new ChooseAction();
+            menu.LabelTheme.Text = label1.Text;
             menu.Show();
             this.Hide();
         }
 
         private void Nazad_Click(object sender, EventArgs e)
         {
-            MenuWithThemes form = new MenuWithThemes();
-            form.labelTheme1.Text = label1.Text;
+            ChooseAction form = new ChooseAction();
+            form.LabelTheme.Text = label1.Text;
             form.Show();
             this.Hide();
         }

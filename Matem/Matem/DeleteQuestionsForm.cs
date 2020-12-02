@@ -51,51 +51,152 @@ namespace Matem
         }
 
         private void Delete_Click(object sender, EventArgs e)
-        {
-            ChooseAction form = new ChooseAction();
-            List<Mission> any = new List<Mission>();
-            XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
-            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
-            {
-                any = (List<Mission>)diser.Deserialize(fs);
-            }
-            string TemaEbat = localLIST[0].Theme;
-            for (int i=0;i<checks.Length;i++)
-            {
-                if(checks[i].Checked)
+        { 
+            if(Delete.BackColor==Color.Lime)
+            {                
+                List<Mission> any = new List<Mission>();
+                XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
+                using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
                 {
-
-                    foreach(var item in any)
+                    any = (List<Mission>)diser.Deserialize(fs);
+                }
+                string TemaEbat = localLIST[0].Theme;
+                for (int i = 0; i < checks.Length; i++)
+                {
+                    if (checks[i].Checked)
                     {
-                        if(item.Theme==TemaEbat && item.question == checks[i].Text)
+                        foreach (var item in localLIST)
                         {
-                            any.Remove(item);
-                            break;
+
+                            if (item.Theme == TemaEbat && item.question == checks[i].Text)
+                            {
+                                localLIST.Remove(item);
+                                break;
+                            }
+                        }
+                        foreach (var item in any)
+                        {
+                            
+                            if (item.Theme == TemaEbat && item.question == checks[i].Text)
+                            {
+                                any.Remove(item);
+                                break;
+                            }
+                        }
+                        // Если этот checkBox помечен, то мы удаляем этот вопрос из localLIST
+                        // Затем эти изменения должны быть применены к общему хранилищу, т. е. bank.xml
+                        // 
+                    }
+                }
+                XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
+                if (File.Exists("bank.xml"))
+                {
+                    File.Delete("bank.xml");
+                }
+                using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+                {
+                    ser.Serialize(fs, any);
+                }
+                /*formater2 = new XmlSerializer(typeof(Nazvanie_Theme));
+                Nazvanie_Theme s;
+                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                {
+                    s = (Nazvanie_Theme)formater2.Deserialize(fs);
+                }*/
+                if(localLIST.Count!=0)
+                {
+                    ChooseAction form = new ChooseAction();
+                    form.LabelTheme.Text = label1.Text;
+                    form.Show();
+                    this.Hide();
+                }           
+                else
+                {
+                    // Нужно удалить тему, если удалены все вопросы по этой теме
+
+                    Nazvanie_Theme theme = new Nazvanie_Theme(label1.Text);
+                    List<Nazvanie_Theme> themes = new List<Nazvanie_Theme>();
+                    XmlSerializer deformater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
+                    if (File.Exists("theme.xml"))
+                    {
+                        using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                        {
+                            themes = (List<Nazvanie_Theme>)deformater.Deserialize(fs);
+                        }
+                        File.Delete("theme.xml");
+                    }
+                    themes.Remove(theme);
+                    XmlSerializer formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
+                    using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                    {
+                        formater.Serialize(fs, themes);
+                    }
+                    MenuWithThemes menu = new MenuWithThemes();
+
+                    
+                    for (int j = 0; j < themes.Count; j++)
+                    {
+                        switch (j)
+                        {
+                            case 0:
+                                {
+                                    menu.labelTheme1.Text = themes[0].Name;
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    menu.labelTheme2.Text = themes[1].Name;
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    menu.labelTheme3.Text = themes[2].Name;
+                                    break;
+                                }
+                            case 3:
+                                {
+                                    menu.labelTheme4.Text = themes[3].Name;
+                                    break;
+                                }
+                            case 4:
+                                {
+                                    menu.labelTheme5.Text = themes[4].Name;
+                                    break;
+                                }
+                            case 5:
+                                {
+                                    menu.labelTheme6.Text = themes[5].Name;
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    menu.labelTheme7.Text = themes[6].Name;
+                                    break;
+                                }
+                            case 7:
+                                {
+                                    menu.labelTheme8.Text = themes[7].Name;
+                                    break;
+                                }
+                            case 8:
+                                {
+                                    menu.labelTheme9.Text = themes[8].Name;
+                                    break;
+                                }
+                            case 9:
+                                {
+                                    menu.labelTheme10.Text = themes[9].Name;
+                                    break;
+                                }
                         }
                     }
-                    // Если этот checkBox помечен, то мы удаляем этот вопрос из localLIST
-                    // Затем эти изменения должны быть применены к общему хранилищу, т. е. bank.xml
-                    // 
+
+                    //menu.labelTheme1.Text = StrokaTheme;
+                    menu.Show();
+                    this.Hide();
                 }
             }
-            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
-            if (File.Exists("bank.xml"))
-            {
-                File.Delete("bank.xml");
-            }
-            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
-            {
-                ser.Serialize(fs, any);
-            }
-            formater2 = new XmlSerializer(typeof(Nazvanie_Theme));
-            Nazvanie_Theme s;
-            using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-            {
-                s = (Nazvanie_Theme)formater2.Deserialize(fs);
-            }
-            form.LabelTheme.Text = s.Name;
-            form.Show();
-            this.Hide();
+            
         }
     }
 }

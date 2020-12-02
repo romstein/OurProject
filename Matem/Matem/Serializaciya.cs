@@ -16,5 +16,12 @@ namespace Matem
         {
             Name = name;
         }
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return false;
+
+            Nazvanie_Theme naz = (Nazvanie_Theme)obj;
+            return (this.Name == naz.Name);
+        }
     }
 }

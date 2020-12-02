@@ -25,13 +25,70 @@ namespace Matem
         private void Nazad_Click(object sender, EventArgs e)
         {
             MenuWithThemes form = new MenuWithThemes();
-            Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-            formater = new XmlSerializer(typeof(Nazvanie_Theme));
+            List<Nazvanie_Theme> listThemes = new List<Nazvanie_Theme>();
+            formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
             using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
             {
-                nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
+                listThemes = (List<Nazvanie_Theme>)formater.Deserialize(fs);
             }
-            form.labelTheme1.Text = nazvanie.Name;
+            for(int i=0;i<listThemes.Count;i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        {
+                            form.labelTheme1.Text = listThemes[0].Name;
+                            break;
+                        }
+                    case 1:
+                        {
+                            form.labelTheme2.Text = listThemes[1].Name;
+                            break;
+                        }
+                    case 2:
+                        {
+                            form.labelTheme3.Text = listThemes[2].Name;
+                            break;
+                        }
+                    case 3:
+                        {
+                            form.labelTheme4.Text = listThemes[3].Name;
+                            break;
+                        }
+                    case 4:
+                        {
+                            form.labelTheme5.Text = listThemes[4].Name;
+                            break;
+                        }
+                    case 5:
+                        {
+                            form.labelTheme6.Text = listThemes[5].Name;
+                            break;
+                        }
+                    case 6:
+                        {
+                            form.labelTheme7.Text = listThemes[6].Name;
+                            break;
+                        }
+                    case 7:
+                        {
+                            form.labelTheme8.Text = listThemes[7].Name;
+                            break;
+                        }
+                    case 8:
+                        {
+                            form.labelTheme9.Text = listThemes[8].Name;
+                            break;
+                        }
+                    case 9:
+                        {
+                            form.labelTheme10.Text = listThemes[9].Name;
+                            break;
+                        }
+                }
+            }
+
+            //form.labelTheme1.Text = nazvanie.Name;
             form.Show();
             this.Hide();
         }
@@ -39,13 +96,13 @@ namespace Matem
         private void AddQuestions_Click(object sender, EventArgs e)
         {
             AddQuestionsForm form = new AddQuestionsForm();
-            Nazvanie_Theme nazvanie = new Nazvanie_Theme();
+            /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
             formater = new XmlSerializer(typeof(Nazvanie_Theme));
             using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
             {
                 nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-            }
-            form.label1.Text = nazvanie.Name;
+            }*/
+            form.label1.Text = LabelTheme.Text;
             form.Show();
             this.Hide();
         }
@@ -53,13 +110,13 @@ namespace Matem
         private void DeleteQuestions_Click(object sender, EventArgs e)
         {
             DeleteQuestionsForm form = new DeleteQuestionsForm();
-            Nazvanie_Theme nazvanie = new Nazvanie_Theme();
+            /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
             formater = new XmlSerializer(typeof(Nazvanie_Theme));
             using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
             {
                 nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-            }
-            form.label1.Text = nazvanie.Name;
+            }*/
+            form.label1.Text = this.LabelTheme.Text;
             formater2 = new XmlSerializer(typeof(List<Mission>));
             using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
             {

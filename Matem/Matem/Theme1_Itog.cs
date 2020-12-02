@@ -28,13 +28,68 @@ namespace Matem
         private void button1_Click(object sender, EventArgs e)
         {
             StudentTasks1 form = new StudentTasks1();
-            Nazvanie_Theme nazvanie;
-            formater = new XmlSerializer(typeof(Nazvanie_Theme));
+            List<Nazvanie_Theme> themes = new List<Nazvanie_Theme>();
+            formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
             using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
             {
-                nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
+                themes = (List<Nazvanie_Theme>)formater.Deserialize(fs);
             }
-            form.Theme1.Text = nazvanie.Name;
+            for (int i = 0; i < themes.Count; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        {
+                            form.Theme1.Text = themes[0].Name;
+                            break;
+                        }
+                    case 1:
+                        {
+                            form.Theme2.Text = themes[1].Name;
+                            break;
+                        }
+                    case 2:
+                        {
+                            form.Theme3.Text = themes[2].Name;
+                            break;
+                        }
+                    case 3:
+                        {
+                            form.Theme4.Text = themes[3].Name;
+                            break;
+                        }
+                    case 4:
+                        {
+                            form.Theme5.Text = themes[4].Name;
+                            break;
+                        }
+                    case 5:
+                        {
+                            form.Theme6.Text = themes[5].Name;
+                            break;
+                        }
+                    case 6:
+                        {
+                            form.Theme7.Text = themes[6].Name;
+                            break;
+                        }
+                    case 7:
+                        {
+                            form.Theme8.Text = themes[7].Name;
+                            break;
+                        }
+                    case 8:
+                        {
+                            form.Theme9.Text = themes[8].Name;
+                            break;
+                        }
+                    case 9:
+                        {
+                            form.Theme10.Text = themes[9].Name;
+                            break;
+                        }
+                }
+            }
             form.Show();
             this.Hide();
         }
@@ -53,7 +108,7 @@ namespace Matem
             {
                 int x = i + 1;
                 labels[i] = new Label();
-                labels[i].Width = 20;
+                labels[i].Width = 30;
                 labels[i].Height = 20;
                 labels[i].Location = new Point(0, localHeight);
                 labels[i].Text = x.ToString();
@@ -62,7 +117,7 @@ namespace Matem
                 answers[i] = new Label();
                 answers[i].Width = 150;
                 answers[i].Height = 20;
-                answers[i].Location = new Point(20, localHeight);
+                answers[i].Location = new Point(30, localHeight);
                 if (list[i].Status == true)
                 {
                     answers[i].Text = "Правильно";

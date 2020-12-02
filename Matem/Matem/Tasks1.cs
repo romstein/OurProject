@@ -17,6 +17,7 @@ namespace Matem
         public string StrokaTheme = "";
         public List<Mission> any = new List<Mission>();
         public List<Mission> localT = new List<Mission>();
+        public List<Nazvanie_Theme> themes = new List<Nazvanie_Theme>();
         List<int> CountNans = new List<int>();
         public int currentIndexRadio = 0;
         public int currentRadioButton = 0;
@@ -204,17 +205,87 @@ namespace Matem
             }
 
             Nazvanie_Theme theme = new Nazvanie_Theme(StrokaTheme);
-            XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
+            XmlSerializer deformater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
             if (File.Exists("theme.xml"))
             {
+                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                {
+                    themes = (List<Nazvanie_Theme>)deformater.Deserialize(fs);
+                }
                 File.Delete("theme.xml");
             }
+            themes.Add(theme);
+            XmlSerializer formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
             using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
             {
-                formater.Serialize(fs, theme);
+                formater.Serialize(fs, themes);
             }
             MenuWithThemes menu = new MenuWithThemes();
-            menu.labelTheme1.Text = StrokaTheme;
+
+            // Допустим у нас есть несколько созданных тем
+            // Далее мы создаем новую тему
+            // Когда создали и жмем на кнопку ,,создать тему,,
+            // нужно при загрузке формы с темами для учителя вывести все имеющиеся темы в хранилище ,,theme.xml,,
+            // Я это сделал сразу в логике кнопки ,,создать тему,,
+            // 
+            for(int j=0;j<themes.Count;j++)
+            {
+                switch(j)
+                {
+                    case 0:
+                        {
+                            menu.labelTheme1.Text = themes[0].Name;
+                            break;
+                        }
+                    case 1:
+                        {
+                            menu.labelTheme2.Text = themes[1].Name;
+                            break;
+                        }
+                    case 2:
+                        {
+                            menu.labelTheme3.Text = themes[2].Name;
+                            break;
+                        }
+                    case 3:
+                        {
+                            menu.labelTheme4.Text = themes[3].Name;
+                            break;
+                        }
+                    case 4:
+                        {
+                            menu.labelTheme5.Text = themes[4].Name;
+                            break;
+                        }
+                    case 5:
+                        {
+                            menu.labelTheme6.Text = themes[5].Name;
+                            break;
+                        }
+                    case 6:
+                        {
+                            menu.labelTheme7.Text = themes[6].Name;
+                            break;
+                        }
+                    case 7:
+                        {
+                            menu.labelTheme8.Text = themes[7].Name;
+                            break;
+                        }
+                    case 8:
+                        {
+                            menu.labelTheme9.Text = themes[8].Name;
+                            break;
+                        }
+                    case 9:
+                        {
+                            menu.labelTheme10.Text = themes[9].Name;
+                            break;
+                        }
+                }
+            }
+
+            //menu.labelTheme1.Text = StrokaTheme;
             menu.Show();
             this.Hide();
 
