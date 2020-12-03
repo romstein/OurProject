@@ -216,7 +216,7 @@ namespace Matem
 
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.DarkSlateGray;
+            closeButton.ForeColor = Color.Red;
         }
 
         private void closeButton_MouseLeave(object sender, EventArgs e)

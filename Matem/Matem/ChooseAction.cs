@@ -92,7 +92,15 @@ namespace Matem
             form.Show();
             this.Hide();
         }
+        private void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Red;
+        }
 
+        private void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Black;
+        }
         private void closeButton_Click(object sender, EventArgs e)
         {
             

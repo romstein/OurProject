@@ -73,7 +73,7 @@ namespace Matem
                     radio[i].Width = panel1.Width - 200;
                     radio[i].Height = 20;
                     radio[i].Location = new Point(0, localHeight);
-                    radio[i].BackColor = Color.DarkSlateGray;
+                    radio[i].BackColor = Color.White; 
                     radio[i].Font = new System.Drawing.Font("Times New Roman", 9);
                     panel[PanelConstanta].Height += radio[i].Height;
                     panel[PanelConstanta].Controls.Add(radio[i]);
@@ -139,7 +139,7 @@ namespace Matem
 
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.DarkSlateGray;
+            closeButton.ForeColor = Color.Red;
         }
 
         private void closeButton_MouseLeave(object sender, EventArgs e)

@@ -88,6 +88,7 @@
             // Theme1
             // 
             this.Theme1.AutoSize = true;
+            this.Theme1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme1.Location = new System.Drawing.Point(38, 122);
             this.Theme1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -113,6 +114,7 @@
             // Theme2
             // 
             this.Theme2.AutoSize = true;
+            this.Theme2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme2.Location = new System.Drawing.Point(38, 146);
             this.Theme2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -125,6 +127,7 @@
             // Theme3
             // 
             this.Theme3.AutoSize = true;
+            this.Theme3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme3.Location = new System.Drawing.Point(38, 171);
             this.Theme3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -137,6 +140,7 @@
             // Theme4
             // 
             this.Theme4.AutoSize = true;
+            this.Theme4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme4.Location = new System.Drawing.Point(38, 195);
             this.Theme4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -149,6 +153,7 @@
             // Theme5
             // 
             this.Theme5.AutoSize = true;
+            this.Theme5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme5.Location = new System.Drawing.Point(38, 219);
             this.Theme5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -161,6 +166,7 @@
             // Theme6
             // 
             this.Theme6.AutoSize = true;
+            this.Theme6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme6.Location = new System.Drawing.Point(38, 244);
             this.Theme6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -173,6 +179,7 @@
             // Theme7
             // 
             this.Theme7.AutoSize = true;
+            this.Theme7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme7.Location = new System.Drawing.Point(38, 268);
             this.Theme7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -185,6 +192,7 @@
             // Theme8
             // 
             this.Theme8.AutoSize = true;
+            this.Theme8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme8.Location = new System.Drawing.Point(38, 292);
             this.Theme8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -197,6 +205,7 @@
             // Theme9
             // 
             this.Theme9.AutoSize = true;
+            this.Theme9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme9.Location = new System.Drawing.Point(38, 317);
             this.Theme9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -209,6 +218,7 @@
             // Theme10
             // 
             this.Theme10.AutoSize = true;
+            this.Theme10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Theme10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Theme10.Location = new System.Drawing.Point(38, 341);
             this.Theme10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
