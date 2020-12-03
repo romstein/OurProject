@@ -93,6 +93,13 @@ namespace Matem
             this.Hide();
         }
 
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            
+                Application.Exit();
+            
+        }
+
         private void AddQuestions_Click(object sender, EventArgs e)
         {
             AddQuestionsForm form = new AddQuestionsForm();

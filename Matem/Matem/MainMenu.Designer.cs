@@ -40,28 +40,30 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Yellow;
+            this.panel1.BackColor = System.Drawing.Color.Honeydew;
             this.panel1.Controls.Add(this.TeacherButton);
             this.panel1.Controls.Add(this.StudentButton);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1117, 544);
+            this.panel1.Size = new System.Drawing.Size(838, 442);
             this.panel1.TabIndex = 0;
             // 
             // TeacherButton
             // 
             this.TeacherButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TeacherButton.BackColor = System.Drawing.Color.Lime;
+            this.TeacherButton.BackColor = System.Drawing.Color.MintCream;
             this.TeacherButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeacherButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TeacherButton.ForeColor = System.Drawing.Color.Black;
-            this.TeacherButton.Location = new System.Drawing.Point(581, 211);
+            this.TeacherButton.Location = new System.Drawing.Point(436, 171);
+            this.TeacherButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TeacherButton.Name = "TeacherButton";
-            this.TeacherButton.Size = new System.Drawing.Size(359, 186);
+            this.TeacherButton.Size = new System.Drawing.Size(269, 151);
             this.TeacherButton.TabIndex = 2;
-            this.TeacherButton.Text = "Teacher";
+            this.TeacherButton.Text = "Учитель";
             this.TeacherButton.UseVisualStyleBackColor = false;
             this.TeacherButton.Click += new System.EventHandler(this.TeacherButton_Click);
             this.TeacherButton.MouseEnter += new System.EventHandler(this.TeacherButton_MouseEnter);
@@ -70,15 +72,16 @@
             // StudentButton
             // 
             this.StudentButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.StudentButton.BackColor = System.Drawing.Color.Lime;
+            this.StudentButton.BackColor = System.Drawing.Color.MintCream;
             this.StudentButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.StudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.StudentButton.ForeColor = System.Drawing.Color.Black;
-            this.StudentButton.Location = new System.Drawing.Point(162, 211);
+            this.StudentButton.Location = new System.Drawing.Point(122, 171);
+            this.StudentButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StudentButton.Name = "StudentButton";
-            this.StudentButton.Size = new System.Drawing.Size(361, 186);
+            this.StudentButton.Size = new System.Drawing.Size(271, 151);
             this.StudentButton.TabIndex = 1;
-            this.StudentButton.Text = "Student";
+            this.StudentButton.Text = "Ученик";
             this.StudentButton.UseVisualStyleBackColor = false;
             this.StudentButton.Click += new System.EventHandler(this.StudentButton_Click);
             this.StudentButton.MouseEnter += new System.EventHandler(this.StudentButton_MouseEnter);
@@ -91,8 +94,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1117, 81);
+            this.panel2.Size = new System.Drawing.Size(838, 66);
             this.panel2.TabIndex = 0;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -104,9 +108,10 @@
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(1087, 0);
+            this.closeButton.Location = new System.Drawing.Point(815, 0);
+            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(30, 29);
+            this.closeButton.Size = new System.Drawing.Size(24, 24);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "X";
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
@@ -117,10 +122,11 @@
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1117, 81);
+            this.label1.Size = new System.Drawing.Size(838, 66);
             this.label1.TabIndex = 0;
             this.label1.Text = "Тренажер по математике";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,12 +135,13 @@
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 544);
+            this.ClientSize = new System.Drawing.Size(838, 442);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(825, 340);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(619, 276);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";

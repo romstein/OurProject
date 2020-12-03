@@ -123,5 +123,10 @@ namespace Matem
                 localHeight = 0;
             }
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

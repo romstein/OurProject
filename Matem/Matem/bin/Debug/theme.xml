@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfNazvanie_Theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Nazvanie_Theme>
+    <Name />
+  </Nazvanie_Theme>
+  <Nazvanie_Theme>
+    <Name />
+  </Nazvanie_Theme>
+  <Nazvanie_Theme>
     <Name>theme 1</Name>
   </Nazvanie_Theme>
 </ArrayOfNazvanie_Theme>

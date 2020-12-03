@@ -448,5 +448,10 @@ namespace Matem
                 this.Hide();
             }
         }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

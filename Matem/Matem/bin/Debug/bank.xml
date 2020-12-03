@@ -4,16 +4,20 @@
     <answers>
       <PairOfStringBoolean>
         <First>1</First>
-        <Second>true</Second>
+        <Second>false</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
         <First>2</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>3</First>
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
     <Status>false</Status>
-    <question>1</question>
-    <Theme>theme 1</Theme>
+    <question>1+1</question>
+    <Theme />
   </Mission>
   <Mission>
     <answers>
@@ -25,9 +29,13 @@
         <First>2</First>
         <Second>true</Second>
       </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>3</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
     </answers>
     <Status>false</Status>
-    <question>2</question>
+    <question>1+1</question>
     <Theme>theme 1</Theme>
   </Mission>
 </ArrayOfMission>

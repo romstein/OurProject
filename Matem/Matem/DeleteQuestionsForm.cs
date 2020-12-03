@@ -47,12 +47,17 @@ namespace Matem
         private void Vyvod_Click(object sender, EventArgs e)
         {
             CreateCheckBoxs();
-            Delete.BackColor = Color.Lime;
+            Delete.BackColor = Color.MintCream;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void Delete_Click(object sender, EventArgs e)
         { 
-            if(Delete.BackColor==Color.Lime)
+            if(Delete.BackColor==Color.MintCream)
             {                
                 List<Mission> any = new List<Mission>();
                 XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));

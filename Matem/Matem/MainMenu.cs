@@ -216,35 +216,35 @@ namespace Matem
 
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.Red;
+            closeButton.ForeColor = Color.DarkSlateGray;
         }
 
         private void closeButton_MouseLeave(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.Black;
+            closeButton.ForeColor = Color.Black; 
         }
 
         private void TeacherButton_MouseEnter(object sender, EventArgs e)
         {
-            TeacherButton.BackColor = Color.Red;
+            TeacherButton.BackColor = Color.DarkSlateGray;
             TeacherButton.ForeColor = Color.White;
         }
 
         private void TeacherButton_MouseLeave(object sender, EventArgs e)
         {
-            TeacherButton.BackColor = Color.Lime;
+            TeacherButton.BackColor = Color.MintCream;
             TeacherButton.ForeColor = Color.Black;
         }
 
         private void StudentButton_MouseEnter(object sender, EventArgs e)
         {
-            StudentButton.BackColor = Color.Red;
-            StudentButton.ForeColor = Color.White;
+            StudentButton.BackColor = Color.DarkSlateGray;
+            StudentButton.ForeColor = Color.White;      
         }
 
         private void StudentButton_MouseLeave(object sender, EventArgs e)
         {
-            StudentButton.BackColor = Color.Lime;
+            StudentButton.BackColor = Color.MintCream; 
             StudentButton.ForeColor = Color.Black;
         }
     }

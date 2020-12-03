@@ -94,6 +94,11 @@ namespace Matem
             this.Hide();
         }
 
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Theme1_Itog_Load(object sender, EventArgs e)
         {
             XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
