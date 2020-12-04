@@ -464,5 +464,139 @@ namespace Matem
         {
             closeButton.ForeColor = Color.Black;
         }
+
+        private void Theme1_MouseEnter(object sender, EventArgs e)
+        {
+            Theme1.ForeColor = Color.Red;
+
+        }
+
+        private void Theme1_MouseLeave(object sender, EventArgs e)
+        {
+            Theme1.ForeColor = Color.Black;
+
+        }
+
+        private void Theme2_MouseEnter(object sender, EventArgs e)
+        {
+            Theme2.ForeColor = Color.Red;
+
+        }
+
+        private void Theme2_MouseLeave(object sender, EventArgs e)
+        {
+            Theme2.ForeColor = Color.Black;
+
+        }
+
+        private void Theme3_MouseEnter(object sender, EventArgs e)
+        {
+            Theme3.ForeColor = Color.Red;
+
+        }
+
+        private void Theme3_MouseLeave(object sender, EventArgs e)
+        {
+            Theme3.ForeColor = Color.Black;
+
+        }
+
+        private void Theme4_MouseEnter(object sender, EventArgs e)
+        {
+            Theme4.ForeColor = Color.Red;
+
+        }
+
+        private void Theme4_MouseLeave(object sender, EventArgs e)
+        {
+            Theme4.ForeColor = Color.Black;
+
+        }
+
+        private void Theme5_MouseEnter(object sender, EventArgs e)
+        {
+            Theme5.ForeColor = Color.Red;
+
+        }
+
+        private void Theme5_MouseLeave(object sender, EventArgs e)
+        {
+            Theme5.ForeColor = Color.Black;
+
+        }
+
+        private void Theme6_MouseEnter(object sender, EventArgs e)
+        {
+            Theme6.ForeColor = Color.Red;
+
+        }
+
+        private void Theme6_MouseLeave(object sender, EventArgs e)
+        {
+            Theme6.ForeColor = Color.Black;
+
+
+        }
+
+        private void Theme7_MouseEnter(object sender, EventArgs e)
+        {
+            Theme7.ForeColor = Color.Red;
+
+        }
+
+        private void Theme7_MouseLeave(object sender, EventArgs e)
+        {
+            Theme7.ForeColor = Color.Black;
+
+        }
+
+        private void Theme8_MouseEnter(object sender, EventArgs e)
+        {
+            Theme8.ForeColor = Color.Red;
+
+        }
+
+        private void Theme8_MouseLeave(object sender, EventArgs e)
+        {
+            Theme8.ForeColor = Color.Black;
+
+        }
+
+        private void Theme9_MouseEnter(object sender, EventArgs e)
+        {
+            Theme9.ForeColor = Color.Red;
+
+        }
+
+        private void Theme9_MouseLeave(object sender, EventArgs e)
+        {
+            Theme9.ForeColor = Color.Black;
+
+        }
+
+        private void Theme10_MouseEnter(object sender, EventArgs e)
+        {
+            Theme10.ForeColor = Color.Red;
+
+        }
+
+        private void Theme10_MouseLeave(object sender, EventArgs e)
+        {
+            Theme10.ForeColor = Color.Black;
+
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+
+
+        }
     }
 }

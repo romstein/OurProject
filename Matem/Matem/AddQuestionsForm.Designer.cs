@@ -69,6 +69,8 @@
             this.Nazad.Text = "Назад";
             this.Nazad.UseVisualStyleBackColor = false;
             this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
+            this.Nazad.MouseEnter += new System.EventHandler(this.Nazad_MouseEnter);
+            this.Nazad.MouseLeave += new System.EventHandler(this.Nazad_MouseLeave);
             // 
             // DopolniteTheme
             // 
@@ -82,6 +84,8 @@
             this.DopolniteTheme.Text = "Дополнить тему";
             this.DopolniteTheme.UseVisualStyleBackColor = false;
             this.DopolniteTheme.Click += new System.EventHandler(this.DopolniteTheme_Click);
+            this.DopolniteTheme.MouseEnter += new System.EventHandler(this.DopolniteTheme_MouseEnter);
+            this.DopolniteTheme.MouseLeave += new System.EventHandler(this.DopolniteTheme_MouseLeave);
             // 
             // panel2
             // 
@@ -110,6 +114,8 @@
             this.closeButton.TabIndex = 2;
             this.closeButton.Text = "X";
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // toolStrip1
             // 

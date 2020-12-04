@@ -291,5 +291,17 @@ namespace Matem
 
 
         }
+
+        private void CreateTheme_MouseEnter(object sender, EventArgs e)
+        {
+            CreateTheme.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void CreateTheme_MouseLeave(object sender, EventArgs e)
+        {
+            CreateTheme.BackColor = Color.White;
+
+        }
     }
 }

@@ -108,6 +108,18 @@ namespace Matem
             closeButton.ForeColor = Color.Black;
         }
 
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+
+        }
+
         private void Theme1_Itog_Load(object sender, EventArgs e)
         {
             XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));

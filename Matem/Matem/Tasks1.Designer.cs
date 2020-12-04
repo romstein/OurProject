@@ -58,7 +58,7 @@
             // ThemeZagolovok
             // 
             this.ThemeZagolovok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ThemeZagolovok.ForeColor = System.Drawing.Color.Green;
+            this.ThemeZagolovok.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.ThemeZagolovok.Location = new System.Drawing.Point(33, 29);
             this.ThemeZagolovok.Name = "ThemeZagolovok";
             this.ThemeZagolovok.Size = new System.Drawing.Size(870, 44);
@@ -142,6 +142,8 @@
             this.CreateTheme.Text = "Создать тему";
             this.CreateTheme.UseVisualStyleBackColor = false;
             this.CreateTheme.Click += new System.EventHandler(this.CreateTheme_Click);
+            this.CreateTheme.MouseEnter += new System.EventHandler(this.CreateTheme_MouseEnter);
+            this.CreateTheme.MouseLeave += new System.EventHandler(this.CreateTheme_MouseLeave);
             // 
             // Tasks1
             // 

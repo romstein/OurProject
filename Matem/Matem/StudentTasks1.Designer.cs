@@ -71,6 +71,8 @@
             this.closeButton.TabIndex = 2;
             this.closeButton.Text = "X";
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // label1
             // 
@@ -97,6 +99,8 @@
             this.Theme1.TabIndex = 1;
             this.Theme1.Text = "---";
             this.Theme1.Click += new System.EventHandler(this.Theme1_Click);
+            this.Theme1.MouseEnter += new System.EventHandler(this.Theme1_MouseEnter);
+            this.Theme1.MouseLeave += new System.EventHandler(this.Theme1_MouseLeave);
             // 
             // button1
             // 
@@ -110,6 +114,8 @@
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             // 
             // Theme2
             // 
@@ -123,6 +129,8 @@
             this.Theme2.TabIndex = 3;
             this.Theme2.Text = "---";
             this.Theme2.Click += new System.EventHandler(this.Theme2_Click);
+            this.Theme2.MouseEnter += new System.EventHandler(this.Theme2_MouseEnter);
+            this.Theme2.MouseLeave += new System.EventHandler(this.Theme2_MouseLeave);
             // 
             // Theme3
             // 
@@ -136,6 +144,8 @@
             this.Theme3.TabIndex = 4;
             this.Theme3.Text = "---";
             this.Theme3.Click += new System.EventHandler(this.Theme3_Click);
+            this.Theme3.MouseEnter += new System.EventHandler(this.Theme3_MouseEnter);
+            this.Theme3.MouseLeave += new System.EventHandler(this.Theme3_MouseLeave);
             // 
             // Theme4
             // 
@@ -149,6 +159,8 @@
             this.Theme4.TabIndex = 5;
             this.Theme4.Text = "---";
             this.Theme4.Click += new System.EventHandler(this.Theme4_Click);
+            this.Theme4.MouseEnter += new System.EventHandler(this.Theme4_MouseEnter);
+            this.Theme4.MouseLeave += new System.EventHandler(this.Theme4_MouseLeave);
             // 
             // Theme5
             // 
@@ -162,6 +174,8 @@
             this.Theme5.TabIndex = 6;
             this.Theme5.Text = "---";
             this.Theme5.Click += new System.EventHandler(this.Theme5_Click);
+            this.Theme5.MouseEnter += new System.EventHandler(this.Theme5_MouseEnter);
+            this.Theme5.MouseLeave += new System.EventHandler(this.Theme5_MouseLeave);
             // 
             // Theme6
             // 
@@ -175,6 +189,8 @@
             this.Theme6.TabIndex = 7;
             this.Theme6.Text = "---";
             this.Theme6.Click += new System.EventHandler(this.Theme6_Click);
+            this.Theme6.MouseEnter += new System.EventHandler(this.Theme6_MouseEnter);
+            this.Theme6.MouseLeave += new System.EventHandler(this.Theme6_MouseLeave);
             // 
             // Theme7
             // 
@@ -188,6 +204,8 @@
             this.Theme7.TabIndex = 8;
             this.Theme7.Text = "---";
             this.Theme7.Click += new System.EventHandler(this.Theme7_Click);
+            this.Theme7.MouseEnter += new System.EventHandler(this.Theme7_MouseEnter);
+            this.Theme7.MouseLeave += new System.EventHandler(this.Theme7_MouseLeave);
             // 
             // Theme8
             // 
@@ -201,6 +219,8 @@
             this.Theme8.TabIndex = 9;
             this.Theme8.Text = "---";
             this.Theme8.Click += new System.EventHandler(this.Theme8_Click);
+            this.Theme8.MouseEnter += new System.EventHandler(this.Theme8_MouseEnter);
+            this.Theme8.MouseLeave += new System.EventHandler(this.Theme8_MouseLeave);
             // 
             // Theme9
             // 
@@ -214,6 +234,8 @@
             this.Theme9.TabIndex = 10;
             this.Theme9.Text = "---";
             this.Theme9.Click += new System.EventHandler(this.Theme9_Click);
+            this.Theme9.MouseEnter += new System.EventHandler(this.Theme9_MouseEnter);
+            this.Theme9.MouseLeave += new System.EventHandler(this.Theme9_MouseLeave);
             // 
             // Theme10
             // 
@@ -227,6 +249,8 @@
             this.Theme10.TabIndex = 11;
             this.Theme10.Text = "---";
             this.Theme10.Click += new System.EventHandler(this.Theme10_Click);
+            this.Theme10.MouseEnter += new System.EventHandler(this.Theme10_MouseEnter);
+            this.Theme10.MouseLeave += new System.EventHandler(this.Theme10_MouseLeave);
             // 
             // StudentTasks1
             // 

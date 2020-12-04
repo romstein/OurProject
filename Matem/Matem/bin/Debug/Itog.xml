@@ -8,15 +8,15 @@
       </PairOfStringBoolean>
       <PairOfStringBoolean>
         <First>2</First>
-        <Second>true</Second>
+        <Second>false</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
         <First>3</First>
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
-    <Status>true</Status>
+    <Status>false</Status>
     <question>1+1</question>
-    <Theme>theme 1</Theme>
+    <Theme>Theme 1</Theme>
   </Mission>
 </ArrayOfMission>

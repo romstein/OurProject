@@ -34,8 +34,8 @@ namespace Matem
             closeButton.ForeColor = Color.Black;
         }
 
-        
-        
+
+       
 
         private void GoBack_Click(object sender, EventArgs e)
         {
@@ -403,7 +403,11 @@ namespace Matem
                 this.Hide();
             }
         }
+        
 
+       
+
+        
         private void labelTheme10_Click(object sender, EventArgs e)
         {
             if (File.Exists("theme.xml"))
@@ -442,6 +446,129 @@ namespace Matem
                 t.Show();
                 this.Hide();
             }
+
+        }
+
+        private void labelTheme1_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme1.ForeColor = Color.Red;
+        }
+
+        private void labelTheme1_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme1.ForeColor = Color.Black;
+        }
+
+        private void labelTheme2_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme2.ForeColor = Color.Black;
+        }
+        private void labelTheme2_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme2.ForeColor = Color.Red;
+        }
+
+        private void labelTheme3_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme3.ForeColor = Color.Red;
+        }
+
+        private void labelTheme3_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme3.ForeColor = Color.Black;
+        }
+
+        private void labelTheme4_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme4.ForeColor = Color.Red;
+        }
+
+        private void labelTheme4_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme4.ForeColor = Color.Black;
+        }
+
+        private void labelTheme5_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme5.ForeColor = Color.Red;
+        }
+
+        private void labelTheme5_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme5.ForeColor = Color.Black;
+
+        }
+
+        private void labelTheme6_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme6.ForeColor = Color.Red;
+
+        }
+
+        private void labelTheme6_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme6.ForeColor = Color.Black;
+
+        }
+
+        private void labelTheme7_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme7.ForeColor = Color.Red;
+
+        }
+
+        private void labelTheme7_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme7.ForeColor = Color.Black;
+
+        }
+
+        private void labelTheme8_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme8.ForeColor = Color.Red;
+
+        }
+
+        private void labelTheme8_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme8.ForeColor = Color.Black;
+
+        }
+
+        private void labelTheme9_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme9.ForeColor = Color.Red;
+
+        }
+
+        private void labelTheme9_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme9.ForeColor = Color.Black;
+
+        }
+
+        private void labelTheme10_MouseEnter(object sender, EventArgs e)
+        {
+            labelTheme10.ForeColor = Color.Red;
+
+        }
+
+        private void labelTheme10_MouseLeave(object sender, EventArgs e)
+        {
+            labelTheme10.ForeColor = Color.Black;
+
+        }
+
+        private void GoBack_MouseEnter(object sender, EventArgs e)
+        {
+            GoBack.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void GoBack_MouseLeave(object sender, EventArgs e)
+        {
+            GoBack.BackColor = Color.White;
+
         }
     }
 }

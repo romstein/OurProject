@@ -66,6 +66,30 @@ namespace Matem
             closeButton.ForeColor = Color.Black;
         }
 
+        private void Vyvod_MouseEnter(object sender, EventArgs e)
+        {
+           Vyvod.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void Vyvod_MouseLeave(object sender, EventArgs e)
+        {
+            Vyvod.BackColor = Color.White;
+
+        }
+
+        private void Delete_MouseEnter(object sender, EventArgs e)
+        {
+            Delete.BackColor = Color.Red;
+
+        }
+
+        private void Delete_MouseLeave(object sender, EventArgs e)
+        {
+            Delete.BackColor = Color.Firebrick;
+
+        }
+
         private void Delete_Click(object sender, EventArgs e)
         { 
             if(Delete.BackColor==Color.MintCream)

@@ -65,6 +65,8 @@
             this.Vyvod.Text = "Вывести все вопросы";
             this.Vyvod.UseVisualStyleBackColor = false;
             this.Vyvod.Click += new System.EventHandler(this.Vyvod_Click);
+            this.Vyvod.MouseEnter += new System.EventHandler(this.Vyvod_MouseEnter);
+            this.Vyvod.MouseLeave += new System.EventHandler(this.Vyvod_MouseLeave);
             // 
             // Delete
             // 
@@ -78,6 +80,8 @@
             this.Delete.Text = "Удалить вопросы";
             this.Delete.UseVisualStyleBackColor = false;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            this.Delete.MouseEnter += new System.EventHandler(this.Delete_MouseEnter);
+            this.Delete.MouseLeave += new System.EventHandler(this.Delete_MouseLeave);
             // 
             // panel2
             // 
@@ -105,6 +109,8 @@
             this.closeButton.TabIndex = 3;
             this.closeButton.Text = "X";
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // label1
             // 

@@ -137,5 +137,17 @@ namespace Matem
         {
             Application.Exit();
         }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.White;
+
+        }
     }
 }

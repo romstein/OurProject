@@ -63,6 +63,8 @@
             this.closeButton.TabIndex = 2;
             this.closeButton.Text = "X";
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
             // LabelTheme
             // 
@@ -89,6 +91,8 @@
             this.DeleteQuestions.Text = "Удалить вопросы";
             this.DeleteQuestions.UseVisualStyleBackColor = false;
             this.DeleteQuestions.Click += new System.EventHandler(this.DeleteQuestions_Click);
+            this.DeleteQuestions.MouseEnter += new System.EventHandler(this.DeleteQuestions_MouseEnter);
+            this.DeleteQuestions.MouseLeave += new System.EventHandler(this.DeleteQuestions_MouseLeave);
             // 
             // AddQuestions
             // 
@@ -102,6 +106,8 @@
             this.AddQuestions.Text = "Добавить вопросы";
             this.AddQuestions.UseVisualStyleBackColor = false;
             this.AddQuestions.Click += new System.EventHandler(this.AddQuestions_Click);
+            this.AddQuestions.MouseEnter += new System.EventHandler(this.AddQuestions_MouseEnter);
+            this.AddQuestions.MouseLeave += new System.EventHandler(this.AddQuestions_MouseLeave);
             // 
             // Nazad
             // 
@@ -115,6 +121,8 @@
             this.Nazad.Text = "Назад";
             this.Nazad.UseVisualStyleBackColor = false;
             this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
+            this.Nazad.MouseEnter += new System.EventHandler(this.Nazad_MouseEnter);
+            this.Nazad.MouseLeave += new System.EventHandler(this.Nazad_MouseLeave);
             // 
             // ChooseAction
             // 

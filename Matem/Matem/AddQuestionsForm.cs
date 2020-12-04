@@ -207,5 +207,29 @@ namespace Matem
         {
             Application.Exit();
         }
+
+        private void Nazad_MouseEnter(object sender, EventArgs e)
+        {
+            Nazad.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void Nazad_MouseLeave(object sender, EventArgs e)
+        {
+            Nazad.BackColor = Color.White;
+
+        }
+
+        private void DopolniteTheme_MouseEnter(object sender, EventArgs e)
+        {
+            DopolniteTheme.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void DopolniteTheme_MouseLeave(object sender, EventArgs e)
+        {
+            DopolniteTheme.BackColor = Color.White;
+
+        }
     }
 }
