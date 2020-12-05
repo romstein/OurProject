@@ -92,7 +92,7 @@ namespace Matem
 
         private void Delete_Click(object sender, EventArgs e)
         { 
-            if(Delete.BackColor==Color.MintCream)
+            if(Delete.BackColor==Color.Red)
             {                
                 List<Mission> any = new List<Mission>();
                 XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
