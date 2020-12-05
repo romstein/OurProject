@@ -12,16 +12,10 @@ using System.Xml.Serialization;
 
 namespace Matem
 {
-    public partial class Tasks1 : Form
+    public partial class AddQuestionsForm : Form
     {
-<<<<<<< HEAD
-
-	// комментарий
-=======
-        public string StrokaTheme = "";
         public List<Mission> any = new List<Mission>();
         public List<Mission> localT = new List<Mission>();
-        public List<Nazvanie_Theme> themes = new List<Nazvanie_Theme>();
         List<int> CountNans = new List<int>();
         public int currentIndexRadio = 0;
         public int currentRadioButton = 0;
@@ -40,18 +34,16 @@ namespace Matem
         TextBox[] textAnswer = new TextBox[1000];
         public int currentIndexTextAnswer = 0;
 
->>>>>>> Roma
-
-        public Tasks1()
+        public AddQuestionsForm()
         {
             InitializeComponent();
         }
 
+        
 
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void AddQuestion_Click(object sender, EventArgs e)
         {
-            if(KolichestvoAnswer.Text=="Введите количество ответов")
+            if (KolichestvoAnswer.Text=="Введите количество ответов")
             {
                 MessageBox.Show("Вы не ввели количество ответов");
             }
@@ -78,7 +70,7 @@ namespace Matem
                     radio[i].Width = panel1.Width - 200;
                     radio[i].Height = 20;
                     radio[i].Location = new Point(0, localHeight);
-                    radio[i].BackColor = Color.White; 
+                    radio[i].BackColor = Color.White;
                     radio[i].Font = new System.Drawing.Font("Times New Roman", 9);
                     panel[PanelConstanta].Height += radio[i].Height;
                     panel[PanelConstanta].Controls.Add(radio[i]);
@@ -94,7 +86,8 @@ namespace Matem
                 }
 
                 panel1.Controls.Add(panel[PanelConstanta]);
-                CreateTheme.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
+                DopolniteTheme.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
+                Nazad.Location = new Point(325, panelLokation + panel[PanelConstanta].Height);
                 currentIndexRadio += Nans;
                 currentIndexTextTask++;
                 localHeight += 5;
@@ -103,7 +96,6 @@ namespace Matem
                 localHeight = 0;
             }
             
-
         }
 
         private void AddAnswer(object sender, KeyEventArgs e)
@@ -122,12 +114,14 @@ namespace Matem
             }
         }
 
-        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        
+
+        private void KolichestvoAnswer_Click(object sender, EventArgs e)
         {
             KolichestvoAnswer.Text = "";
         }
 
-        private void toolStripTextBox2_KeyDown(object sender, KeyEventArgs e)
+        private void KolichestvoAnswer_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -135,40 +129,7 @@ namespace Matem
             }
         }
 
-        
-
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void closeButton_MouseEnter(object sender, EventArgs e)
-        {
-            closeButton.ForeColor = Color.Red;
-        }
-
-        private void closeButton_MouseLeave(object sender, EventArgs e)
-        {
-            closeButton.ForeColor = Color.Black;
-        }
-
-
-        private void ThemeZagolovok_Click(object sender, EventArgs e)
-        {
-            ThemeZagolovok.Text = StrokaTheme;
-            ThemeZagolovok.BackColor = Color.White;
-        }
-
-        private void ThemeZagolovok_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                StrokaTheme = ThemeZagolovok.Text;
-                ThemeZagolovok.BackColor = Color.Honeydew;
-            }
-        }
-
-        private void CreateTheme_Click(object sender, EventArgs e)
+        private void DopolniteTheme_Click(object sender, EventArgs e)
         {
             int ind = 0;
             int i = 0;
@@ -180,12 +141,12 @@ namespace Matem
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
             }
-            while ( i < radio.Length && ind<CountNans.Count)
+            while (i < radio.Length && ind < CountNans.Count)
             {
                 Mission mr = new Mission();
-                
+
                 int n = CountNans[ind];
-                for(int j = 0; j <n ;j++)
+                for (int j = 0; j < n; j++)
                 {
                     Pair<string, bool> v = new Pair<string, bool>();
                     v.First = radio[i].Text;
@@ -194,7 +155,7 @@ namespace Matem
                     i++;
 
                 }
-                mr.Theme = StrokaTheme;
+                mr.Theme = label1.Text;
                 mr.question = textTask[ind].Text;
                 any.Add(mr);
                 ind++;
@@ -209,103 +170,65 @@ namespace Matem
                 ser.Serialize(fs, any);
             }
 
-            Nazvanie_Theme theme = new Nazvanie_Theme(StrokaTheme);
-            XmlSerializer deformater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
+            /*Nazvanie_Theme theme = new Nazvanie_Theme(label1.Text);
+            XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
             if (File.Exists("theme.xml"))
             {
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    themes = (List<Nazvanie_Theme>)deformater.Deserialize(fs);
-                }
                 File.Delete("theme.xml");
             }
-            themes.Add(theme);
-            XmlSerializer formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
             using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
             {
-                formater.Serialize(fs, themes);
-            }
-            MenuWithThemes menu = new MenuWithThemes();
-
-            // Допустим у нас есть несколько созданных тем
-            // Далее мы создаем новую тему
-            // Когда создали и жмем на кнопку ,,создать тему,,
-            // нужно при загрузке формы с темами для учителя вывести все имеющиеся темы в хранилище ,,theme.xml,,
-            // Я это сделал сразу в логике кнопки ,,создать тему,,
-            // 
-            for(int j=0;j<themes.Count;j++)
-            {
-                switch(j)
-                {
-                    case 0:
-                        {
-                            menu.labelTheme1.Text = themes[0].Name;
-                            break;
-                        }
-                    case 1:
-                        {
-                            menu.labelTheme2.Text = themes[1].Name;
-                            break;
-                        }
-                    case 2:
-                        {
-                            menu.labelTheme3.Text = themes[2].Name;
-                            break;
-                        }
-                    case 3:
-                        {
-                            menu.labelTheme4.Text = themes[3].Name;
-                            break;
-                        }
-                    case 4:
-                        {
-                            menu.labelTheme5.Text = themes[4].Name;
-                            break;
-                        }
-                    case 5:
-                        {
-                            menu.labelTheme6.Text = themes[5].Name;
-                            break;
-                        }
-                    case 6:
-                        {
-                            menu.labelTheme7.Text = themes[6].Name;
-                            break;
-                        }
-                    case 7:
-                        {
-                            menu.labelTheme8.Text = themes[7].Name;
-                            break;
-                        }
-                    case 8:
-                        {
-                            menu.labelTheme9.Text = themes[8].Name;
-                            break;
-                        }
-                    case 9:
-                        {
-                            menu.labelTheme10.Text = themes[9].Name;
-                            break;
-                        }
-                }
-            }
-
-            //menu.labelTheme1.Text = StrokaTheme;
+                formater.Serialize(fs, theme);
+            }*/
+            ChooseAction menu = new ChooseAction();
+            menu.LabelTheme.Text = label1.Text;
             menu.Show();
             this.Hide();
+        }
 
+        private void Nazad_Click(object sender, EventArgs e)
+        {
+            ChooseAction form = new ChooseAction();
+            form.LabelTheme.Text = label1.Text;
+            form.Show();
+            this.Hide();
+        }
+        private void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Red;
+        }
+
+        private void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Black;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Nazad_MouseEnter(object sender, EventArgs e)
+        {
+            Nazad.BackColor = Color.DarkSlateGray;
 
         }
 
-        private void CreateTheme_MouseEnter(object sender, EventArgs e)
+        private void Nazad_MouseLeave(object sender, EventArgs e)
         {
-            CreateTheme.BackColor = Color.DarkSlateGray;
+            Nazad.BackColor = Color.White;
 
         }
 
-        private void CreateTheme_MouseLeave(object sender, EventArgs e)
+        private void DopolniteTheme_MouseEnter(object sender, EventArgs e)
         {
-            CreateTheme.BackColor = Color.White;
+            DopolniteTheme.BackColor = Color.DarkSlateGray;
+
+        }
+
+        private void DopolniteTheme_MouseLeave(object sender, EventArgs e)
+        {
+            DopolniteTheme.BackColor = Color.White;
 
         }
     }
