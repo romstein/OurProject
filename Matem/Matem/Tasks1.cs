@@ -14,11 +14,7 @@ namespace Matem
 {
     public partial class Tasks1 : Form
     {
-<<<<<<< HEAD
-
-	// комментарий
-=======
-        public string StrokaTheme = "";
+        public string StrokaTheme;
         public List<Mission> any = new List<Mission>();
         public List<Mission> localT = new List<Mission>();
         public List<Nazvanie_Theme> themes = new List<Nazvanie_Theme>();
@@ -40,7 +36,7 @@ namespace Matem
         TextBox[] textAnswer = new TextBox[1000];
         public int currentIndexTextAnswer = 0;
 
->>>>>>> Roma
+
 
         public Tasks1()
         {
@@ -80,6 +76,7 @@ namespace Matem
                     radio[i].Location = new Point(0, localHeight);
                     radio[i].BackColor = Color.White; 
                     radio[i].Font = new System.Drawing.Font("Times New Roman", 9);
+                    radio[i].Text = "";
                     panel[PanelConstanta].Height += radio[i].Height;
                     panel[PanelConstanta].Controls.Add(radio[i]);
                     textAnswer[currentIndexTextAnswer] = new TextBox();
@@ -153,146 +150,197 @@ namespace Matem
         }
 
 
-        private void ThemeZagolovok_Click(object sender, EventArgs e)
-        {
-            ThemeZagolovok.Text = StrokaTheme;
-            ThemeZagolovok.BackColor = Color.White;
-        }
+        //private void ThemeZagolovok_Click(object sender, EventArgs e)
+        //{
+        //    ThemeZagolovok.Text = StrokaTheme;
+        //    ThemeZagolovok.BackColor = Color.White;
+        //}
 
-        private void ThemeZagolovok_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                StrokaTheme = ThemeZagolovok.Text;
-                ThemeZagolovok.BackColor = Color.Honeydew;
-            }
-        }
+        //private void ThemeZagolovok_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        StrokaTheme = ThemeZagolovok.Text;
+        //        ThemeZagolovok.BackColor = Color.Honeydew;
+        //    }
+        //}
 
         private void CreateTheme_Click(object sender, EventArgs e)
         {
-            int ind = 0;
-            int i = 0;
-            XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
-            if (File.Exists("bank.xml"))
+            bool fal1 = false;
+            bool fal2 = false;
+            bool fal3 = false;
+            bool fal4 = false;
+            bool fal5 = false;
+            int countRadioCheck = 0;
+            if(PanelConstanta==0)
             {
+                fal5 = true;
+            }
+            for(int j=0;j<currentIndexRadio;j++)
+            {
+                if(radio[j].Checked)
+                {
+                    countRadioCheck++;
+                }
+            }
+            if(countRadioCheck!=CountNans.Count)
+            {
+                fal4 = true;
+            }
+            if(ThemeZagolovok.Text=="Введите название темы" || ThemeZagolovok.Text=="")
+            {
+                fal3 = true;
+            }
+            for(int j=0; j<currentIndexRadio;j++)
+            {
+                if(radio[j].Text=="")
+                {
+                    fal1 = true;
+                    break;
+                }
+            }
+            for(int j=0;j<currentIndexTextTask;j++)
+            {
+                if(textTask[j].Text=="")
+                {
+                    fal2 = true;
+                    break;
+                }
+            }
+            if(fal1 || fal2 || fal3 || fal4 || fal5)
+            {
+                MessageBox.Show("Некорректные введенные данные");
+            }
+            else
+            {
+                int ind = 0;
+                int i = 0;
+                StrokaTheme = ThemeZagolovok.Text;
+                XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
+                if (File.Exists("bank.xml"))
+                {
+                    using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+                    {
+                        any = (List<Mission>)diser.Deserialize(fs);
+                    }
+                }
+                while (i < radio.Length && ind < CountNans.Count)
+                {
+                    Mission mr = new Mission();
+
+                    int n = CountNans[ind];
+                    for (int j = 0; j < n; j++)
+                    {
+                        Pair<string, bool> v = new Pair<string, bool>();
+                        v.First = radio[i].Text;
+                        v.Second = radio[i].Checked;
+                        mr.answers.Add(v);
+                        i++;
+
+                    }
+                    mr.Theme = StrokaTheme;
+                    mr.question = textTask[ind].Text;
+                    any.Add(mr);
+                    ind++;
+                }
+                XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
+                if (File.Exists("bank.xml"))
+                {
+                    File.Delete("bank.xml");
+                }
                 using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
                 {
-                    any = (List<Mission>)diser.Deserialize(fs);
+                    ser.Serialize(fs, any);
                 }
-            }
-            while ( i < radio.Length && ind<CountNans.Count)
-            {
-                Mission mr = new Mission();
-                
-                int n = CountNans[ind];
-                for(int j = 0; j <n ;j++)
+
+
+                Nazvanie_Theme theme = new Nazvanie_Theme(StrokaTheme);
+                XmlSerializer deformater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
+                if (File.Exists("theme.xml"))
                 {
-                    Pair<string, bool> v = new Pair<string, bool>();
-                    v.First = radio[i].Text;
-                    v.Second = radio[i].Checked;
-                    mr.answers.Add(v);
-                    i++;
-
+                    using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                    {
+                        themes = (List<Nazvanie_Theme>)deformater.Deserialize(fs);
+                    }
+                    File.Delete("theme.xml");
                 }
-                mr.Theme = StrokaTheme;
-                mr.question = textTask[ind].Text;
-                any.Add(mr);
-                ind++;
-            }
-            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
-            if (File.Exists("bank.xml"))
-            {
-                File.Delete("bank.xml");
-            }
-            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
-            {
-                ser.Serialize(fs, any);
-            }
-
-            Nazvanie_Theme theme = new Nazvanie_Theme(StrokaTheme);
-            XmlSerializer deformater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
-            if (File.Exists("theme.xml"))
-            {
+                themes.Add(theme);
+                XmlSerializer formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
                 using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
                 {
-                    themes = (List<Nazvanie_Theme>)deformater.Deserialize(fs);
+                    formater.Serialize(fs, themes);
                 }
-                File.Delete("theme.xml");
-            }
-            themes.Add(theme);
-            XmlSerializer formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
-            using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-            {
-                formater.Serialize(fs, themes);
-            }
-            MenuWithThemes menu = new MenuWithThemes();
+                MenuWithThemes menu = new MenuWithThemes();
 
-            // Допустим у нас есть несколько созданных тем
-            // Далее мы создаем новую тему
-            // Когда создали и жмем на кнопку ,,создать тему,,
-            // нужно при загрузке формы с темами для учителя вывести все имеющиеся темы в хранилище ,,theme.xml,,
-            // Я это сделал сразу в логике кнопки ,,создать тему,,
-            // 
-            for(int j=0;j<themes.Count;j++)
-            {
-                switch(j)
+                // Допустим у нас есть несколько созданных тем
+                // Далее мы создаем новую тему
+                // Когда создали и жмем на кнопку ,,создать тему,,
+                // нужно при загрузке формы с темами для учителя вывести все имеющиеся темы в хранилище ,,theme.xml,,
+                // Я это сделал сразу в логике кнопки ,,создать тему,,
+                // 
+                for (int j = 0; j < themes.Count; j++)
                 {
-                    case 0:
-                        {
-                            menu.labelTheme1.Text = themes[0].Name;
-                            break;
-                        }
-                    case 1:
-                        {
-                            menu.labelTheme2.Text = themes[1].Name;
-                            break;
-                        }
-                    case 2:
-                        {
-                            menu.labelTheme3.Text = themes[2].Name;
-                            break;
-                        }
-                    case 3:
-                        {
-                            menu.labelTheme4.Text = themes[3].Name;
-                            break;
-                        }
-                    case 4:
-                        {
-                            menu.labelTheme5.Text = themes[4].Name;
-                            break;
-                        }
-                    case 5:
-                        {
-                            menu.labelTheme6.Text = themes[5].Name;
-                            break;
-                        }
-                    case 6:
-                        {
-                            menu.labelTheme7.Text = themes[6].Name;
-                            break;
-                        }
-                    case 7:
-                        {
-                            menu.labelTheme8.Text = themes[7].Name;
-                            break;
-                        }
-                    case 8:
-                        {
-                            menu.labelTheme9.Text = themes[8].Name;
-                            break;
-                        }
-                    case 9:
-                        {
-                            menu.labelTheme10.Text = themes[9].Name;
-                            break;
-                        }
+                    switch (j)
+                    {
+                        case 0:
+                            {
+                                menu.labelTheme1.Text = themes[0].Name;
+                                break;
+                            }
+                        case 1:
+                            {
+                                menu.labelTheme2.Text = themes[1].Name;
+                                break;
+                            }
+                        case 2:
+                            {
+                                menu.labelTheme3.Text = themes[2].Name;
+                                break;
+                            }
+                        case 3:
+                            {
+                                menu.labelTheme4.Text = themes[3].Name;
+                                break;
+                            }
+                        case 4:
+                            {
+                                menu.labelTheme5.Text = themes[4].Name;
+                                break;
+                            }
+                        case 5:
+                            {
+                                menu.labelTheme6.Text = themes[5].Name;
+                                break;
+                            }
+                        case 6:
+                            {
+                                menu.labelTheme7.Text = themes[6].Name;
+                                break;
+                            }
+                        case 7:
+                            {
+                                menu.labelTheme8.Text = themes[7].Name;
+                                break;
+                            }
+                        case 8:
+                            {
+                                menu.labelTheme9.Text = themes[8].Name;
+                                break;
+                            }
+                        case 9:
+                            {
+                                menu.labelTheme10.Text = themes[9].Name;
+                                break;
+                            }
+                    }
                 }
-            }
 
-            //menu.labelTheme1.Text = StrokaTheme;
-            menu.Show();
-            this.Hide();
+                //menu.labelTheme1.Text = StrokaTheme;
+                menu.Show();
+                this.Hide();
+            }
+            
 
 
         }
@@ -300,13 +348,15 @@ namespace Matem
         private void CreateTheme_MouseEnter(object sender, EventArgs e)
         {
             CreateTheme.BackColor = Color.DarkSlateGray;
-
+            CreateTheme.ForeColor = Color.White;
         }
 
         private void CreateTheme_MouseLeave(object sender, EventArgs e)
         {
-            CreateTheme.BackColor = Color.White;
-
+            CreateTheme.BackColor = Color.MintCream;
+            CreateTheme.ForeColor = Color.Black;
         }
+
+        
     }
 }

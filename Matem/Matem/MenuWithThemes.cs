@@ -562,13 +562,14 @@ namespace Matem
         private void GoBack_MouseEnter(object sender, EventArgs e)
         {
             GoBack.BackColor = Color.DarkSlateGray;
+            GoBack.ForeColor = Color.White;
 
         }
 
         private void GoBack_MouseLeave(object sender, EventArgs e)
         {
-            GoBack.BackColor = Color.White;
-
+            GoBack.BackColor = Color.MintCream;
+            GoBack.ForeColor = Color.Black;
         }
     }
 }

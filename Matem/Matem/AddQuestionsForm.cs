@@ -131,59 +131,102 @@ namespace Matem
 
         private void DopolniteTheme_Click(object sender, EventArgs e)
         {
-            int ind = 0;
-            int i = 0;
-            XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
-            if (File.Exists("bank.xml"))
+            bool fal1 = false;
+            bool fal2 = false;
+            bool fal3 = false;
+            bool fal4 = false;
+            int countRadioCheck = 0;
+            if(PanelConstanta==0)
             {
+                fal3 = true;
+            }
+            for (int j = 0; j < currentIndexRadio; j++)
+            {
+                if (radio[j].Checked)
+                {
+                    countRadioCheck++;
+                }
+            }
+            if (countRadioCheck != CountNans.Count)
+            {
+                fal4 = true;
+            }
+            for (int j = 0; j < currentIndexRadio; j++)
+            {
+                if (radio[j].Text == "")
+                {
+                    fal1 = true;
+                    break;
+                }
+            }
+            for (int j = 0; j < currentIndexTextTask; j++)
+            {
+                if (textTask[j].Text == "")
+                {
+                    fal2 = true;
+                    break;
+                }
+            }
+            if(fal1 || fal2 || fal3 || fal4)
+            {
+                MessageBox.Show("Некорректные введенные данные");
+            }
+            else
+            {
+                int ind = 0;
+                int i = 0;
+                XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
+                if (File.Exists("bank.xml"))
+                {
+                    using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
+                    {
+                        any = (List<Mission>)diser.Deserialize(fs);
+                    }
+                }
+                while (i < radio.Length && ind < CountNans.Count)
+                {
+                    Mission mr = new Mission();
+
+                    int n = CountNans[ind];
+                    for (int j = 0; j < n; j++)
+                    {
+                        Pair<string, bool> v = new Pair<string, bool>();
+                        v.First = radio[i].Text;
+                        v.Second = radio[i].Checked;
+                        mr.answers.Add(v);
+                        i++;
+
+                    }
+                    mr.Theme = label1.Text;
+                    mr.question = textTask[ind].Text;
+                    any.Add(mr);
+                    ind++;
+                }
+                XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
+                if (File.Exists("bank.xml"))
+                {
+                    File.Delete("bank.xml");
+                }
                 using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
                 {
-                    any = (List<Mission>)diser.Deserialize(fs);
+                    ser.Serialize(fs, any);
                 }
-            }
-            while (i < radio.Length && ind < CountNans.Count)
-            {
-                Mission mr = new Mission();
 
-                int n = CountNans[ind];
-                for (int j = 0; j < n; j++)
+                /*Nazvanie_Theme theme = new Nazvanie_Theme(label1.Text);
+                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
+                if (File.Exists("theme.xml"))
                 {
-                    Pair<string, bool> v = new Pair<string, bool>();
-                    v.First = radio[i].Text;
-                    v.Second = radio[i].Checked;
-                    mr.answers.Add(v);
-                    i++;
-
+                    File.Delete("theme.xml");
                 }
-                mr.Theme = label1.Text;
-                mr.question = textTask[ind].Text;
-                any.Add(mr);
-                ind++;
+                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
+                {
+                    formater.Serialize(fs, theme);
+                }*/
+                ChooseAction menu = new ChooseAction();
+                menu.LabelTheme.Text = label1.Text;
+                menu.Show();
+                this.Hide();
             }
-            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
-            if (File.Exists("bank.xml"))
-            {
-                File.Delete("bank.xml");
-            }
-            using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
-            {
-                ser.Serialize(fs, any);
-            }
-
-            /*Nazvanie_Theme theme = new Nazvanie_Theme(label1.Text);
-            XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-            if (File.Exists("theme.xml"))
-            {
-                File.Delete("theme.xml");
-            }
-            using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-            {
-                formater.Serialize(fs, theme);
-            }*/
-            ChooseAction menu = new ChooseAction();
-            menu.LabelTheme.Text = label1.Text;
-            menu.Show();
-            this.Hide();
         }
 
         private void Nazad_Click(object sender, EventArgs e)
@@ -211,25 +254,26 @@ namespace Matem
         private void Nazad_MouseEnter(object sender, EventArgs e)
         {
             Nazad.BackColor = Color.DarkSlateGray;
-
+            Nazad.ForeColor = Color.White;
         }
 
         private void Nazad_MouseLeave(object sender, EventArgs e)
         {
-            Nazad.BackColor = Color.White;
-
+            Nazad.BackColor = Color.MintCream;
+            Nazad.ForeColor = Color.Black;
         }
 
         private void DopolniteTheme_MouseEnter(object sender, EventArgs e)
         {
             DopolniteTheme.BackColor = Color.DarkSlateGray;
+            DopolniteTheme.ForeColor = Color.White;
 
         }
 
         private void DopolniteTheme_MouseLeave(object sender, EventArgs e)
         {
-            DopolniteTheme.BackColor = Color.White;
-
+            DopolniteTheme.BackColor = Color.MintCream;
+            DopolniteTheme.ForeColor = Color.Black;
         }
     }
 }

@@ -141,13 +141,13 @@ namespace Matem
         private void button1_MouseEnter(object sender, EventArgs e)
         {
             button1.BackColor = Color.DarkSlateGray;
-
+            button1.ForeColor = Color.White;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.BackColor = Color.White;
-
+            button1.BackColor = Color.MintCream;
+            button1.ForeColor = Color.Black;
         }
     }
 }

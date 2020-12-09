@@ -46,8 +46,11 @@ namespace Matem
 
         private void Vyvod_Click(object sender, EventArgs e)
         {
-            CreateCheckBoxs();
-            Delete.BackColor = Color.MintCream;
+            if(localLIST==null)
+            {
+                CreateCheckBoxs();
+            }            
+
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -69,30 +72,50 @@ namespace Matem
         private void Vyvod_MouseEnter(object sender, EventArgs e)
         {
            Vyvod.BackColor = Color.DarkSlateGray;
-
+            Vyvod.ForeColor = Color.White;
         }
 
         private void Vyvod_MouseLeave(object sender, EventArgs e)
         {
-            Vyvod.BackColor = Color.White;
-
+            Vyvod.BackColor = Color.MintCream;
+            Vyvod.ForeColor = Color.Black;
         }
 
         private void Delete_MouseEnter(object sender, EventArgs e)
         {
             Delete.BackColor = Color.Red;
-
+            Delete.ForeColor = Color.White;
         }
 
         private void Delete_MouseLeave(object sender, EventArgs e)
         {
-            Delete.BackColor = Color.Firebrick;
+            Delete.BackColor = Color.MintCream;
+            Delete.ForeColor = Color.Black;
+        }
 
+        private void Nazad_Click(object sender, EventArgs e)
+        {
+            ChooseAction form = new ChooseAction();
+            form.LabelTheme.Text = label1.Text;
+            form.Show();
+            this.Hide();
+        }
+
+        private void Nazad_MouseEnter(object sender, EventArgs e)
+        {
+            Nazad.BackColor = Color.DarkSlateGray;
+            Nazad.ForeColor = Color.White;
+        }
+
+        private void Nazad_MouseLeave(object sender, EventArgs e)
+        {
+            Nazad.BackColor = Color.MintCream;
+            Nazad.ForeColor = Color.Black;
         }
 
         private void Delete_Click(object sender, EventArgs e)
         { 
-            if(Delete.BackColor==Color.Red)
+            if(Delete.BackColor==Color.Red && localLIST!=null)
             {                
                 List<Mission> any = new List<Mission>();
                 XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));

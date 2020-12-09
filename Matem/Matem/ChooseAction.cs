@@ -111,36 +111,37 @@ namespace Matem
         private void Nazad_MouseEnter(object sender, EventArgs e)
         {
             Nazad.BackColor = Color.DarkSlateGray;
-
+            Nazad.ForeColor = Color.White;
         }
 
         private void Nazad_MouseLeave(object sender, EventArgs e)
         {
-            Nazad.BackColor = Color.White;
-
+            Nazad.BackColor = Color.MintCream;
+            Nazad.ForeColor = Color.Black;
         }
 
         private void DeleteQuestions_MouseEnter(object sender, EventArgs e)
         {
             DeleteQuestions.BackColor = Color.DarkSlateGray;
-
+            DeleteQuestions.ForeColor = Color.White;
         }
 
         private void DeleteQuestions_MouseLeave(object sender, EventArgs e)
         {
-            DeleteQuestions.BackColor = Color.White;
-
+            DeleteQuestions.BackColor = Color.MintCream;
+            DeleteQuestions.ForeColor = Color.Black;
         }
 
         private void AddQuestions_MouseEnter(object sender, EventArgs e)
         {
             AddQuestions.BackColor = Color.DarkSlateGray;
+            AddQuestions.ForeColor = Color.White;
         }
 
         private void AddQuestions_MouseLeave(object sender, EventArgs e)
         {
-            AddQuestions.BackColor = Color.White;
-
+            AddQuestions.BackColor = Color.MintCream;
+            AddQuestions.ForeColor = Color.Black;
         }
 
         private void AddQuestions_Click(object sender, EventArgs e)
