@@ -94,7 +94,7 @@ namespace Matem
                 textTask[currentIndexTextTask].Height = 20;
                 textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
                 textTask[currentIndexTextTask].Text = item.question;
-                textTask[currentIndexTextTask].BackColor= Color.Cyan;
+                textTask[currentIndexTextTask].BackColor= Color.SkyBlue; 
                 panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
                 panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
                 localHeight += textTask[currentIndexTextTask].Height;
@@ -107,7 +107,7 @@ namespace Matem
                     radio[currentRadioButton].Width = this.Width;
                     radio[currentRadioButton].Height = 20;
                     radio[currentRadioButton].Location = new Point(0, localHeight);
-                    radio[currentRadioButton].BackColor = Color.Beige;
+                    radio[currentRadioButton].BackColor = Color.Honeydew;
                     radio[currentRadioButton].Font = new System.Drawing.Font("Times New Roman", 9);
                     radio[currentRadioButton].Text = item.answers[i].First;
                     panel[PanelConstanta].Height += radio[currentRadioButton].Height;
