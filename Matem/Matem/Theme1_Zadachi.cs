@@ -25,6 +25,7 @@ namespace Matem
         public int currentRadioButton = 0;
         public RadioButton[] radio = new RadioButton[1000];
         int [] forRandom;
+        List<Mission> forResult=new List<Mission>();
 
 
 
@@ -46,10 +47,12 @@ namespace Matem
                 list = (List<Mission>)formater.Deserialize(fs);
 
             }
+            
             int ind = 0;
             for(int i = 0; i < forRandom.Length; i++)
             {
                 int vr = forRandom[i];
+                forResult.Add(list[vr]);
                 list[vr].Status = false;// если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
                 for(int j = 0; j < list[vr].answers.Count; j++)
                 {
@@ -82,7 +85,7 @@ namespace Matem
             }
             using (FileStream fs = new FileStream("Itog.xml", FileMode.OpenOrCreate))
             {
-                ser.Serialize(fs, list);
+                ser.Serialize(fs, forResult);
             }
 
 
