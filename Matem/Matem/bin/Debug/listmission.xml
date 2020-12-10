@@ -46,4 +46,27 @@
     <question>1+1</question>
     <Theme>Theme 1</Theme>
   </Mission>
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
+        <First>2</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>5</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>6</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>28</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>xyz=t</question>
+    <Theme>Theme 1</Theme>
+  </Mission>
 </ArrayOfMission>

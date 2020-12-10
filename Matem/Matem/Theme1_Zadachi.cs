@@ -24,7 +24,7 @@ namespace Matem
         public int localHeight = 0;
         public int currentRadioButton = 0;
         public RadioButton[] radio = new RadioButton[1000];
- 
+        int [] forRandom;
 
 
 
@@ -39,22 +39,42 @@ namespace Matem
         private void button1_Click(object sender, EventArgs e)
         {
             Theme1_Itog itog = new Theme1_Itog();
-            
-            int ind = 0;
-            for (int i = 0; i < list.Count; i++)
+            XmlSerializer formater = new XmlSerializer(typeof(List<Mission>));
+            using (FileStream fs = new FileStream("listmission.xml", FileMode.OpenOrCreate))
             {
-                list[i].Status = false; // если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
-                for (int j = 0; j < list[i].answers.Count; j++)
+
+                list = (List<Mission>)formater.Deserialize(fs);
+
+            }
+            int ind = 0;
+            for(int i = 0; i < forRandom.Length; i++)
+            {
+                int vr = forRandom[i];
+                list[vr].Status = false;// если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
+                for(int j = 0; j < list[vr].answers.Count; j++)
                 {
-                    if (radio[ind].Checked == true && list[i].answers[j].Second == true)
+                    if (radio[ind].Checked == true && list[vr].answers[j].Second == true)
                     {
-                        list[i].Status = true;
+                        list[vr].Status = true;
 
                     }
                     ind++;
-
                 }
             }
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    list[i].Status = false; // если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
+            //    for (int j = 0; j < list[i].answers.Count; j++)
+            //    {
+            //        if (radio[ind].Checked == true && list[i].answers[j].Second == true)
+            //        {
+            //            list[i].Status = true;
+
+            //        }
+            //        ind++;
+
+            //    }
+            //}
             XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
             if (File.Exists("Itog.xml"))
             {
@@ -81,10 +101,44 @@ namespace Matem
                 list = (List<Mission>)formater.Deserialize(fs);
 
             }
+            forRandom = new int [list.Count];
+            List<Mission> any = new List<Mission>();
             label1.Text = list[0].Theme;
-
-            foreach (var item in list)
+            using (FileStream fs = new FileStream("listmission.xml", FileMode.OpenOrCreate))
             {
+
+                any = (List<Mission>)formater.Deserialize(fs);
+
+            }
+            int ind = 0;
+            while (any.Count > 0)
+            {
+                Random r = new Random();
+                int RandomIndex = r.Next(any.Count);
+                Mission a = any[RandomIndex];
+                for (int kol = 0; kol < list.Count; kol++)
+                {
+                    if (list[kol].question == a.question)
+                    {
+                        bool k = false;
+                        for (int pr = 0; pr < a.answers.Count; pr++)
+                        {
+                            if (a.answers[pr].First != list[kol].answers[pr].First || a.answers[pr].Second != list[kol].answers[pr].Second)
+                            {
+                                k = true;
+                            }
+                        }
+                        if (k == false)
+                        {
+                            forRandom[ind] = kol;
+                        }
+                        
+                    }
+                    
+                }
+                
+                ind++;
+                
                 panel[PanelConstanta] = new Panel();
                 panel[PanelConstanta].Width = panel1.Width;
                 panel[PanelConstanta].Height = 0;
@@ -93,14 +147,14 @@ namespace Matem
                 textTask[currentIndexTextTask].Width = this.Width;
                 textTask[currentIndexTextTask].Height = 20;
                 textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
-                textTask[currentIndexTextTask].Text = item.question;
-                textTask[currentIndexTextTask].BackColor= Color.SkyBlue; 
+                textTask[currentIndexTextTask].Text = any[RandomIndex].question;
+                textTask[currentIndexTextTask].BackColor = Color.SkyBlue;
                 panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
                 panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
                 localHeight += textTask[currentIndexTextTask].Height;
 
 
-                for (int i = 0; i < item.answers.Count; i++)
+                for (int i = 0; i < any[RandomIndex].answers.Count; i++)
                 {
 
                     radio[currentRadioButton] = new RadioButton();
@@ -109,7 +163,7 @@ namespace Matem
                     radio[currentRadioButton].Location = new Point(0, localHeight);
                     radio[currentRadioButton].BackColor = Color.Honeydew;
                     radio[currentRadioButton].Font = new System.Drawing.Font("Times New Roman", 9);
-                    radio[currentRadioButton].Text = item.answers[i].First;
+                    radio[currentRadioButton].Text = any[RandomIndex].answers[i].First;
                     panel[PanelConstanta].Height += radio[currentRadioButton].Height;
                     panel[PanelConstanta].Controls.Add(radio[currentRadioButton]);
                     localHeight += radio[currentRadioButton].Height;
@@ -121,7 +175,9 @@ namespace Matem
                 currentIndexTextTask++;
                 panelLokation += localHeight;
                 localHeight = 0;
+                any.RemoveAt(RandomIndex);
             }
+            
         }
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {
