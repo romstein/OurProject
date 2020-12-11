@@ -91,7 +91,7 @@ namespace Matem
 
             itog.label1.Text = label1.Text;
             itog.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Theme1_Zadachi_Load(object sender, EventArgs e)

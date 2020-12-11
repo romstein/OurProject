@@ -23,7 +23,7 @@ namespace Matem
         {
             MainMenu main = new MainMenu();
             main.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Theme1_Click(object sender, EventArgs e)
@@ -37,12 +37,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -63,7 +58,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
             
         }
@@ -91,12 +86,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -117,7 +107,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -132,12 +122,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -158,7 +143,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -173,12 +158,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+                
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -199,7 +179,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -214,12 +194,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+                
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -240,7 +215,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -255,12 +230,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+                
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -281,7 +251,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -296,12 +266,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+                
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -322,7 +287,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -337,12 +302,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+                
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -363,7 +323,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -378,12 +338,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+                
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -404,7 +359,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -419,12 +374,7 @@ namespace Matem
                 {
                     any = (List<Mission>)diser.Deserialize(fs);
                 }
-                /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-                }*/
+                
                 List<Mission> list = new List<Mission>();
                 foreach (var item in any)
                 {
@@ -445,7 +395,7 @@ namespace Matem
                     formatterlist.Serialize(fs, list);
                 }
                 form.Show();
-                this.Hide();
+                this.Close();
             }
         }
 

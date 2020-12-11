@@ -4,46 +4,11 @@
     <answers>
       <PairOfStringBoolean>
         <First>1</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
         <Second>true</Second>
       </PairOfStringBoolean>
     </answers>
     <Status>false</Status>
-    <question>2+2</question>
-    <Theme>Theme 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <Status>false</Status>
-    <question>1+1</question>
-    <Theme>Theme 1</Theme>
+    <question>1</question>
+    <Theme>тема 3</Theme>
   </Mission>
 </ArrayOfMission>

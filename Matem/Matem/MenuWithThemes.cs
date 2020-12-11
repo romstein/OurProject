@@ -41,7 +41,7 @@ namespace Matem
         {
             MainMenu main = new MainMenu();
             main.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void labelTheme1_Click(object sender, EventArgs e)
@@ -63,14 +63,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie1.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 
                 
@@ -80,7 +80,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -103,14 +103,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie2.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -120,7 +120,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -143,14 +143,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie3.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -160,7 +160,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -183,14 +183,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie4.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -200,7 +200,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -223,14 +223,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie5.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -240,7 +240,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -263,14 +263,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie6.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -280,7 +280,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -303,14 +303,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie7.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -320,7 +320,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -343,14 +343,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie8.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -360,7 +360,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -383,14 +383,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie9.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -400,7 +400,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
         }
         
@@ -427,14 +427,14 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = nazvanie10.Name;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else
                 {
                     Tasks1 t = new Tasks1();
                     t.ThemeZagolovok.Text = "Введите название темы";
                     t.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
 
@@ -444,7 +444,7 @@ namespace Matem
                 Tasks1 t = new Tasks1();
                 t.ThemeZagolovok.Text = "Введите название темы";
                 t.Show();
-                this.Hide();
+                this.Close();
             }
 
         }

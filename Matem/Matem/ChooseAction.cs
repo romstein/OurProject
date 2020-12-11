@@ -90,7 +90,7 @@ namespace Matem
 
             //form.labelTheme1.Text = nazvanie.Name;
             form.Show();
-            this.Hide();
+            this.Close();
         }
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {
@@ -155,7 +155,7 @@ namespace Matem
             }*/
             form.label1.Text = LabelTheme.Text;
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void DeleteQuestions_Click(object sender, EventArgs e)
@@ -199,7 +199,7 @@ namespace Matem
                 }
             }            
             form.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

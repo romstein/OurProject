@@ -98,7 +98,7 @@ namespace Matem
             ChooseAction form = new ChooseAction();
             form.LabelTheme.Text = label1.Text;
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Nazad_MouseEnter(object sender, EventArgs e)
@@ -171,7 +171,7 @@ namespace Matem
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = label1.Text;
                     form.Show();
-                    this.Hide();
+                    this.Close();
                 }           
                 else
                 {
@@ -256,7 +256,7 @@ namespace Matem
 
                     //menu.labelTheme1.Text = StrokaTheme;
                     menu.Show();
-                    this.Hide();
+                    this.Close();
                 }
             }
             

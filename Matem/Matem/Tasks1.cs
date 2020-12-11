@@ -338,7 +338,7 @@ namespace Matem
 
                 //menu.labelTheme1.Text = StrokaTheme;
                 menu.Show();
-                this.Hide();
+                this.Close();
             }
             
 

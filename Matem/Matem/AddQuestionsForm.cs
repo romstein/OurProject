@@ -225,7 +225,7 @@ namespace Matem
                 ChooseAction menu = new ChooseAction();
                 menu.LabelTheme.Text = label1.Text;
                 menu.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
@@ -234,7 +234,7 @@ namespace Matem
             ChooseAction form = new ChooseAction();
             form.LabelTheme.Text = label1.Text;
             form.Show();
-            this.Hide();
+            this.Close();
         }
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {

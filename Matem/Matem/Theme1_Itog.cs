@@ -91,7 +91,7 @@ namespace Matem
                 }
             }
             form.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void closeButton_Click(object sender, EventArgs e)
