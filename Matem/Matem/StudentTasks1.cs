@@ -18,14 +18,7 @@ namespace Matem
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MainMenu main = new MainMenu();
-            main.Show();
-            this.Close();
-        }
-
+        
         private void Theme1_Click(object sender, EventArgs e)
         {
             if(Theme1.Text!="---")
@@ -536,16 +529,25 @@ namespace Matem
 
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void Nazad_Click(object sender, EventArgs e)
         {
-            button1.BackColor = Color.DarkSlateGray;
-            button1.ForeColor = Color.White;
+            MainMenu main = new MainMenu();
+            main.Show();
+            this.Close();
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void Nazad_MouseEnter(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.Black;
-            button1.BackColor = Color.MintCream;
+            Nazad.BackColor = Color.DarkSlateGray;
+            Nazad.BackColor2 = Color.DarkSlateGray;
+            Nazad.ForeColor = Color.White;
+        }
+
+        private void Nazad_MouseLeave(object sender, EventArgs e)
+        {
+            Nazad.BackColor = Color.MintCream;
+            Nazad.BackColor2 = Color.MintCream;
+            Nazad.ForeColor = Color.Black;
         }
     }
 }

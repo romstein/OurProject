@@ -30,16 +30,16 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Proverka = new Matem.RoundButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.Proverka);
             this.panel1.Controls.Add(this.closeButton);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -65,22 +65,6 @@
             this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.BackColor = System.Drawing.Color.MintCream;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(0, 69);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Проверить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,6 +76,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Proverka
+            // 
+            this.Proverka.BackColor = System.Drawing.Color.MintCream;
+            this.Proverka.BackColor2 = System.Drawing.Color.MintCream;
+            this.Proverka.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Proverka.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Proverka.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Proverka.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Proverka.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Proverka.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Proverka.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Proverka.ButtonRoundRadius = 40;
+            this.Proverka.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Proverka.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Proverka.Location = new System.Drawing.Point(8, 58);
+            this.Proverka.Name = "Proverka";
+            this.Proverka.Size = new System.Drawing.Size(201, 60);
+            this.Proverka.TabIndex = 1;
+            this.Proverka.Text = "Проверить";
+            this.Proverka.Click += new System.EventHandler(this.Proverka_Click);
+            this.Proverka.MouseEnter += new System.EventHandler(this.Proverka_MouseEnter);
+            this.Proverka.MouseLeave += new System.EventHandler(this.Proverka_MouseLeave);
             // 
             // Theme1_Zadachi
             // 
@@ -117,7 +124,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label closeButton;
+        private RoundButton Proverka;
     }
 }

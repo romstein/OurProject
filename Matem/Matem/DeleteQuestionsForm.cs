@@ -17,7 +17,7 @@ namespace Matem
         public List<Mission> localLIST;
         public XmlSerializer formater,formater2;
         public CheckBox[] checks;
-        public int localHEIGHT = 150;
+        public int localHEIGHT = 170;
         public DeleteQuestionsForm()
         {
             InitializeComponent();
@@ -46,10 +46,6 @@ namespace Matem
 
         private void Vyvod_Click(object sender, EventArgs e)
         {
-            if(localLIST==null)
-            {
-                CreateCheckBoxs();
-            }            
 
         }
 
@@ -69,54 +65,12 @@ namespace Matem
             closeButton.ForeColor = Color.Black;
         }
 
-        private void Vyvod_MouseEnter(object sender, EventArgs e)
-        {
-           Vyvod.BackColor = Color.DarkSlateGray;
-            Vyvod.ForeColor = Color.White;
-        }
+        
 
-        private void Vyvod_MouseLeave(object sender, EventArgs e)
+        private void Delete1_Click(object sender, EventArgs e)
         {
-            Vyvod.BackColor = Color.MintCream;
-            Vyvod.ForeColor = Color.Black;
-        }
-
-        private void Delete_MouseEnter(object sender, EventArgs e)
-        {
-            Delete.BackColor = Color.Red;
-            Delete.ForeColor = Color.White;
-        }
-
-        private void Delete_MouseLeave(object sender, EventArgs e)
-        {
-            Delete.BackColor = Color.MintCream;
-            Delete.ForeColor = Color.Black;
-        }
-
-        private void Nazad_Click(object sender, EventArgs e)
-        {
-            ChooseAction form = new ChooseAction();
-            form.LabelTheme.Text = label1.Text;
-            form.Show();
-            this.Close();
-        }
-
-        private void Nazad_MouseEnter(object sender, EventArgs e)
-        {
-            Nazad.BackColor = Color.DarkSlateGray;
-            Nazad.ForeColor = Color.White;
-        }
-
-        private void Nazad_MouseLeave(object sender, EventArgs e)
-        {
-            Nazad.BackColor = Color.MintCream;
-            Nazad.ForeColor = Color.Black;
-        }
-
-        private void Delete_Click(object sender, EventArgs e)
-        { 
-            if(Delete.BackColor==Color.Red && localLIST!=null)
-            {                
+            if (Delete1.BackColor == Color.Red && Delete1.BackColor2==Color.Red && localLIST != null)
+            {
                 List<Mission> any = new List<Mission>();
                 XmlSerializer diser = new XmlSerializer(typeof(List<Mission>));
                 using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
@@ -139,7 +93,7 @@ namespace Matem
                         }
                         foreach (var item in any)
                         {
-                            
+
                             if (item.Theme == TemaEbat && item.question == checks[i].Text)
                             {
                                 any.Remove(item);
@@ -160,19 +114,14 @@ namespace Matem
                 {
                     ser.Serialize(fs, any);
                 }
-                /*formater2 = new XmlSerializer(typeof(Nazvanie_Theme));
-                Nazvanie_Theme s;
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    s = (Nazvanie_Theme)formater2.Deserialize(fs);
-                }*/
-                if(localLIST.Count!=0)
+                
+                if (localLIST.Count != 0)
                 {
                     ChooseAction form = new ChooseAction();
                     form.LabelTheme.Text = label1.Text;
                     form.Show();
                     this.Close();
-                }           
+                }
                 else
                 {
                     // Нужно удалить тему, если удалены все вопросы по этой теме
@@ -196,7 +145,7 @@ namespace Matem
                     }
                     MenuWithThemes menu = new MenuWithThemes();
 
-                    
+
                     for (int j = 0; j < themes.Count; j++)
                     {
                         switch (j)
@@ -253,13 +202,69 @@ namespace Matem
                                 }
                         }
                     }
-
-                    //menu.labelTheme1.Text = StrokaTheme;
                     menu.Show();
                     this.Close();
                 }
             }
-            
         }
+
+        private void Delete1_MouseEnter(object sender, EventArgs e)
+        {
+            Delete1.BackColor = Color.Red;
+            Delete1.BackColor2 = Color.Red;
+            Delete1.ForeColor = Color.White;
+        }
+
+        private void Vyvod1_Click(object sender, EventArgs e)
+        {
+            if (localLIST == null)
+            {
+                CreateCheckBoxs();
+            }
+        }
+
+        private void Nazad1_Click(object sender, EventArgs e)
+        {
+            ChooseAction form = new ChooseAction();
+            form.LabelTheme.Text = label1.Text;
+            form.Show();
+            this.Close();
+        }
+
+        private void Vyvod1_MouseEnter(object sender, EventArgs e)
+        {
+            Vyvod1.BackColor = Color.DarkSlateGray;
+            Vyvod1.BackColor2 = Color.DarkSlateGray;
+            Vyvod1.ForeColor = Color.White;
+        }
+
+        private void Vyvod1_MouseLeave(object sender, EventArgs e)
+        {
+            Vyvod1.BackColor = Color.MintCream;
+            Vyvod1.BackColor2 = Color.MintCream;
+            Vyvod1.ForeColor = Color.Black;
+        }
+
+        private void Nazad1_MouseEnter(object sender, EventArgs e)
+        {
+            Nazad1.BackColor = Color.DarkSlateGray;
+            Nazad1.BackColor2 = Color.DarkSlateGray;
+            Nazad1.ForeColor = Color.White;
+        }
+
+        private void Nazad1_MouseLeave(object sender, EventArgs e)
+        {
+            Nazad1.BackColor = Color.MintCream;
+            Nazad1.BackColor2 = Color.MintCream;
+            Nazad1.ForeColor = Color.Black;
+        }
+
+        private void Delete1_MouseLeave(object sender, EventArgs e)
+        {
+            Delete1.BackColor = Color.MintCream;
+            Delete1.BackColor2 = Color.MintCream;
+            Delete1.ForeColor = Color.Black;
+        }
+        
     }
 }

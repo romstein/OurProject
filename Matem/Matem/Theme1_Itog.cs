@@ -23,9 +23,21 @@ namespace Matem
         public int localHeight = 125;
         public int x1,y1;
 
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Red;
+        }
 
+        private void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Black;
+        }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void NazadVMenu_Click(object sender, EventArgs e)
         {
             StudentTasks1 form = new StudentTasks1();
             List<Nazvanie_Theme> themes = new List<Nazvanie_Theme>();
@@ -94,30 +106,18 @@ namespace Matem
             this.Close();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void NazadVMenu_MouseEnter(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-        private void closeButton_MouseEnter(object sender, EventArgs e)
-        {
-            closeButton.ForeColor = Color.Red;
+            NazadVMenu.BackColor = Color.DarkSlateGray;
+            NazadVMenu.BackColor2 = Color.DarkSlateGray;
+            NazadVMenu.ForeColor = Color.White;
         }
 
-        private void closeButton_MouseLeave(object sender, EventArgs e)
+        private void NazadVMenu_MouseLeave(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.Black;
-        }
-
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.DarkSlateGray;
-            button1.ForeColor = Color.White;
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.MintCream;
-            button1.ForeColor = Color.Black;
+            NazadVMenu.BackColor = Color.MintCream;
+            NazadVMenu.BackColor2 = Color.MintCream;
+            NazadVMenu.ForeColor = Color.Black;
         }
 
         private void Theme1_Itog_Load(object sender, EventArgs e)
@@ -171,7 +171,7 @@ namespace Matem
             otvet.Text = $"Решено {Verno} из {list.Count}";
             otvet.Font = new System.Drawing.Font("Times New Roman", 14);
             this.Controls.Add(otvet);
-            button1.Location = new Point(x1, y1 + otvet.Height);
+            NazadVMenu.Location = new Point(x1, y1 + otvet.Height);
 
         }
     }

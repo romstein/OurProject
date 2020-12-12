@@ -24,6 +24,26 @@ namespace Matem
 
         private void Nazad_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Red;
+        }
+
+        private void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Black;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        { 
+            Application.Exit();
+        }
+        
+
+        private void Nazad1_Click(object sender, EventArgs e)
+        {
             MenuWithThemes form = new MenuWithThemes();
             List<Nazvanie_Theme> listThemes = new List<Nazvanie_Theme>();
             formater = new XmlSerializer(typeof(List<Nazvanie_Theme>));
@@ -31,7 +51,7 @@ namespace Matem
             {
                 listThemes = (List<Nazvanie_Theme>)formater.Deserialize(fs);
             }
-            for(int i=0;i<listThemes.Count;i++)
+            for (int i = 0; i < listThemes.Count; i++)
             {
                 switch (i)
                 {
@@ -87,86 +107,42 @@ namespace Matem
                         }
                 }
             }
-
-            //form.labelTheme1.Text = nazvanie.Name;
             form.Show();
             this.Close();
         }
-        private void closeButton_MouseEnter(object sender, EventArgs e)
+
+        private void Nazad1_MouseEnter(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.Red;
+            Nazad1.BackColor = Color.DarkSlateGray;
+            Nazad1.BackColor2 = Color.DarkSlateGray;
+            Nazad1.ForeColor = Color.White;
         }
 
-        private void closeButton_MouseLeave(object sender, EventArgs e)
+        private void Nazad1_MouseLeave(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.Black;
-        }
-        private void closeButton_Click(object sender, EventArgs e)
-        {
-            
-                Application.Exit();
-            
+            Nazad1.BackColor = Color.MintCream;
+            Nazad1.BackColor2 = Color.MintCream;
+            Nazad1.ForeColor = Color.Black;
         }
 
-        private void Nazad_MouseEnter(object sender, EventArgs e)
-        {
-            Nazad.BackColor = Color.DarkSlateGray;
-            Nazad.ForeColor = Color.White;
-        }
-
-        private void Nazad_MouseLeave(object sender, EventArgs e)
-        {
-            Nazad.BackColor = Color.MintCream;
-            Nazad.ForeColor = Color.Black;
-        }
-
-        private void DeleteQuestions_MouseEnter(object sender, EventArgs e)
-        {
-            DeleteQuestions.BackColor = Color.DarkSlateGray;
-            DeleteQuestions.ForeColor = Color.White;
-        }
-
-        private void DeleteQuestions_MouseLeave(object sender, EventArgs e)
-        {
-            DeleteQuestions.BackColor = Color.MintCream;
-            DeleteQuestions.ForeColor = Color.Black;
-        }
-
-        private void AddQuestions_MouseEnter(object sender, EventArgs e)
-        {
-            AddQuestions.BackColor = Color.DarkSlateGray;
-            AddQuestions.ForeColor = Color.White;
-        }
-
-        private void AddQuestions_MouseLeave(object sender, EventArgs e)
-        {
-            AddQuestions.BackColor = Color.MintCream;
-            AddQuestions.ForeColor = Color.Black;
-        }
-
-        private void AddQuestions_Click(object sender, EventArgs e)
+        private void AddQuestions1_Click(object sender, EventArgs e)
         {
             AddQuestionsForm form = new AddQuestionsForm();
-            /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-            formater = new XmlSerializer(typeof(Nazvanie_Theme));
-            using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-            {
-                nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-            }*/
             form.label1.Text = LabelTheme.Text;
             form.Show();
             this.Close();
         }
 
-        private void DeleteQuestions_Click(object sender, EventArgs e)
+        private void AddQuestions1_MouseEnter(object sender, EventArgs e)
+        {
+            AddQuestions1.BackColor = Color.DarkSlateGray;
+            AddQuestions1.BackColor2 = Color.DarkSlateGray;
+            AddQuestions1.ForeColor = Color.White;
+        }
+
+        private void DeleteQuestions1_Click(object sender, EventArgs e)
         {
             DeleteQuestionsForm form = new DeleteQuestionsForm();
-            /*Nazvanie_Theme nazvanie = new Nazvanie_Theme();
-            formater = new XmlSerializer(typeof(Nazvanie_Theme));
-            using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-            {
-                nazvanie = (Nazvanie_Theme)formater.Deserialize(fs);
-            }*/
             form.label1.Text = this.LabelTheme.Text;
             formater2 = new XmlSerializer(typeof(List<Mission>));
             using (FileStream fs = new FileStream("bank.xml", FileMode.OpenOrCreate))
@@ -174,14 +150,14 @@ namespace Matem
                 any = (List<Mission>)formater2.Deserialize(fs);
             }
             themeQuestions = new List<Mission>();
-            foreach(var t in any)
+            foreach (var t in any)
             {
-                if(t.Theme==LabelTheme.Text)
+                if (t.Theme == LabelTheme.Text)
                 {
                     themeQuestions.Add(t);
                 }
             }
-            if(File.Exists("local.xml"))
+            if (File.Exists("local.xml"))
             {
                 File.Delete("local.xml");
                 formater3 = new XmlSerializer(typeof(List<Mission>));
@@ -197,9 +173,31 @@ namespace Matem
                 {
                     formater3.Serialize(fs, themeQuestions);
                 }
-            }            
+            }
             form.Show();
             this.Close();
         }
+
+        private void DeleteQuestions1_MouseEnter(object sender, EventArgs e)
+        {
+            DeleteQuestions1.BackColor = Color.DarkSlateGray;
+            DeleteQuestions1.BackColor2 = Color.DarkSlateGray;
+            DeleteQuestions1.ForeColor = Color.White;
+        }
+
+        private void DeleteQuestions1_MouseLeave(object sender, EventArgs e)
+        {
+            DeleteQuestions1.BackColor = Color.MintCream;
+            DeleteQuestions1.BackColor2 = Color.MintCream;
+            DeleteQuestions1.ForeColor = Color.Black;
+        }
+
+        private void AddQuestions1_MouseLeave(object sender, EventArgs e)
+        {
+            AddQuestions1.BackColor = Color.MintCream;
+            AddQuestions1.BackColor2 = Color.MintCream;
+            AddQuestions1.ForeColor = Color.Black;
+        }
+
     }
 }

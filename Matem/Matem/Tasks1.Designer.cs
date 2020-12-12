@@ -36,7 +36,7 @@
             this.AddQuestion = new System.Windows.Forms.ToolStripButton();
             this.KolichestvoAnswer = new System.Windows.Forms.ToolStripTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CreateTheme = new System.Windows.Forms.Button();
+            this.CreateTheme1 = new Matem.RoundButton();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -50,18 +50,19 @@
             this.panel2.Controls.Add(this.toolStrip1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(954, 114);
+            this.panel2.Size = new System.Drawing.Size(1272, 140);
             this.panel2.TabIndex = 0;
             // 
             // ThemeZagolovok
             // 
             this.ThemeZagolovok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ThemeZagolovok.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.ThemeZagolovok.Location = new System.Drawing.Point(33, 29);
+            this.ThemeZagolovok.Location = new System.Drawing.Point(44, 36);
+            this.ThemeZagolovok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ThemeZagolovok.Name = "ThemeZagolovok";
-            this.ThemeZagolovok.Size = new System.Drawing.Size(870, 44);
+            this.ThemeZagolovok.Size = new System.Drawing.Size(1159, 53);
             this.ThemeZagolovok.TabIndex = 3;
             this.ThemeZagolovok.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -73,10 +74,9 @@
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(911, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.closeButton.Location = new System.Drawing.Point(1215, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(24, 24);
+            this.closeButton.Size = new System.Drawing.Size(30, 29);
             this.closeButton.TabIndex = 2;
             this.closeButton.Text = "X";
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
@@ -91,9 +91,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddQuestion,
             this.KolichestvoAnswer});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 87);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 113);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(227, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(247, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -110,7 +110,7 @@
             // KolichestvoAnswer
             // 
             this.KolichestvoAnswer.Name = "KolichestvoAnswer";
-            this.KolichestvoAnswer.Size = new System.Drawing.Size(158, 27);
+            this.KolichestvoAnswer.Size = new System.Drawing.Size(209, 27);
             this.KolichestvoAnswer.Text = "Введите количество ответов";
             this.KolichestvoAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox2_KeyDown);
             this.KolichestvoAnswer.Click += new System.EventHandler(this.toolStripTextBox2_Click);
@@ -119,39 +119,48 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Honeydew;
-            this.panel1.Controls.Add(this.CreateTheme);
+            this.panel1.Controls.Add(this.CreateTheme1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 604);
+            this.panel1.Size = new System.Drawing.Size(1272, 743);
             this.panel1.TabIndex = 0;
             // 
-            // CreateTheme
+            // CreateTheme1
             // 
-            this.CreateTheme.BackColor = System.Drawing.Color.MintCream;
-            this.CreateTheme.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreateTheme.Location = new System.Drawing.Point(0, 160);
-            this.CreateTheme.Name = "CreateTheme";
-            this.CreateTheme.Size = new System.Drawing.Size(267, 64);
-            this.CreateTheme.TabIndex = 1;
-            this.CreateTheme.Text = "Создать тему";
-            this.CreateTheme.UseVisualStyleBackColor = false;
-            this.CreateTheme.Click += new System.EventHandler(this.CreateTheme_Click);
-            this.CreateTheme.MouseEnter += new System.EventHandler(this.CreateTheme_MouseEnter);
-            this.CreateTheme.MouseLeave += new System.EventHandler(this.CreateTheme_MouseLeave);
+            this.CreateTheme1.BackColor = System.Drawing.Color.MintCream;
+            this.CreateTheme1.BackColor2 = System.Drawing.Color.MintCream;
+            this.CreateTheme1.ButtonBorderColor = System.Drawing.Color.Black;
+            this.CreateTheme1.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.CreateTheme1.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.CreateTheme1.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.CreateTheme1.ButtonPressedColor = System.Drawing.Color.Red;
+            this.CreateTheme1.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.CreateTheme1.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.CreateTheme1.ButtonRoundRadius = 40;
+            this.CreateTheme1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateTheme1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateTheme1.Location = new System.Drawing.Point(0, 197);
+            this.CreateTheme1.Name = "CreateTheme1";
+            this.CreateTheme1.Size = new System.Drawing.Size(360, 80);
+            this.CreateTheme1.TabIndex = 2;
+            this.CreateTheme1.Text = "Создать тему";
+            this.CreateTheme1.Click += new System.EventHandler(this.CreateTheme1_Click);
+            this.CreateTheme1.MouseEnter += new System.EventHandler(this.CreateTheme1_MouseEnter);
+            this.CreateTheme1.MouseLeave += new System.EventHandler(this.CreateTheme1_MouseLeave);
             // 
             // Tasks1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 604);
+            this.ClientSize = new System.Drawing.Size(1272, 743);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(717, 497);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(956, 612);
             this.Name = "Tasks1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Шаблон для редактиования";
@@ -173,6 +182,6 @@
         private System.Windows.Forms.ToolStripTextBox KolichestvoAnswer;
         private System.Windows.Forms.Label closeButton;
         public System.Windows.Forms.TextBox ThemeZagolovok;
-        private System.Windows.Forms.Button CreateTheme;
+        private RoundButton CreateTheme1;
     }
 }

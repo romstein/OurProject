@@ -91,7 +91,7 @@ namespace Matem
                 }
 
                 panel1.Controls.Add(panel[PanelConstanta]);
-                CreateTheme.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
+                CreateTheme1.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
                 currentIndexRadio += Nans;
                 currentIndexTextTask++;
                 localHeight += 5;
@@ -147,25 +147,9 @@ namespace Matem
         private void closeButton_MouseLeave(object sender, EventArgs e)
         {
             closeButton.ForeColor = Color.Black;
-        }
+        }      
 
-
-        //private void ThemeZagolovok_Click(object sender, EventArgs e)
-        //{
-        //    ThemeZagolovok.Text = StrokaTheme;
-        //    ThemeZagolovok.BackColor = Color.White;
-        //}
-
-        //private void ThemeZagolovok_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyCode == Keys.Enter)
-        //    {
-        //        StrokaTheme = ThemeZagolovok.Text;
-        //        ThemeZagolovok.BackColor = Color.Honeydew;
-        //    }
-        //}
-
-        private void CreateTheme_Click(object sender, EventArgs e)
+        private void CreateTheme1_Click(object sender, EventArgs e)
         {
             bool fal1 = false;
             bool fal2 = false;
@@ -173,42 +157,42 @@ namespace Matem
             bool fal4 = false;
             bool fal5 = false;
             int countRadioCheck = 0;
-            if(PanelConstanta==0)
+            if (PanelConstanta == 0)
             {
                 fal5 = true;
             }
-            for(int j=0;j<currentIndexRadio;j++)
+            for (int j = 0; j < currentIndexRadio; j++)
             {
-                if(radio[j].Checked)
+                if (radio[j].Checked)
                 {
                     countRadioCheck++;
                 }
             }
-            if(countRadioCheck!=CountNans.Count)
+            if (countRadioCheck != CountNans.Count)
             {
                 fal4 = true;
             }
-            if(ThemeZagolovok.Text=="Введите название темы" || ThemeZagolovok.Text=="")
+            if (ThemeZagolovok.Text == "Введите название темы" || ThemeZagolovok.Text == "")
             {
                 fal3 = true;
             }
-            for(int j=0; j<currentIndexRadio;j++)
+            for (int j = 0; j < currentIndexRadio; j++)
             {
-                if(radio[j].Text=="")
+                if (radio[j].Text == "")
                 {
                     fal1 = true;
                     break;
                 }
             }
-            for(int j=0;j<currentIndexTextTask;j++)
+            for (int j = 0; j < currentIndexTextTask; j++)
             {
-                if(textTask[j].Text=="")
+                if (textTask[j].Text == "")
                 {
                     fal2 = true;
                     break;
                 }
             }
-            if(fal1 || fal2 || fal3 || fal4 || fal5)
+            if (fal1 || fal2 || fal3 || fal4 || fal5)
             {
                 MessageBox.Show("Некорректные введенные данные");
             }
@@ -340,23 +324,20 @@ namespace Matem
                 menu.Show();
                 this.Close();
             }
-            
-
-
         }
 
-        private void CreateTheme_MouseEnter(object sender, EventArgs e)
+        private void CreateTheme1_MouseEnter(object sender, EventArgs e)
         {
-            CreateTheme.BackColor = Color.DarkSlateGray;
-            CreateTheme.ForeColor = Color.White;
+            CreateTheme1.BackColor = Color.DarkSlateGray;
+            CreateTheme1.BackColor2 = Color.DarkSlateGray;
+            CreateTheme1.ForeColor = Color.White;
         }
 
-        private void CreateTheme_MouseLeave(object sender, EventArgs e)
+        private void CreateTheme1_MouseLeave(object sender, EventArgs e)
         {
-            CreateTheme.BackColor = Color.MintCream;
-            CreateTheme.ForeColor = Color.Black;
+            CreateTheme1.BackColor = Color.MintCream;
+            CreateTheme1.BackColor2 = Color.MintCream;
+            CreateTheme1.ForeColor = Color.Black;
         }
-
-        
     }
 }

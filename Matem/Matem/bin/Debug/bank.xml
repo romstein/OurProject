@@ -80,4 +80,19 @@
     <question>1</question>
     <Theme>тема 3</Theme>
   </Mission>
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
+        <First>1</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>2</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>1</question>
+    <Theme>theme 33</Theme>
+  </Mission>
 </ArrayOfMission>

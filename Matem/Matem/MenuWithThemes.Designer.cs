@@ -39,10 +39,10 @@
             this.labelTheme3 = new System.Windows.Forms.Label();
             this.labelTheme2 = new System.Windows.Forms.Label();
             this.labelTheme1 = new System.Windows.Forms.Label();
-            this.GoBack = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.GoBack1 = new Matem.RoundButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Honeydew;
+            this.panel1.Controls.Add(this.GoBack1);
             this.panel1.Controls.Add(this.labelTheme10);
             this.panel1.Controls.Add(this.labelTheme9);
             this.panel1.Controls.Add(this.labelTheme8);
@@ -60,13 +61,12 @@
             this.panel1.Controls.Add(this.labelTheme3);
             this.panel1.Controls.Add(this.labelTheme2);
             this.panel1.Controls.Add(this.labelTheme1);
-            this.panel1.Controls.Add(this.GoBack);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 439);
+            this.panel1.Size = new System.Drawing.Size(971, 540);
             this.panel1.TabIndex = 0;
             // 
             // labelTheme10
@@ -74,10 +74,9 @@
             this.labelTheme10.AutoSize = true;
             this.labelTheme10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme10.Location = new System.Drawing.Point(38, 341);
-            this.labelTheme10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme10.Location = new System.Drawing.Point(51, 420);
             this.labelTheme10.Name = "labelTheme10";
-            this.labelTheme10.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme10.Size = new System.Drawing.Size(153, 26);
             this.labelTheme10.TabIndex = 12;
             this.labelTheme10.Text = "Создать тему";
             this.labelTheme10.Click += new System.EventHandler(this.labelTheme10_Click);
@@ -89,10 +88,9 @@
             this.labelTheme9.AutoSize = true;
             this.labelTheme9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme9.Location = new System.Drawing.Point(38, 317);
-            this.labelTheme9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme9.Location = new System.Drawing.Point(51, 390);
             this.labelTheme9.Name = "labelTheme9";
-            this.labelTheme9.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme9.Size = new System.Drawing.Size(153, 26);
             this.labelTheme9.TabIndex = 11;
             this.labelTheme9.Text = "Создать тему";
             this.labelTheme9.Click += new System.EventHandler(this.labelTheme9_Click);
@@ -104,10 +102,9 @@
             this.labelTheme8.AutoSize = true;
             this.labelTheme8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme8.Location = new System.Drawing.Point(38, 292);
-            this.labelTheme8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme8.Location = new System.Drawing.Point(51, 359);
             this.labelTheme8.Name = "labelTheme8";
-            this.labelTheme8.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme8.Size = new System.Drawing.Size(153, 26);
             this.labelTheme8.TabIndex = 10;
             this.labelTheme8.Text = "Создать тему";
             this.labelTheme8.Click += new System.EventHandler(this.labelTheme8_Click);
@@ -119,10 +116,9 @@
             this.labelTheme7.AutoSize = true;
             this.labelTheme7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme7.Location = new System.Drawing.Point(38, 268);
-            this.labelTheme7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme7.Location = new System.Drawing.Point(51, 330);
             this.labelTheme7.Name = "labelTheme7";
-            this.labelTheme7.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme7.Size = new System.Drawing.Size(153, 26);
             this.labelTheme7.TabIndex = 9;
             this.labelTheme7.Text = "Создать тему";
             this.labelTheme7.Click += new System.EventHandler(this.labelTheme7_Click);
@@ -134,10 +130,9 @@
             this.labelTheme6.AutoSize = true;
             this.labelTheme6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme6.Location = new System.Drawing.Point(38, 244);
-            this.labelTheme6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme6.Location = new System.Drawing.Point(51, 300);
             this.labelTheme6.Name = "labelTheme6";
-            this.labelTheme6.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme6.Size = new System.Drawing.Size(153, 26);
             this.labelTheme6.TabIndex = 8;
             this.labelTheme6.Text = "Создать тему";
             this.labelTheme6.Click += new System.EventHandler(this.labelTheme6_Click);
@@ -149,10 +144,9 @@
             this.labelTheme5.AutoSize = true;
             this.labelTheme5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme5.Location = new System.Drawing.Point(38, 219);
-            this.labelTheme5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme5.Location = new System.Drawing.Point(51, 270);
             this.labelTheme5.Name = "labelTheme5";
-            this.labelTheme5.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme5.Size = new System.Drawing.Size(153, 26);
             this.labelTheme5.TabIndex = 7;
             this.labelTheme5.Text = "Создать тему";
             this.labelTheme5.Click += new System.EventHandler(this.labelTheme5_Click);
@@ -164,10 +158,9 @@
             this.labelTheme4.AutoSize = true;
             this.labelTheme4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme4.Location = new System.Drawing.Point(38, 195);
-            this.labelTheme4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme4.Location = new System.Drawing.Point(51, 240);
             this.labelTheme4.Name = "labelTheme4";
-            this.labelTheme4.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme4.Size = new System.Drawing.Size(153, 26);
             this.labelTheme4.TabIndex = 6;
             this.labelTheme4.Text = "Создать тему";
             this.labelTheme4.Click += new System.EventHandler(this.labelTheme4_Click);
@@ -179,10 +172,9 @@
             this.labelTheme3.AutoSize = true;
             this.labelTheme3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme3.Location = new System.Drawing.Point(38, 171);
-            this.labelTheme3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme3.Location = new System.Drawing.Point(51, 210);
             this.labelTheme3.Name = "labelTheme3";
-            this.labelTheme3.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme3.Size = new System.Drawing.Size(153, 26);
             this.labelTheme3.TabIndex = 5;
             this.labelTheme3.Text = "Создать тему";
             this.labelTheme3.Click += new System.EventHandler(this.labelTheme3_Click);
@@ -194,10 +186,9 @@
             this.labelTheme2.AutoSize = true;
             this.labelTheme2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme2.Location = new System.Drawing.Point(38, 146);
-            this.labelTheme2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme2.Location = new System.Drawing.Point(51, 180);
             this.labelTheme2.Name = "labelTheme2";
-            this.labelTheme2.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme2.Size = new System.Drawing.Size(153, 26);
             this.labelTheme2.TabIndex = 4;
             this.labelTheme2.Text = "Создать тему";
             this.labelTheme2.Click += new System.EventHandler(this.labelTheme2_Click);
@@ -209,30 +200,14 @@
             this.labelTheme1.AutoSize = true;
             this.labelTheme1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelTheme1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTheme1.Location = new System.Drawing.Point(38, 122);
-            this.labelTheme1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTheme1.Location = new System.Drawing.Point(51, 150);
             this.labelTheme1.Name = "labelTheme1";
-            this.labelTheme1.Size = new System.Drawing.Size(126, 22);
+            this.labelTheme1.Size = new System.Drawing.Size(153, 26);
             this.labelTheme1.TabIndex = 3;
             this.labelTheme1.Text = "Создать тему";
             this.labelTheme1.Click += new System.EventHandler(this.labelTheme1_Click);
             this.labelTheme1.MouseEnter += new System.EventHandler(this.labelTheme1_MouseEnter);
             this.labelTheme1.MouseLeave += new System.EventHandler(this.labelTheme1_MouseLeave);
-            // 
-            // GoBack
-            // 
-            this.GoBack.BackColor = System.Drawing.Color.MintCream;
-            this.GoBack.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GoBack.Location = new System.Drawing.Point(555, 362);
-            this.GoBack.Margin = new System.Windows.Forms.Padding(2);
-            this.GoBack.Name = "GoBack";
-            this.GoBack.Size = new System.Drawing.Size(105, 49);
-            this.GoBack.TabIndex = 2;
-            this.GoBack.Text = "Назад";
-            this.GoBack.UseVisualStyleBackColor = false;
-            this.GoBack.Click += new System.EventHandler(this.GoBack_Click);
-            this.GoBack.MouseEnter += new System.EventHandler(this.GoBack_MouseEnter);
-            this.GoBack.MouseLeave += new System.EventHandler(this.GoBack_MouseLeave);
             // 
             // panel2
             // 
@@ -241,9 +216,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(728, 98);
+            this.panel2.Size = new System.Drawing.Size(971, 121);
             this.panel2.TabIndex = 0;
             // 
             // closeButton
@@ -253,10 +228,9 @@
             this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.closeButton.ForeColor = System.Drawing.Color.Black;
-            this.closeButton.Location = new System.Drawing.Point(705, 0);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.closeButton.Location = new System.Drawing.Point(940, 0);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(24, 24);
+            this.closeButton.Size = new System.Drawing.Size(30, 29);
             this.closeButton.TabIndex = 1;
             this.closeButton.Text = "X";
             this.closeButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.closeButton_MouseClick);
@@ -269,21 +243,43 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(728, 98);
+            this.label1.Size = new System.Drawing.Size(971, 121);
             this.label1.TabIndex = 0;
             this.label1.Text = "Меню с разделами";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // GoBack1
+            // 
+            this.GoBack1.BackColor = System.Drawing.Color.MintCream;
+            this.GoBack1.BackColor2 = System.Drawing.Color.MintCream;
+            this.GoBack1.ButtonBorderColor = System.Drawing.Color.Black;
+            this.GoBack1.ButtonHighlightColor = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonHighlightColor2 = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonHighlightForeColor = System.Drawing.Color.White;
+            this.GoBack1.ButtonPressedColor = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonPressedColor2 = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.GoBack1.ButtonRoundRadius = 40;
+            this.GoBack1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GoBack1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GoBack1.Location = new System.Drawing.Point(740, 446);
+            this.GoBack1.Name = "GoBack1";
+            this.GoBack1.Size = new System.Drawing.Size(140, 60);
+            this.GoBack1.TabIndex = 13;
+            this.GoBack1.Text = "Назад";
+            this.GoBack1.Click += new System.EventHandler(this.GoBack1_Click);
+            this.GoBack1.MouseEnter += new System.EventHandler(this.GoBack1_MouseEnter);
+            this.GoBack1.MouseLeave += new System.EventHandler(this.GoBack1_MouseLeave);
+            // 
             // MenuWithThemes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(728, 439);
+            this.ClientSize = new System.Drawing.Size(971, 540);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuWithThemes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuWithThemes";
@@ -301,7 +297,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label closeButton;
-        private System.Windows.Forms.Button GoBack;
         public System.Windows.Forms.Label labelTheme1;
         public System.Windows.Forms.Label labelTheme10;
         public System.Windows.Forms.Label labelTheme9;
@@ -312,5 +307,6 @@
         public System.Windows.Forms.Label labelTheme4;
         public System.Windows.Forms.Label labelTheme3;
         public System.Windows.Forms.Label labelTheme2;
+        private RoundButton GoBack1;
     }
 }

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Nazad = new System.Windows.Forms.Button();
-            this.Vyvod = new System.Windows.Forms.Button();
-            this.Delete = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Nazad1 = new Matem.RoundButton();
+            this.Vyvod1 = new Matem.RoundButton();
+            this.Delete1 = new Matem.RoundButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,9 +44,9 @@
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Honeydew;
-            this.panel1.Controls.Add(this.Nazad);
-            this.panel1.Controls.Add(this.Vyvod);
-            this.panel1.Controls.Add(this.Delete);
+            this.panel1.Controls.Add(this.Nazad1);
+            this.panel1.Controls.Add(this.Vyvod1);
+            this.panel1.Controls.Add(this.Delete1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -54,51 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1272, 743);
             this.panel1.TabIndex = 0;
-            // 
-            // Nazad
-            // 
-            this.Nazad.BackColor = System.Drawing.Color.MintCream;
-            this.Nazad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Nazad.Location = new System.Drawing.Point(508, 142);
-            this.Nazad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Nazad.Name = "Nazad";
-            this.Nazad.Size = new System.Drawing.Size(172, 44);
-            this.Nazad.TabIndex = 3;
-            this.Nazad.Text = "Назад";
-            this.Nazad.UseVisualStyleBackColor = false;
-            this.Nazad.Click += new System.EventHandler(this.Nazad_Click);
-            this.Nazad.MouseEnter += new System.EventHandler(this.Nazad_MouseEnter);
-            this.Nazad.MouseLeave += new System.EventHandler(this.Nazad_MouseLeave);
-            // 
-            // Vyvod
-            // 
-            this.Vyvod.BackColor = System.Drawing.Color.MintCream;
-            this.Vyvod.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Vyvod.Location = new System.Drawing.Point(203, 143);
-            this.Vyvod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Vyvod.Name = "Vyvod";
-            this.Vyvod.Size = new System.Drawing.Size(299, 43);
-            this.Vyvod.TabIndex = 2;
-            this.Vyvod.Text = "Вывести все вопросы";
-            this.Vyvod.UseVisualStyleBackColor = false;
-            this.Vyvod.Click += new System.EventHandler(this.Vyvod_Click);
-            this.Vyvod.MouseEnter += new System.EventHandler(this.Vyvod_MouseEnter);
-            this.Vyvod.MouseLeave += new System.EventHandler(this.Vyvod_MouseLeave);
-            // 
-            // Delete
-            // 
-            this.Delete.BackColor = System.Drawing.Color.MintCream;
-            this.Delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Delete.Location = new System.Drawing.Point(0, 143);
-            this.Delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(195, 43);
-            this.Delete.TabIndex = 1;
-            this.Delete.Text = "Удалить вопросы";
-            this.Delete.UseVisualStyleBackColor = false;
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
-            this.Delete.MouseEnter += new System.EventHandler(this.Delete_MouseEnter);
-            this.Delete.MouseLeave += new System.EventHandler(this.Delete_MouseLeave);
             // 
             // panel2
             // 
@@ -140,6 +95,75 @@
             this.label1.Text = "ThemeZagolovok";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Nazad1
+            // 
+            this.Nazad1.BackColor = System.Drawing.Color.MintCream;
+            this.Nazad1.BackColor2 = System.Drawing.Color.MintCream;
+            this.Nazad1.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Nazad1.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Nazad1.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Nazad1.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Nazad1.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Nazad1.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Nazad1.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Nazad1.ButtonRoundRadius = 40;
+            this.Nazad1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Nazad1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Nazad1.Location = new System.Drawing.Point(508, 142);
+            this.Nazad1.Name = "Nazad1";
+            this.Nazad1.Size = new System.Drawing.Size(172, 64);
+            this.Nazad1.TabIndex = 6;
+            this.Nazad1.Text = "Назад";
+            this.Nazad1.Click += new System.EventHandler(this.Nazad1_Click);
+            this.Nazad1.MouseEnter += new System.EventHandler(this.Nazad1_MouseEnter);
+            this.Nazad1.MouseLeave += new System.EventHandler(this.Nazad1_MouseLeave);
+            // 
+            // Vyvod1
+            // 
+            this.Vyvod1.BackColor = System.Drawing.Color.MintCream;
+            this.Vyvod1.BackColor2 = System.Drawing.Color.MintCream;
+            this.Vyvod1.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Vyvod1.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Vyvod1.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Vyvod1.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Vyvod1.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Vyvod1.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Vyvod1.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Vyvod1.ButtonRoundRadius = 40;
+            this.Vyvod1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Vyvod1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Vyvod1.Location = new System.Drawing.Point(203, 143);
+            this.Vyvod1.Name = "Vyvod1";
+            this.Vyvod1.Size = new System.Drawing.Size(299, 63);
+            this.Vyvod1.TabIndex = 5;
+            this.Vyvod1.Text = "Вывести все вопросы";
+            this.Vyvod1.Click += new System.EventHandler(this.Vyvod1_Click);
+            this.Vyvod1.MouseEnter += new System.EventHandler(this.Vyvod1_MouseEnter);
+            this.Vyvod1.MouseLeave += new System.EventHandler(this.Vyvod1_MouseLeave);
+            // 
+            // Delete1
+            // 
+            this.Delete1.BackColor = System.Drawing.Color.MintCream;
+            this.Delete1.BackColor2 = System.Drawing.Color.MintCream;
+            this.Delete1.ButtonBorderColor = System.Drawing.Color.Black;
+            this.Delete1.ButtonHighlightColor = System.Drawing.Color.Orange;
+            this.Delete1.ButtonHighlightColor2 = System.Drawing.Color.OrangeRed;
+            this.Delete1.ButtonHighlightForeColor = System.Drawing.Color.Black;
+            this.Delete1.ButtonPressedColor = System.Drawing.Color.Red;
+            this.Delete1.ButtonPressedColor2 = System.Drawing.Color.Maroon;
+            this.Delete1.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.Delete1.ButtonRoundRadius = 40;
+            this.Delete1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Delete1.Location = new System.Drawing.Point(0, 143);
+            this.Delete1.Name = "Delete1";
+            this.Delete1.Size = new System.Drawing.Size(195, 63);
+            this.Delete1.TabIndex = 4;
+            this.Delete1.Text = "Удалить вопросы";
+            this.Delete1.Click += new System.EventHandler(this.Delete1_Click);
+            this.Delete1.MouseEnter += new System.EventHandler(this.Delete1_MouseEnter);
+            this.Delete1.MouseLeave += new System.EventHandler(this.Delete1_MouseLeave);
+            // 
             // DeleteQuestionsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -164,9 +188,9 @@
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.Button Vyvod;
         private System.Windows.Forms.Label closeButton;
-        private System.Windows.Forms.Button Nazad;
+        private RoundButton Delete1;
+        private RoundButton Vyvod1;
+        private RoundButton Nazad1;
     }
 }

@@ -86,8 +86,8 @@ namespace Matem
                 }
 
                 panel1.Controls.Add(panel[PanelConstanta]);
-                DopolniteTheme.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
-                Nazad.Location = new Point(325, panelLokation + panel[PanelConstanta].Height);
+                DopolniteTheme1.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
+                Nazad1.Location = new Point(325, panelLokation + panel[PanelConstanta].Height);
                 currentIndexRadio += Nans;
                 currentIndexTextTask++;
                 localHeight += 5;
@@ -131,12 +131,38 @@ namespace Matem
 
         private void DopolniteTheme_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void Nazad_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Red;
+        }
+
+        private void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            closeButton.ForeColor = Color.Black;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
+
+        private void DopolniteTheme1_Click(object sender, EventArgs e)
+        {
             bool fal1 = false;
             bool fal2 = false;
             bool fal3 = false;
             bool fal4 = false;
             int countRadioCheck = 0;
-            if(PanelConstanta==0)
+            if (PanelConstanta == 0)
             {
                 fal3 = true;
             }
@@ -167,7 +193,7 @@ namespace Matem
                     break;
                 }
             }
-            if(fal1 || fal2 || fal3 || fal4)
+            if (fal1 || fal2 || fal3 || fal4)
             {
                 MessageBox.Show("Некорректные введенные данные");
             }
@@ -211,17 +237,6 @@ namespace Matem
                 {
                     ser.Serialize(fs, any);
                 }
-
-                /*Nazvanie_Theme theme = new Nazvanie_Theme(label1.Text);
-                XmlSerializer formater = new XmlSerializer(typeof(Nazvanie_Theme));
-                if (File.Exists("theme.xml"))
-                {
-                    File.Delete("theme.xml");
-                }
-                using (FileStream fs = new FileStream("theme.xml", FileMode.OpenOrCreate))
-                {
-                    formater.Serialize(fs, theme);
-                }*/
                 ChooseAction menu = new ChooseAction();
                 menu.LabelTheme.Text = label1.Text;
                 menu.Show();
@@ -229,51 +244,40 @@ namespace Matem
             }
         }
 
-        private void Nazad_Click(object sender, EventArgs e)
+        private void Nazad1_Click(object sender, EventArgs e)
         {
             ChooseAction form = new ChooseAction();
             form.LabelTheme.Text = label1.Text;
             form.Show();
             this.Close();
         }
-        private void closeButton_MouseEnter(object sender, EventArgs e)
+
+        private void DopolniteTheme1_MouseEnter(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.Red;
+            DopolniteTheme1.BackColor = Color.DarkSlateGray;
+            DopolniteTheme1.BackColor2 = Color.DarkSlateGray;
+            DopolniteTheme1.ForeColor = Color.White;
         }
 
-        private void closeButton_MouseLeave(object sender, EventArgs e)
+        private void DopolniteTheme1_MouseLeave(object sender, EventArgs e)
         {
-            closeButton.ForeColor = Color.Black;
+            DopolniteTheme1.BackColor = Color.MintCream;
+            DopolniteTheme1.BackColor2 = Color.MintCream;
+            DopolniteTheme1.ForeColor = Color.Black;
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void Nazad1_MouseEnter(object sender, EventArgs e)
         {
-            Application.Exit();
+            Nazad1.BackColor = Color.DarkSlateGray;
+            Nazad1.BackColor2 = Color.DarkSlateGray;
+            Nazad1.ForeColor = Color.White;
         }
 
-        private void Nazad_MouseEnter(object sender, EventArgs e)
+        private void Nazad1_MouseLeave(object sender, EventArgs e)
         {
-            Nazad.BackColor = Color.DarkSlateGray;
-            Nazad.ForeColor = Color.White;
-        }
-
-        private void Nazad_MouseLeave(object sender, EventArgs e)
-        {
-            Nazad.BackColor = Color.MintCream;
-            Nazad.ForeColor = Color.Black;
-        }
-
-        private void DopolniteTheme_MouseEnter(object sender, EventArgs e)
-        {
-            DopolniteTheme.BackColor = Color.DarkSlateGray;
-            DopolniteTheme.ForeColor = Color.White;
-
-        }
-
-        private void DopolniteTheme_MouseLeave(object sender, EventArgs e)
-        {
-            DopolniteTheme.BackColor = Color.MintCream;
-            DopolniteTheme.ForeColor = Color.Black;
+            Nazad1.BackColor = Color.MintCream;
+            Nazad1.BackColor2 = Color.MintCream;
+            Nazad1.ForeColor = Color.Black;
         }
     }
 }

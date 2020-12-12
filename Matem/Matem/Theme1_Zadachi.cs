@@ -37,63 +37,6 @@ namespace Matem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Theme1_Itog itog = new Theme1_Itog();
-            XmlSerializer formater = new XmlSerializer(typeof(List<Mission>));
-            using (FileStream fs = new FileStream("listmission.xml", FileMode.OpenOrCreate))
-            {
-
-                list = (List<Mission>)formater.Deserialize(fs);
-
-            }
-            
-            int ind = 0;
-            for(int i = 0; i < forRandom.Length; i++)
-            {
-                int vr = forRandom[i];
-                forResult.Add(list[vr]);
-                list[vr].Status = false;// если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
-                for(int j = 0; j < list[vr].answers.Count; j++)
-                {
-                    if (radio[ind].Checked == true && list[vr].answers[j].Second == true)
-                    {
-                        list[vr].Status = true;
-
-                    }
-                    ind++;
-                }
-            }
-            //for (int i = 0; i < list.Count; i++)
-            //{
-            //    list[i].Status = false; // если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
-            //    for (int j = 0; j < list[i].answers.Count; j++)
-            //    {
-            //        if (radio[ind].Checked == true && list[i].answers[j].Second == true)
-            //        {
-            //            list[i].Status = true;
-
-            //        }
-            //        ind++;
-
-            //    }
-            //}
-            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
-            if (File.Exists("Itog.xml"))
-            {
-                File.Delete("Itog.xml");
-            }
-            using (FileStream fs = new FileStream("Itog.xml", FileMode.OpenOrCreate))
-            {
-                ser.Serialize(fs, forResult);
-            }
-
-
-            itog.label1.Text = label1.Text;
-            itog.Show();
-            this.Close();
-        }
-
         private void Theme1_Zadachi_Load(object sender, EventArgs e)
         {
 
@@ -197,16 +140,75 @@ namespace Matem
             Application.Exit();
         }
 
-        private void button1_MouseEnter(object sender, EventArgs e)
+        private void Proverka_Click(object sender, EventArgs e)
         {
-            button1.BackColor = Color.DarkSlateGray;
-            button1.ForeColor = Color.White;
+            Theme1_Itog itog = new Theme1_Itog();
+            XmlSerializer formater = new XmlSerializer(typeof(List<Mission>));
+            using (FileStream fs = new FileStream("listmission.xml", FileMode.OpenOrCreate))
+            {
+
+                list = (List<Mission>)formater.Deserialize(fs);
+
+            }
+
+            int ind = 0;
+            for (int i = 0; i < forRandom.Length; i++)
+            {
+                int vr = forRandom[i];
+                forResult.Add(list[vr]);
+                list[vr].Status = false;// если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
+                for (int j = 0; j < list[vr].answers.Count; j++)
+                {
+                    if (radio[ind].Checked == true && list[vr].answers[j].Second == true)
+                    {
+                        list[vr].Status = true;
+
+                    }
+                    ind++;
+                }
+            }
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //    list[i].Status = false; // если вдруг идет повторное решение теста. Перед проверкой зануляю все статусы
+            //    for (int j = 0; j < list[i].answers.Count; j++)
+            //    {
+            //        if (radio[ind].Checked == true && list[i].answers[j].Second == true)
+            //        {
+            //            list[i].Status = true;
+
+            //        }
+            //        ind++;
+
+            //    }
+            //}
+            XmlSerializer ser = new XmlSerializer(typeof(List<Mission>));
+            if (File.Exists("Itog.xml"))
+            {
+                File.Delete("Itog.xml");
+            }
+            using (FileStream fs = new FileStream("Itog.xml", FileMode.OpenOrCreate))
+            {
+                ser.Serialize(fs, forResult);
+            }
+
+
+            itog.label1.Text = label1.Text;
+            itog.Show();
+            this.Close();
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void Proverka_MouseEnter(object sender, EventArgs e)
         {
-            button1.BackColor = Color.MintCream;
-            button1.ForeColor = Color.Black;
+            Proverka.BackColor = Color.DarkSlateGray;
+            Proverka.BackColor2 = Color.DarkSlateGray;
+            Proverka.ForeColor = Color.White;
+        }
+
+        private void Proverka_MouseLeave(object sender, EventArgs e)
+        {
+            Proverka.BackColor = Color.MintCream;
+            Proverka.BackColor2 = Color.MintCream;
+            Proverka.ForeColor = Color.Black;
         }
     }
 }
