@@ -90,10 +90,12 @@ namespace Matem
                 panel[PanelConstanta].Height = 0;
                 panel[PanelConstanta].Location = new Point(0, panelLokation);
                 textTask[currentIndexTextTask] = new Label();
-                textTask[currentIndexTextTask].Width = this.Width;
-                textTask[currentIndexTextTask].Height = 20;
-                textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
                 textTask[currentIndexTextTask].Text = any[RandomIndex].question;
+                int n = textTask[currentIndexTextTask].Text.Count(c => c == '\n') + 1;
+                textTask[currentIndexTextTask].Width = this.Width;
+                textTask[currentIndexTextTask].Height = n*25;
+                textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 14);
+                
                 textTask[currentIndexTextTask].BackColor = Color.SkyBlue;
                 panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
                 panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
@@ -105,10 +107,10 @@ namespace Matem
 
                     radio[currentRadioButton] = new RadioButton();
                     radio[currentRadioButton].Width = this.Width;
-                    radio[currentRadioButton].Height = 20;
+                    radio[currentRadioButton].Height = 25;
                     radio[currentRadioButton].Location = new Point(0, localHeight);
                     radio[currentRadioButton].BackColor = Color.Honeydew;
-                    radio[currentRadioButton].Font = new System.Drawing.Font("Times New Roman", 9);
+                    radio[currentRadioButton].Font = new System.Drawing.Font("Times New Roman", 14);
                     radio[currentRadioButton].Text = any[RandomIndex].answers[i].First;
                     panel[PanelConstanta].Height += radio[currentRadioButton].Height;
                     panel[PanelConstanta].Controls.Add(radio[currentRadioButton]);
@@ -123,6 +125,7 @@ namespace Matem
                 localHeight = 0;
                 any.RemoveAt(RandomIndex);
             }
+            
             
         }
         private void closeButton_MouseEnter(object sender, EventArgs e)

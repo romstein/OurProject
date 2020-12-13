@@ -56,8 +56,8 @@ namespace Matem
                 textTask[currentIndexTextTask] = new TextBox();
                 textTask[currentIndexTextTask].Multiline = true;
                 textTask[currentIndexTextTask].Width = panel1.Width;
-                textTask[currentIndexTextTask].Height = 20;
-                textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 9);
+                textTask[currentIndexTextTask].Height = 300;
+                textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 14);
                 panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
                 panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
                 localHeight += textTask[currentIndexTextTask].Height;
@@ -68,17 +68,18 @@ namespace Matem
                 {
                     radio[i] = new RadioButton();
                     radio[i].Width = panel1.Width - 200;
-                    radio[i].Height = 20;
+                    radio[i].Height = 25;
                     radio[i].Location = new Point(0, localHeight);
                     radio[i].BackColor = Color.White;
-                    radio[i].Font = new System.Drawing.Font("Times New Roman", 9);
+                    radio[i].Font = new System.Drawing.Font("Times New Roman", 14);
+                    radio[i].Text = "";
                     panel[PanelConstanta].Height += radio[i].Height;
                     panel[PanelConstanta].Controls.Add(radio[i]);
                     textAnswer[currentIndexTextAnswer] = new TextBox();
                     textAnswer[currentIndexTextAnswer].Width = 200;
-                    textAnswer[currentIndexTextAnswer].Height = 20;
+                    textAnswer[currentIndexTextAnswer].Height = 25;
                     textAnswer[currentIndexTextAnswer].Location = new Point(radio[i].Width, localHeight);
-                    textAnswer[currentIndexTextAnswer].Font = new System.Drawing.Font("Times New Roman", 9);
+                    textAnswer[currentIndexTextAnswer].Font = new System.Drawing.Font("Times New Roman", 14);
                     textAnswer[currentIndexTextAnswer].KeyDown += new System.Windows.Forms.KeyEventHandler(AddAnswer);
                     panel[PanelConstanta].Controls.Add(textAnswer[currentIndexTextAnswer]);
                     localHeight += radio[i].Height;

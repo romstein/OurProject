@@ -72,27 +72,39 @@
   <Mission>
     <answers>
       <PairOfStringBoolean>
-        <First>1</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <Status>false</Status>
-    <question>1</question>
-    <Theme>тема 3</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
+        <First>12</First>
         <Second>true</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
-        <First>2</First>
+        <First>10</First>
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
     <Status>false</Status>
-    <question>1</question>
-    <Theme>theme 33</Theme>
+    <question>Что выведет программа?
+int x=10;
+int y=12;
+if (x&gt;y) Console.WriteLine(x)
+else Console.WriteLine(y);</question>
+    <Theme>Theme 1</Theme>
+  </Mission>
+  <Mission>
+    <answers>
+      <PairOfStringBoolean>
+        <First>3</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>6</First>
+        <Second>true</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>Ничего</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+    </answers>
+    <Status>false</Status>
+    <question>3+3=?</question>
+    <Theme>Theme 1</Theme>
   </Mission>
 </ArrayOfMission>
