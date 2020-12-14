@@ -225,10 +225,25 @@ namespace Matem
 
         private void Nazad1_Click(object sender, EventArgs e)
         {
-            ChooseAction form = new ChooseAction();
-            form.LabelTheme.Text = label1.Text;
-            form.Show();
-            this.Close();
+            DialogResult result = MessageBox.Show("Вернуться без сохранения изменений?",
+                "Сообщение",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly
+                );
+            if(result==DialogResult.Yes)
+            {
+                ChooseAction form = new ChooseAction();
+                form.LabelTheme.Text = label1.Text;
+                form.Show();
+                form.TopMost = true;
+                this.Close();
+            }
+            else
+            {
+                this.TopMost = true;
+            }
         }
 
         private void Vyvod1_MouseEnter(object sender, EventArgs e)

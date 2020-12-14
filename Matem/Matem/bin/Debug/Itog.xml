@@ -3,24 +3,20 @@
   <Mission>
     <answers>
       <PairOfStringBoolean>
-        <First>1</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
+        <First>12</First>
         <Second>true</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
+        <First>10</First>
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
-    <Status>false</Status>
-    <question>1+1</question>
+    <Status>true</Status>
+    <question>Что выведет программа?
+int x=10;
+int y=12;
+if (x&gt;y) Console.WriteLine(x)
+else Console.WriteLine(y);</question>
     <Theme>Theme 1</Theme>
   </Mission>
   <Mission>
@@ -72,20 +68,24 @@
   <Mission>
     <answers>
       <PairOfStringBoolean>
-        <First>12</First>
+        <First>1</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>2</First>
         <Second>true</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
-        <First>10</First>
+        <First>3</First>
+        <Second>false</Second>
+      </PairOfStringBoolean>
+      <PairOfStringBoolean>
+        <First>4</First>
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
     <Status>false</Status>
-    <question>Что выведет программа?
-int x=10;
-int y=12;
-if (x&gt;y) Console.WriteLine(x)
-else Console.WriteLine(y);</question>
+    <question>1+1</question>
     <Theme>Theme 1</Theme>
   </Mission>
   <Mission>
