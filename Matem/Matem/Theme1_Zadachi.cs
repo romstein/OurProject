@@ -26,7 +26,7 @@ namespace Matem
         public RadioButton[] radio = new RadioButton[1000];
         int [] forRandom;
         List<Mission> forResult=new List<Mission>();
-
+        Point lastPoint;
 
 
         TextBox[] textAnswer = new TextBox[1000];
@@ -212,6 +212,34 @@ namespace Matem
             Proverka.BackColor = Color.MintCream;
             Proverka.BackColor2 = Color.MintCream;
             Proverka.ForeColor = Color.Black;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

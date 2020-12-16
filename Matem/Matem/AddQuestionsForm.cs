@@ -20,6 +20,7 @@ namespace Matem
         public int currentIndexRadio = 0;
         public int currentRadioButton = 0;
         RadioButton[] radio = new RadioButton[1000];
+        Point lastPoint;
 
         public int Nans = 0;
         public int localHeight = 0;
@@ -294,6 +295,34 @@ namespace Matem
             Nazad1.BackColor = Color.MintCream;
             Nazad1.BackColor2 = Color.MintCream;
             Nazad1.ForeColor = Color.Black;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

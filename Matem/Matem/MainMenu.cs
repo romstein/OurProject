@@ -51,12 +51,7 @@ namespace Matem
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void TeacherButton_Click(object sender, EventArgs e)
-        {
-            
-            
-
-        }
+        
        
         private void StudentButton_Click(object sender, EventArgs e)
         {

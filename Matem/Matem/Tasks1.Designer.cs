@@ -54,17 +54,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1272, 140);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // ThemeZagolovok
             // 
             this.ThemeZagolovok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ThemeZagolovok.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.ThemeZagolovok.Location = new System.Drawing.Point(44, 36);
-            this.ThemeZagolovok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ThemeZagolovok.Margin = new System.Windows.Forms.Padding(4);
             this.ThemeZagolovok.Name = "ThemeZagolovok";
             this.ThemeZagolovok.Size = new System.Drawing.Size(1159, 53);
             this.ThemeZagolovok.TabIndex = 3;
             this.ThemeZagolovok.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ThemeZagolovok.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ThemeZagolovok_MouseDown);
+            this.ThemeZagolovok.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ThemeZagolovok_MouseMove);
             // 
             // closeButton
             // 

@@ -18,6 +18,7 @@ namespace Matem
         public XmlSerializer formater,formater2;
         public CheckBox[] checks;
         public int localHEIGHT = 170;
+        Point lastPoint;
         public DeleteQuestionsForm()
         {
             InitializeComponent();
@@ -272,6 +273,34 @@ namespace Matem
             Nazad1.BackColor = Color.MintCream;
             Nazad1.BackColor2 = Color.MintCream;
             Nazad1.ForeColor = Color.Black;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
 
         private void Delete1_MouseLeave(object sender, EventArgs e)

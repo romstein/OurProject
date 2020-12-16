@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GoBack1 = new Matem.RoundButton();
             this.labelTheme10 = new System.Windows.Forms.Label();
             this.labelTheme9 = new System.Windows.Forms.Label();
             this.labelTheme8 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.closeButton = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.GoBack1 = new Matem.RoundButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(971, 540);
             this.panel1.TabIndex = 0;
+            // 
+            // GoBack1
+            // 
+            this.GoBack1.BackColor = System.Drawing.Color.MintCream;
+            this.GoBack1.BackColor2 = System.Drawing.Color.MintCream;
+            this.GoBack1.ButtonBorderColor = System.Drawing.Color.Black;
+            this.GoBack1.ButtonHighlightColor = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonHighlightColor2 = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonHighlightForeColor = System.Drawing.Color.White;
+            this.GoBack1.ButtonPressedColor = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonPressedColor2 = System.Drawing.Color.DarkSlateGray;
+            this.GoBack1.ButtonPressedForeColor = System.Drawing.Color.White;
+            this.GoBack1.ButtonRoundRadius = 40;
+            this.GoBack1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GoBack1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GoBack1.Location = new System.Drawing.Point(740, 446);
+            this.GoBack1.Name = "GoBack1";
+            this.GoBack1.Size = new System.Drawing.Size(140, 60);
+            this.GoBack1.TabIndex = 13;
+            this.GoBack1.Text = "Назад";
+            this.GoBack1.Click += new System.EventHandler(this.GoBack1_Click);
+            this.GoBack1.MouseEnter += new System.EventHandler(this.GoBack1_MouseEnter);
+            this.GoBack1.MouseLeave += new System.EventHandler(this.GoBack1_MouseLeave);
             // 
             // labelTheme10
             // 
@@ -220,6 +243,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(971, 121);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // closeButton
             // 
@@ -248,29 +273,8 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Меню с разделами";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // GoBack1
-            // 
-            this.GoBack1.BackColor = System.Drawing.Color.MintCream;
-            this.GoBack1.BackColor2 = System.Drawing.Color.MintCream;
-            this.GoBack1.ButtonBorderColor = System.Drawing.Color.Black;
-            this.GoBack1.ButtonHighlightColor = System.Drawing.Color.DarkSlateGray;
-            this.GoBack1.ButtonHighlightColor2 = System.Drawing.Color.DarkSlateGray;
-            this.GoBack1.ButtonHighlightForeColor = System.Drawing.Color.White;
-            this.GoBack1.ButtonPressedColor = System.Drawing.Color.DarkSlateGray;
-            this.GoBack1.ButtonPressedColor2 = System.Drawing.Color.DarkSlateGray;
-            this.GoBack1.ButtonPressedForeColor = System.Drawing.Color.White;
-            this.GoBack1.ButtonRoundRadius = 40;
-            this.GoBack1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GoBack1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GoBack1.Location = new System.Drawing.Point(740, 446);
-            this.GoBack1.Name = "GoBack1";
-            this.GoBack1.Size = new System.Drawing.Size(140, 60);
-            this.GoBack1.TabIndex = 13;
-            this.GoBack1.Text = "Назад";
-            this.GoBack1.Click += new System.EventHandler(this.GoBack1_Click);
-            this.GoBack1.MouseEnter += new System.EventHandler(this.GoBack1_MouseEnter);
-            this.GoBack1.MouseLeave += new System.EventHandler(this.GoBack1_MouseLeave);
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // MenuWithThemes
             // 

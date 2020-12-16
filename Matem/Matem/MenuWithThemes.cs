@@ -19,6 +19,8 @@ namespace Matem
             InitializeComponent();
         }
 
+        Point lastPoint;
+
         private void closeButton_MouseClick(object sender, MouseEventArgs e)
         {
             Application.Exit();
@@ -580,6 +582,34 @@ namespace Matem
             GoBack1.BackColor = Color.MintCream;
             GoBack1.BackColor2 = Color.MintCream;
             GoBack1.ForeColor = Color.Black;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }

@@ -56,6 +56,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(971, 121);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // closeButton
             // 
@@ -84,6 +86,8 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Меню с разделами";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // Theme1
             // 

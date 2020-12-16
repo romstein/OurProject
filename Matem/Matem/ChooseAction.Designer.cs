@@ -48,6 +48,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(907, 87);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // closeButton
             // 
@@ -76,6 +78,8 @@
             this.LabelTheme.TabIndex = 0;
             this.LabelTheme.Text = "ThemeLabel";
             this.LabelTheme.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelTheme.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LabelTheme_MouseDown);
+            this.LabelTheme.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LabelTheme_MouseMove);
             // 
             // AddQuestions1
             // 

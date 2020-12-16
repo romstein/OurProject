@@ -21,11 +21,9 @@ namespace Matem
         public XmlSerializer formater,formater2,formater3;
         public List<Mission> any;
         public List<Mission> themeQuestions;
+        Point lastPoint;
 
-        private void Nazad_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {
             closeButton.ForeColor = Color.Red;
@@ -183,6 +181,34 @@ namespace Matem
             DeleteQuestions1.BackColor = Color.DarkSlateGray;
             DeleteQuestions1.BackColor2 = Color.DarkSlateGray;
             DeleteQuestions1.ForeColor = Color.White;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void LabelTheme_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void LabelTheme_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
 
         private void DeleteQuestions1_MouseLeave(object sender, EventArgs e)

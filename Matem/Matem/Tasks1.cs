@@ -14,6 +14,8 @@ namespace Matem
 {
     public partial class Tasks1 : Form
     {
+        Point lastPoint;
+
         public string StrokaTheme;
         public List<Mission> any = new List<Mission>();
         public List<Mission> localT = new List<Mission>();
@@ -338,6 +340,34 @@ namespace Matem
             CreateTheme1.BackColor = Color.MintCream;
             CreateTheme1.BackColor2 = Color.MintCream;
             CreateTheme1.ForeColor = Color.Black;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void ThemeZagolovok_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void ThemeZagolovok_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }
