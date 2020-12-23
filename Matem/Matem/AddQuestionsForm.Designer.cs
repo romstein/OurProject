@@ -142,9 +142,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddQuestion,
             this.KolichestvoAnswer});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 113);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 111);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(247, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(286, 29);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -154,14 +154,14 @@
             this.AddQuestion.Image = ((System.Drawing.Image)(resources.GetObject("AddQuestion.Image")));
             this.AddQuestion.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddQuestion.Name = "AddQuestion";
-            this.AddQuestion.Size = new System.Drawing.Size(24, 24);
+            this.AddQuestion.Size = new System.Drawing.Size(24, 26);
             this.AddQuestion.Text = "Довавить вопрос";
             this.AddQuestion.Click += new System.EventHandler(this.AddQuestion_Click);
             // 
             // KolichestvoAnswer
             // 
             this.KolichestvoAnswer.Name = "KolichestvoAnswer";
-            this.KolichestvoAnswer.Size = new System.Drawing.Size(209, 27);
+            this.KolichestvoAnswer.Size = new System.Drawing.Size(209, 29);
             this.KolichestvoAnswer.Text = "Введите количество ответов";
             this.KolichestvoAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KolichestvoAnswer_KeyDown);
             this.KolichestvoAnswer.Click += new System.EventHandler(this.KolichestvoAnswer_Click);

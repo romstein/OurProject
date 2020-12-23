@@ -61,51 +61,60 @@ namespace Matem
             }
             else
             {
-                panel[PanelConstanta] = new Panel();
-                panel[PanelConstanta].Width = panel1.Width;
-                panel[PanelConstanta].Height = 0;
-                panel[PanelConstanta].Location = new Point(0, panelLokation);
-                textTask[currentIndexTextTask] = new TextBox();
-                textTask[currentIndexTextTask].Multiline = true;
-                textTask[currentIndexTextTask].Width = panel1.Width;
-                textTask[currentIndexTextTask].Height = 300;
-                textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 14);
-                panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
-                panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
-                localHeight += textTask[currentIndexTextTask].Height;
-
-                Nans = int.Parse(KolichestvoAnswer.Text);
-                CountNans.Add(Nans);
-                for (int i = currentIndexRadio; i < currentIndexRadio + Nans; i++)
+                int countAnswers = int.Parse(KolichestvoAnswer.Text);
+                if (countAnswers <= 0)
                 {
-                    radio[i] = new RadioButton();
-                    radio[i].Width = panel1.Width - 200;
-                    radio[i].Height = 30;
-                    radio[i].Location = new Point(0, localHeight);
-                    radio[i].BackColor = Color.White; 
-                    radio[i].Font = new System.Drawing.Font("Times New Roman", 14);
-                    radio[i].Text = "";
-                    panel[PanelConstanta].Height += radio[i].Height;
-                    panel[PanelConstanta].Controls.Add(radio[i]);
-                    textAnswer[currentIndexTextAnswer] = new TextBox();
-                    textAnswer[currentIndexTextAnswer].Width = 200;
-                    textAnswer[currentIndexTextAnswer].Height = 30;
-                    textAnswer[currentIndexTextAnswer].Location = new Point(radio[i].Width, localHeight);
-                    textAnswer[currentIndexTextAnswer].Font = new System.Drawing.Font("Times New Roman", 14);
-                    textAnswer[currentIndexTextAnswer].KeyDown += new System.Windows.Forms.KeyEventHandler(AddAnswer);
-                    panel[PanelConstanta].Controls.Add(textAnswer[currentIndexTextAnswer]);
-                    localHeight += radio[i].Height;
-                    currentIndexTextAnswer++;
+                    MessageBox.Show("Количество ответов может быть только положительным и больше нуля");
                 }
+                else
+                {
+                    panel[PanelConstanta] = new Panel();
+                    panel[PanelConstanta].Width = panel1.Width;
+                    panel[PanelConstanta].Height = 0;
+                    panel[PanelConstanta].Location = new Point(0, panelLokation);
+                    textTask[currentIndexTextTask] = new TextBox();
+                    textTask[currentIndexTextTask].Multiline = true;
+                    textTask[currentIndexTextTask].Width = panel1.Width;
+                    textTask[currentIndexTextTask].Height = 300;
+                    textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 14);
+                    panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
+                    panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
+                    localHeight += textTask[currentIndexTextTask].Height;
 
-                panel1.Controls.Add(panel[PanelConstanta]);
-                CreateTheme1.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
-                currentIndexRadio += Nans;
-                currentIndexTextTask++;
-                localHeight += 5;
-                PanelConstanta++;
-                panelLokation += localHeight;
-                localHeight = 0;
+                    Nans = int.Parse(KolichestvoAnswer.Text);
+                    CountNans.Add(Nans);
+                    for (int i = currentIndexRadio; i < currentIndexRadio + Nans; i++)
+                    {
+                        radio[i] = new RadioButton();
+                        radio[i].Width = panel1.Width - 200;
+                        radio[i].Height = 30;
+                        radio[i].Location = new Point(0, localHeight);
+                        radio[i].BackColor = Color.White;
+                        radio[i].Font = new System.Drawing.Font("Times New Roman", 14);
+                        radio[i].Text = "";
+                        panel[PanelConstanta].Height += radio[i].Height;
+                        panel[PanelConstanta].Controls.Add(radio[i]);
+                        textAnswer[currentIndexTextAnswer] = new TextBox();
+                        textAnswer[currentIndexTextAnswer].Width = 200;
+                        textAnswer[currentIndexTextAnswer].Height = 30;
+                        textAnswer[currentIndexTextAnswer].Location = new Point(radio[i].Width, localHeight);
+                        textAnswer[currentIndexTextAnswer].Font = new System.Drawing.Font("Times New Roman", 14);
+                        textAnswer[currentIndexTextAnswer].KeyDown += new System.Windows.Forms.KeyEventHandler(AddAnswer);
+                        panel[PanelConstanta].Controls.Add(textAnswer[currentIndexTextAnswer]);
+                        localHeight += radio[i].Height;
+                        currentIndexTextAnswer++;
+                    }
+
+                    panel1.Controls.Add(panel[PanelConstanta]);
+                    CreateTheme1.Location = new Point(0, panelLokation + panel[PanelConstanta].Height);
+                    currentIndexRadio += Nans;
+                    currentIndexTextTask++;
+                    localHeight += 5;
+                    PanelConstanta++;
+                    panelLokation += localHeight;
+                    localHeight = 0;
+                }
+                
             }
             
 
