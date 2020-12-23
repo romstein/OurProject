@@ -49,9 +49,15 @@ namespace Matem
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            if(KolichestvoAnswer.Text=="Введите количество ответов")
+            int res;
+            bool isInt = Int32.TryParse(KolichestvoAnswer.Text, out res);
+            if (KolichestvoAnswer.Text=="Введите количество ответов")
             {
                 MessageBox.Show("Вы не ввели количество ответов");
+            }
+            if (isInt == false)
+            {
+                MessageBox.Show("Введите количество ответов числом");
             }
             else
             {
