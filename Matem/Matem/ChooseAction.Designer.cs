@@ -78,6 +78,7 @@
             this.LabelTheme.TabIndex = 0;
             this.LabelTheme.Text = "ThemeLabel";
             this.LabelTheme.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LabelTheme.UseMnemonic = false;
             this.LabelTheme.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LabelTheme_MouseDown);
             this.LabelTheme.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LabelTheme_MouseMove);
             // 

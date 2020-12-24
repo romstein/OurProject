@@ -102,6 +102,7 @@
             this.labelTheme10.Size = new System.Drawing.Size(153, 26);
             this.labelTheme10.TabIndex = 12;
             this.labelTheme10.Text = "Создать тему";
+            this.labelTheme10.UseMnemonic = false;
             this.labelTheme10.Click += new System.EventHandler(this.labelTheme10_Click);
             this.labelTheme10.MouseEnter += new System.EventHandler(this.labelTheme10_MouseEnter);
             this.labelTheme10.MouseLeave += new System.EventHandler(this.labelTheme10_MouseLeave);
@@ -116,6 +117,7 @@
             this.labelTheme9.Size = new System.Drawing.Size(153, 26);
             this.labelTheme9.TabIndex = 11;
             this.labelTheme9.Text = "Создать тему";
+            this.labelTheme9.UseMnemonic = false;
             this.labelTheme9.Click += new System.EventHandler(this.labelTheme9_Click);
             this.labelTheme9.MouseEnter += new System.EventHandler(this.labelTheme9_MouseEnter);
             this.labelTheme9.MouseLeave += new System.EventHandler(this.labelTheme9_MouseLeave);
@@ -130,6 +132,7 @@
             this.labelTheme8.Size = new System.Drawing.Size(153, 26);
             this.labelTheme8.TabIndex = 10;
             this.labelTheme8.Text = "Создать тему";
+            this.labelTheme8.UseMnemonic = false;
             this.labelTheme8.Click += new System.EventHandler(this.labelTheme8_Click);
             this.labelTheme8.MouseEnter += new System.EventHandler(this.labelTheme8_MouseEnter);
             this.labelTheme8.MouseLeave += new System.EventHandler(this.labelTheme8_MouseLeave);
@@ -144,6 +147,7 @@
             this.labelTheme7.Size = new System.Drawing.Size(153, 26);
             this.labelTheme7.TabIndex = 9;
             this.labelTheme7.Text = "Создать тему";
+            this.labelTheme7.UseMnemonic = false;
             this.labelTheme7.Click += new System.EventHandler(this.labelTheme7_Click);
             this.labelTheme7.MouseEnter += new System.EventHandler(this.labelTheme7_MouseEnter);
             this.labelTheme7.MouseLeave += new System.EventHandler(this.labelTheme7_MouseLeave);
@@ -158,6 +162,7 @@
             this.labelTheme6.Size = new System.Drawing.Size(153, 26);
             this.labelTheme6.TabIndex = 8;
             this.labelTheme6.Text = "Создать тему";
+            this.labelTheme6.UseMnemonic = false;
             this.labelTheme6.Click += new System.EventHandler(this.labelTheme6_Click);
             this.labelTheme6.MouseEnter += new System.EventHandler(this.labelTheme6_MouseEnter);
             this.labelTheme6.MouseLeave += new System.EventHandler(this.labelTheme6_MouseLeave);
@@ -172,6 +177,7 @@
             this.labelTheme5.Size = new System.Drawing.Size(153, 26);
             this.labelTheme5.TabIndex = 7;
             this.labelTheme5.Text = "Создать тему";
+            this.labelTheme5.UseMnemonic = false;
             this.labelTheme5.Click += new System.EventHandler(this.labelTheme5_Click);
             this.labelTheme5.MouseEnter += new System.EventHandler(this.labelTheme5_MouseEnter);
             this.labelTheme5.MouseLeave += new System.EventHandler(this.labelTheme5_MouseLeave);
@@ -186,6 +192,7 @@
             this.labelTheme4.Size = new System.Drawing.Size(153, 26);
             this.labelTheme4.TabIndex = 6;
             this.labelTheme4.Text = "Создать тему";
+            this.labelTheme4.UseMnemonic = false;
             this.labelTheme4.Click += new System.EventHandler(this.labelTheme4_Click);
             this.labelTheme4.MouseEnter += new System.EventHandler(this.labelTheme4_MouseEnter);
             this.labelTheme4.MouseLeave += new System.EventHandler(this.labelTheme4_MouseLeave);
@@ -200,6 +207,7 @@
             this.labelTheme3.Size = new System.Drawing.Size(153, 26);
             this.labelTheme3.TabIndex = 5;
             this.labelTheme3.Text = "Создать тему";
+            this.labelTheme3.UseMnemonic = false;
             this.labelTheme3.Click += new System.EventHandler(this.labelTheme3_Click);
             this.labelTheme3.MouseEnter += new System.EventHandler(this.labelTheme3_MouseEnter);
             this.labelTheme3.MouseLeave += new System.EventHandler(this.labelTheme3_MouseLeave);
@@ -214,6 +222,7 @@
             this.labelTheme2.Size = new System.Drawing.Size(153, 26);
             this.labelTheme2.TabIndex = 4;
             this.labelTheme2.Text = "Создать тему";
+            this.labelTheme2.UseMnemonic = false;
             this.labelTheme2.Click += new System.EventHandler(this.labelTheme2_Click);
             this.labelTheme2.MouseEnter += new System.EventHandler(this.labelTheme2_MouseEnter);
             this.labelTheme2.MouseLeave += new System.EventHandler(this.labelTheme2_MouseLeave);
@@ -228,6 +237,7 @@
             this.labelTheme1.Size = new System.Drawing.Size(153, 26);
             this.labelTheme1.TabIndex = 3;
             this.labelTheme1.Text = "Создать тему";
+            this.labelTheme1.UseMnemonic = false;
             this.labelTheme1.Click += new System.EventHandler(this.labelTheme1_Click);
             this.labelTheme1.MouseEnter += new System.EventHandler(this.labelTheme1_MouseEnter);
             this.labelTheme1.MouseLeave += new System.EventHandler(this.labelTheme1_MouseLeave);

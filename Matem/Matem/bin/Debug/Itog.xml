@@ -3,108 +3,31 @@
   <Mission>
     <answers>
       <PairOfStringBoolean>
-        <First>1</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
+        <First>&amp;&amp; &amp;&amp;&amp;</First>
         <Second>true</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
+        <First> &amp;&amp;&amp; &amp;&amp;&amp;</First>
         <Second>false</Second>
       </PairOfStringBoolean>
     </answers>
     <Status>false</Status>
-    <question>1+1</question>
-    <Theme>Theme 1</Theme>
+    <question>1</question>
+    <Theme>&amp;&amp;_123_&amp;&amp;&amp;</Theme>
   </Mission>
   <Mission>
     <answers>
       <PairOfStringBoolean>
-        <First>12</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>10</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <Status>false</Status>
-    <question>Что выведет программа?
-int x=10;
-int y=12;
-if (x&gt;y) Console.WriteLine(x)
-else Console.WriteLine(y);</question>
-    <Theme>Theme 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>3</First>
+        <First>&amp;&amp;</First>
         <Second>false</Second>
       </PairOfStringBoolean>
       <PairOfStringBoolean>
-        <First>6</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>Ничего</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <Status>false</Status>
-    <question>3+3=?</question>
-    <Theme>Theme 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>5</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>6</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>28</First>
+        <First>&amp;&amp;&amp; &amp;&amp;&amp;&amp;</First>
         <Second>true</Second>
       </PairOfStringBoolean>
     </answers>
     <Status>false</Status>
-    <question>xyz=t</question>
-    <Theme>Theme 1</Theme>
-  </Mission>
-  <Mission>
-    <answers>
-      <PairOfStringBoolean>
-        <First>1</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>2</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>3</First>
-        <Second>false</Second>
-      </PairOfStringBoolean>
-      <PairOfStringBoolean>
-        <First>4</First>
-        <Second>true</Second>
-      </PairOfStringBoolean>
-    </answers>
-    <Status>false</Status>
-    <question>2+2</question>
-    <Theme>Theme 1</Theme>
+    <question>2</question>
+    <Theme>&amp;&amp;_123_&amp;&amp;&amp;</Theme>
   </Mission>
 </ArrayOfMission>

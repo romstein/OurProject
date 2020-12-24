@@ -92,6 +92,7 @@ namespace Matem
                         radio[i].BackColor = Color.White;
                         radio[i].Font = new System.Drawing.Font("Times New Roman", 14);
                         radio[i].Text = "";
+                        radio[i].UseMnemonic = false;
                         panel[PanelConstanta].Height += radio[i].Height;
                         panel[PanelConstanta].Controls.Add(radio[i]);
                         textAnswer[currentIndexTextAnswer] = new TextBox();

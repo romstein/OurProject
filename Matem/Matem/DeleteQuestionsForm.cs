@@ -36,6 +36,7 @@ namespace Matem
             {
                 checks[i] = new CheckBox();
                 checks[i].Text = localLIST[i].question;
+                checks[i].UseMnemonic = false;
                 checks[i].Width = panel1.Width;
                 checks[i].BackColor = Color.White;
                 checks[i].Height = 30;

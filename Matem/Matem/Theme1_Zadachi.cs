@@ -95,7 +95,7 @@ namespace Matem
                 textTask[currentIndexTextTask].Width = this.Width;
                 textTask[currentIndexTextTask].Height = n*25;
                 textTask[currentIndexTextTask].Font = new System.Drawing.Font("Times New Roman", 14);
-                
+                textTask[currentIndexTextTask].UseMnemonic = false;
                 textTask[currentIndexTextTask].BackColor = Color.SkyBlue;
                 panel[PanelConstanta].Height += textTask[currentIndexTextTask].Height;
                 panel[PanelConstanta].Controls.Add(textTask[currentIndexTextTask]);
@@ -112,6 +112,7 @@ namespace Matem
                     radio[currentRadioButton].BackColor = Color.Honeydew;
                     radio[currentRadioButton].Font = new System.Drawing.Font("Times New Roman", 14);
                     radio[currentRadioButton].Text = any[RandomIndex].answers[i].First;
+                    radio[currentRadioButton].UseMnemonic = false;
                     panel[PanelConstanta].Height += radio[currentRadioButton].Height;
                     panel[PanelConstanta].Controls.Add(radio[currentRadioButton]);
                     localHeight += radio[currentRadioButton].Height;

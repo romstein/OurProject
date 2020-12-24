@@ -99,6 +99,7 @@
             this.Theme1.Size = new System.Drawing.Size(36, 26);
             this.Theme1.TabIndex = 1;
             this.Theme1.Text = "---";
+            this.Theme1.UseMnemonic = false;
             this.Theme1.Click += new System.EventHandler(this.Theme1_Click);
             this.Theme1.MouseEnter += new System.EventHandler(this.Theme1_MouseEnter);
             this.Theme1.MouseLeave += new System.EventHandler(this.Theme1_MouseLeave);
@@ -113,6 +114,7 @@
             this.Theme2.Size = new System.Drawing.Size(36, 26);
             this.Theme2.TabIndex = 3;
             this.Theme2.Text = "---";
+            this.Theme2.UseMnemonic = false;
             this.Theme2.Click += new System.EventHandler(this.Theme2_Click);
             this.Theme2.MouseEnter += new System.EventHandler(this.Theme2_MouseEnter);
             this.Theme2.MouseLeave += new System.EventHandler(this.Theme2_MouseLeave);
@@ -127,6 +129,7 @@
             this.Theme3.Size = new System.Drawing.Size(36, 26);
             this.Theme3.TabIndex = 4;
             this.Theme3.Text = "---";
+            this.Theme3.UseMnemonic = false;
             this.Theme3.Click += new System.EventHandler(this.Theme3_Click);
             this.Theme3.MouseEnter += new System.EventHandler(this.Theme3_MouseEnter);
             this.Theme3.MouseLeave += new System.EventHandler(this.Theme3_MouseLeave);
@@ -141,6 +144,7 @@
             this.Theme4.Size = new System.Drawing.Size(36, 26);
             this.Theme4.TabIndex = 5;
             this.Theme4.Text = "---";
+            this.Theme4.UseMnemonic = false;
             this.Theme4.Click += new System.EventHandler(this.Theme4_Click);
             this.Theme4.MouseEnter += new System.EventHandler(this.Theme4_MouseEnter);
             this.Theme4.MouseLeave += new System.EventHandler(this.Theme4_MouseLeave);
@@ -155,6 +159,7 @@
             this.Theme5.Size = new System.Drawing.Size(36, 26);
             this.Theme5.TabIndex = 6;
             this.Theme5.Text = "---";
+            this.Theme5.UseMnemonic = false;
             this.Theme5.Click += new System.EventHandler(this.Theme5_Click);
             this.Theme5.MouseEnter += new System.EventHandler(this.Theme5_MouseEnter);
             this.Theme5.MouseLeave += new System.EventHandler(this.Theme5_MouseLeave);
@@ -169,6 +174,7 @@
             this.Theme6.Size = new System.Drawing.Size(36, 26);
             this.Theme6.TabIndex = 7;
             this.Theme6.Text = "---";
+            this.Theme6.UseMnemonic = false;
             this.Theme6.Click += new System.EventHandler(this.Theme6_Click);
             this.Theme6.MouseEnter += new System.EventHandler(this.Theme6_MouseEnter);
             this.Theme6.MouseLeave += new System.EventHandler(this.Theme6_MouseLeave);
@@ -183,6 +189,7 @@
             this.Theme7.Size = new System.Drawing.Size(36, 26);
             this.Theme7.TabIndex = 8;
             this.Theme7.Text = "---";
+            this.Theme7.UseMnemonic = false;
             this.Theme7.Click += new System.EventHandler(this.Theme7_Click);
             this.Theme7.MouseEnter += new System.EventHandler(this.Theme7_MouseEnter);
             this.Theme7.MouseLeave += new System.EventHandler(this.Theme7_MouseLeave);
@@ -197,6 +204,7 @@
             this.Theme8.Size = new System.Drawing.Size(36, 26);
             this.Theme8.TabIndex = 9;
             this.Theme8.Text = "---";
+            this.Theme8.UseMnemonic = false;
             this.Theme8.Click += new System.EventHandler(this.Theme8_Click);
             this.Theme8.MouseEnter += new System.EventHandler(this.Theme8_MouseEnter);
             this.Theme8.MouseLeave += new System.EventHandler(this.Theme8_MouseLeave);
@@ -211,6 +219,7 @@
             this.Theme9.Size = new System.Drawing.Size(36, 26);
             this.Theme9.TabIndex = 10;
             this.Theme9.Text = "---";
+            this.Theme9.UseMnemonic = false;
             this.Theme9.Click += new System.EventHandler(this.Theme9_Click);
             this.Theme9.MouseEnter += new System.EventHandler(this.Theme9_MouseEnter);
             this.Theme9.MouseLeave += new System.EventHandler(this.Theme9_MouseLeave);
@@ -225,6 +234,7 @@
             this.Theme10.Size = new System.Drawing.Size(36, 26);
             this.Theme10.TabIndex = 11;
             this.Theme10.Text = "---";
+            this.Theme10.UseMnemonic = false;
             this.Theme10.Click += new System.EventHandler(this.Theme10_Click);
             this.Theme10.MouseEnter += new System.EventHandler(this.Theme10_MouseEnter);
             this.Theme10.MouseLeave += new System.EventHandler(this.Theme10_MouseLeave);

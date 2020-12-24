@@ -62,7 +62,7 @@
             this.ThemeZagolovok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ThemeZagolovok.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.ThemeZagolovok.Location = new System.Drawing.Point(44, 36);
-            this.ThemeZagolovok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ThemeZagolovok.Margin = new System.Windows.Forms.Padding(4);
             this.ThemeZagolovok.Name = "ThemeZagolovok";
             this.ThemeZagolovok.Size = new System.Drawing.Size(1159, 53);
             this.ThemeZagolovok.TabIndex = 3;
